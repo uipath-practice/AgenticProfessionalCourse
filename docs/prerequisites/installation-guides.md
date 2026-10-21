@@ -2,9 +2,22 @@
 
 Install the tools you need before starting the workshop.
 
-## Prerequisites
+The setup comes in two parts:
 
-Before the main setup, make sure you have these installed:
+- **[Common tools](#common-tools)**: everyone needs these. They're used both when a coding agent builds
+  automations for you and when you build a coded agent yourself.
+- **[Coding agents](#coding-agents)**: the extra tools for the lessons where a coding agent, such as
+  **Claude Code** or **Codex**, builds Studio workflows, coded agents and other automations for you.
+
+!!! tip "Where to run these commands"
+    Run every command in a terminal window. On **Windows**, open **PowerShell** (press the Windows key,
+    type `PowerShell` and press Enter). On **Mac**, open **Terminal** (press Cmd + Space, type
+    `Terminal` and press Enter). The install commands work from any folder. After installing a tool,
+    close the terminal and open a new one, so it can find the tool.
+
+## Common tools
+
+### 1. Node.js
 
 **Node.js** (LTS) — required for the UiPath CLI and the React app build.
 
@@ -26,10 +39,61 @@ Before the main setup, make sure you have these installed:
         npm install -g npm@11
         ```
 
-**Python 3.10+** — required for the coded underwriting agent.
+### 2. UiPath CLI
 
-1. Download from [python.org/downloads](https://www.python.org/downloads/) — on Windows, check **Add Python to PATH** during install
-2. Verify with `python --version` or `python3 --version`
+The `uip` CLI signs you in to UiPath and runs, publishes and manages your automations from the terminal.
+
+```bash
+npm install -g @uipath/cli@latest
+```
+
+Verify: `uip --version` — you should see `1.195.1` or later.
+
+### 3. Python and uv
+
+**Python** — required for coded agents, including the ones a coding agent generates for you. Coded
+agents need **Python 3.11 to 3.13**.
+
+The easiest way to get the right version is **uv**, a fast Python package manager. Coded agent
+projects use it to create their Python environment, and it downloads Python 3.13 by itself when a
+project needs it.
+
+Install uv:
+
+=== "Windows"
+
+    ```powershell
+    winget install astral-sh.uv
+    ```
+
+=== "Mac"
+
+    ```bash
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    ```
+
+Open a new terminal and verify with `uv --version`.
+
+!!! note "Prefer a regular Python install?"
+    Download Python 3.11, 3.12 or 3.13 from [python.org/downloads](https://www.python.org/downloads/) —
+    on Windows, check **Add Python to PATH** during install. Verify with `python --version` or
+    `python3 --version`.
+
+### 4. Authenticate with Your Tenant
+
+```bash
+uip login --authority https://cloud.uipath.com --organization tpenlabs -t AgenticWorkshop
+```
+
+A browser window opens. Complete the sign-in there. Check the result with `uip login status`: it
+should show **Logged in** for tenant **AgenticWorkshop**.
+
+## Coding agents
+
+The tools below are for the lessons where a coding agent builds automations for you, for example
+Studio workflows (XAML), coded agents, React apps and Maestro processes.
+
+### 1. .NET SDK 8.0
 
 **.NET SDK 8.0** — required to build and run the UiPath Studio project.
 
@@ -49,10 +113,14 @@ Before the main setup, make sure you have these installed:
     dotnet --list-sdks
     ```
 
+### 2. UiPath Studio
+
 **UiPath Studio** — required to open, run, and debug the generated XAML workflow. Currently supported on Windows only; Mac support is coming soon.
 
 1. Download from [uipath.com/start-trial](https://www.uipath.com/start-trial)
 2. Sign in with your UiPath account and verify Studio launches
+
+### 3. Git
 
 **Git** — required for the UiPath skills marketplace. Try Method 1 first; if it doesn't work, use Method 2.
 
@@ -83,7 +151,7 @@ Before the main setup, make sure you have these installed:
 
     You should see something like `git version 2.45.1.windows.1`.
 
-## Install a Coding Agent
+### 4. Install a Coding Agent
 
 Pick one — or install both:
 
@@ -110,19 +178,9 @@ Verify: `claude --version` or `codex --version`
     npm install -g @anthropic-ai/claude-code
     ```
 
-## Install UiPath Skills
+### 5. Install UiPath Skills into Your Coding Agent
 
-Install the UiPath CLI and the skills that give the agent the knowledge it needs to generate Studio workflows, coded agents, React apps, and Maestro processes.
-
-### 1. Install the UiPath CLI
-
-```bash
-npm install -g @uipath/cli@latest
-```
-
-Verify: `uip --version` — you should see `1.195.1` or later.
-
-### 2. Install UiPath Skills into Your Coding Agent
+Install the skills that give the agent the knowledge it needs to generate Studio workflows, coded agents, React apps, and Maestro processes. They use the UiPath CLI you installed in [Common tools](#2-uipath-cli).
 
 === "Claude"
 
@@ -193,11 +251,5 @@ Each skill gives the agent deep knowledge of one part of the UiPath platform:
 | :--- | :--- |
 | **uipath-rpa** | Studio XAML structure, activity libraries, selectors, error handling, Orchestrator Assets, packaging |
 | **uipath-agents** | Python agent project layout, LangGraph patterns, tool definitions, UiPath AI Trust Layer |
-
-### 3. Authenticate with Your Tenant
-
-```bash
-uip login --authority https://cloud.uipath.com --organization tpenlabs -t AgenticWorkshop
-```
 
 Skills are auto-discovered on session start. Ask the agent to build a coded agent and it will load the right skill automatically.

@@ -17,6 +17,18 @@ is the fastest and most convenient way to automate API enabled applications. It 
 authorization and authentication, helping you centralize management of API connections and also
 allowing faster integration into SaaS platforms.
 
+In a nutshell, Integration Service does the following:
+
+- Enables automation with an out-of-the-box library of connectors.
+- Helps setting up and managing connections easily with standardized authentication.
+- Enables kicking off automations with server-side triggers or events.
+- Provides curated activities and events (with additional data filters) for ease of use.
+- Simplifies automation design by providing a uniform experience across all Studio designers.
+
+A [connection](https://docs.uipath.com/integration-service/automation-cloud/latest/user-guide/connections)
+is an authenticated link to one application account, for example one Gmail mailbox. Your automations
+use the connection to call that application, so nobody has to type credentials into a workflow.
+
 Let's see what we have prepared:
 
 ![Orchestrator with the Benefit Claims folder selected, showing the available connections](9-configure-api-integration-benefit-rejection.images/1-integration-service-connections-W.png){ .screenshot width="900" }

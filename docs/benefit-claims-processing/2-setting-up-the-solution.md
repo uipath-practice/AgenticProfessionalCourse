@@ -3,13 +3,12 @@
 !!! tip "Here is our plan for this lesson:"
 
     1. Create a Maestro Agentic Process Solution in **Studio Web**, starting from a template
-    2. Add the necessary solution resources — connections, context grounding indexes, and storage buckets
+    2. Connect the storage bucket that holds the applicants' files
 
 ## Goal
 
-Create the **Benefit Claims Processing** solution from a prepared template, then link the resources
-the agentic process needs later: two **Integration Service** connections, three **Context Grounding**
-indexes, and two **Orchestrator** storage buckets.
+Create the **Benefit Claims Processing** solution from a prepared template, then connect the
+**Orchestrator** storage bucket the agentic process needs later.
 
 [[[
 ![UiPath Automation Cloud home page with the tenant selector set to AgenticWorkshop](2-setting-up-the-solution.images/1-select-tenant.png){ .screenshot }
@@ -42,8 +41,9 @@ Our Benefit Claims solution contains a few components:
 
 - The Agentic Process (Benefit Claims Processing)
 - **Process Benefits Application** — an RPA Workflow that uses [UiPath IXP — Unstructured Documents](https://docs.uipath.com/ixp/automation-cloud/latest/user-guide/introduction) to extract data from the Benefits Claim application.
-- **Addition Tool**, **Multiplication Tool**, **Subtraction Tool** — a few RPA workflows which will be used as tools by AI Agents
+- **Addition Tool**, **Multiplication Tool**, **Subtraction Tool** — a few API workflows which will be used as tools by AI Agents
 - **DownloadFileFromStorageBucket** and **UploadFileToStorageBucket** — two RPA workflows which will help with handling files from Orchestrator Storage Buckets.
+- **Start Benefit Claim** — an RPA workflow that starts the Benefit Claims Processing agentic process. It will be used as a tool by a conversational agent.
 - A UiPath App, used to present claim details and decisions to Case Workers (Action App).
 
 ??? note "Learn more about the Unstructured and Complex Documents feature of IXP"
@@ -88,77 +88,15 @@ Benefit Claims Processing - <Your Name>
 
 ## Adding resources to our solution
 
-Next, let's link a few resources that our agentic process is going to use.
+Next, let's link the storage bucket that our agentic process is going to use.
 
-### 3. Configure the Integration Service connections
-
-Let's start with the [Integration Service Connections](https://docs.uipath.com/integration-service/automation-cloud/latest/user-guide/connections).
-
-In a nutshell, Integration Service does the following:
-
-- Enables automation with an out-of-the-box library of connectors.
-- Helps setting up and managing connections easily with standardized authentication.
-- Enables kicking off automations with server-side triggers or events.
-- Provides curated activities and events (with additional data filters) for ease of use.
-- Simplifies automation design by providing a uniform experience across all Studio designers.
-
-[[[
-We are going to use a few connections throughout our process, so let us go ahead and configure them.
-
-In the bottom-left panel of the solution, expand the **Connections** dropdown.
-|30|
-![Solution resources panel with the Connections section expanded, showing a Gmail account and a GenAI Connection](2-setting-up-the-solution.images/5-connections-panel.jpg){ .screenshot }
-]]]
-
-[[[
-Configure the **Gmail** connection as in the picture from the right.
-|50|
-![Gmail connection form with the Name field set to uipathlabs@gmail.com and the connection dropdown open](2-setting-up-the-solution.images/6-gmail-connection.jpg){ .screenshot }
-]]]
-
-[[[
-Configure the **GenAI** connection as in the picture from the right.
-|50|
-![Connection form with the Name field set to GenAI Connection and the UiPath GenAI Activities connection selector open](2-setting-up-the-solution.images/7-genai-connection.jpg){ .screenshot }
-]]]
-
-### 4. Add the Context Grounding indexes
-
-In order for our agents to generate meaningful answers and decisions, we need to ground their
-knowledge to relevant Benefit Claims regulations and guidelines. To do that, we are going to use
-[Context Grounding](https://docs.uipath.com/automation-cloud/automation-cloud/latest/admin-guide/about-context-grounding).
-
-Context Grounding allows you to bring in your data to generate more accurate, reliable GenAI
-predictions. You can create representative indexes and embeddings of business data that UiPath GenAI
-features can reference for contextual evidence at runtime.
-
-Let's add a few
-[Context Grounding Indexes](https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-indexes)
-to our solution, which we are going to use later for our agents.
-
-Configure the **Eligibility** context as in the picture below:
-
-![Studio Web with the Eligibility index selected in the Explorer and the context grounding index picker open, showing Eligibility under Benefit Claims in Platform resources](2-setting-up-the-solution.images/8-eligibility-context-W.png){ .screenshot width="900" }
-
-Configure the **Income Verification** context as in the picture below:
-
-![Studio Web with the Income Verification index selected in the Explorer and the context grounding index picker open, showing Income Verification under Benefit Claims in Platform resources](2-setting-up-the-solution.images/9-income-verification-context-W.png){ .screenshot width="900" }
-
-Configure the **Residency Verification** context as in the picture below:
-
-![Studio Web with the Residency Verification index selected in the Explorer and the context grounding index picker open, showing Residency Verification under Benefit Claims in Platform resources](2-setting-up-the-solution.images/10-residency-verification-context-W.png){ .screenshot width="900" }
-
-### 5. Connect the Storage Buckets
+### 3. Connect the Storage Bucket
 
 In our scenario, the process relies on files submitted by the applicants for benefit claims. We will
 store these files inside
 [Orchestrator Storage Buckets](https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-storage-buckets).
 
-Let's connect the Storage Buckets to our solution.
-
-Configure the **Eligibility** storage bucket as in the picture below:
-
-![Debug configuration panel mapping the Bucket name field to the Eligibility storage bucket](2-setting-up-the-solution.images/11-eligibility-storage-bucket-W.jpg){ .screenshot width="900" }
+Let's connect the **Input Documents** Storage Bucket to our solution.
 
 Configure the **Input Documents** storage bucket as in the picture below:
 

@@ -79,10 +79,12 @@ nav:
     - 3. Add an RPA automation to your Maestro workflow: benefit-claims-processing/3-configure-a-robot.md
     - 4. Build the Residency Verification Agent: benefit-claims-processing/4-residency-verification-agent.md
     - 5. Build the Income Verification Agent: benefit-claims-processing/5-income-verification-agent.md
-    - 6. Build the Eligibility Determination Agent: benefit-claims-processing/6-eligibility-determination-agent.md
+    - 6. Build the Eligibility Determination Agent: benefit-claims-processing/6-eligibility-determination-agent-coded.md
     - 7. Add an Action App for human validation: benefit-claims-processing/7-configure-human-validation.md
     - 8. Update external systems using API — Benefit Approval Case: benefit-claims-processing/8-configure-api-integration-benefit-approval.md
     - 9. Update external systems using API — Benefit Rejection Case: benefit-claims-processing/9-configure-api-integration-benefit-rejection.md
+    - 10. Benefit Claims Assistant - Conversational Agent: benefit-claims-processing/10-benefit-claims-assistant-conversational-agent.md
+    - 11. Publish the Solution: benefit-claims-processing/11-publish-the-solution.md
   - Next Steps: next-steps.md
 
 extra_css:

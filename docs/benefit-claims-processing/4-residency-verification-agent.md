@@ -98,6 +98,12 @@ accurate, reliable GenAI predictions. Context Grounding is designed to make your
 LLM-ready without the need for any additional subscription to embedding models, vector databases, or
 large language models (LLMs).
 
+You can create representative
+[indexes](https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-indexes) and
+embeddings of business data that UiPath GenAI features can reference for contextual evidence at
+runtime. An index is a searchable copy of your documents: when the agent asks a question, it gets
+back the passages that match best.
+
 [[[
 In this case, we are going to use context grounding to provide the agent with residency records to
 match with the applicant's declared residency address.

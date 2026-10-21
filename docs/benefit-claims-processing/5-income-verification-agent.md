@@ -119,13 +119,13 @@ Give your coding agent a plain-English description of what to build:
 ```text
 Build a low-code UiPath agent named "Income Verification Agent" that verifies an applicant's income for benefits eligibility.
 
-It takes a paystub PDF as input. First, runs it through Analyze Files to extract the applicant's name, monthly income, and SSN (SSN is listed under "Employee ID"). Then call the existing "Retrieve Income Information" RPA process (already existent in the studio web solution) to get their income on record — just connect it as a tool, don't rebuild it.
+It takes a paystub PDF as input. First, runs it through Analyze Files to extract the applicant's name, monthly income, and SSN (SSN is listed under "Employee ID"). If the paystub doesn't state a monthly income directly, deduce it from what it does show: gross pay for the pay period times the number of pay periods per year, divided by 12 (weekly = 52, bi-weekly = 26, semi-monthly = 24, monthly = 12), an annual salary divided by 12, or an hourly rate times the hours worked, scaled to a month. Use the pay frequency or the pay period dates on the paystub to tell which applies, and round the result to 2 decimals. Then call the existing "Retrieve Income Information" RPA process (already existent in the studio web solution) to get their income on record — just connect it as a tool, don't rebuild it.
 
-Compare the two incomes: exact match = "valid", mismatch = "invalid", and if anything's missing or zero, treat it as "invalid" instead of erroring.
+Compare the two incomes: exact match = "valid", mismatch = "invalid". If the monthly income can't be determined from the paystub, or anything else is missing or zero, treat it as "invalid" instead of erroring. When the monthly income was deduced, explain in the rationale how it was calculated.
 
 Output should be: { "out_decision": "valid | invalid", "out_rationale": "..." }
 
-Don't expose the full SSN anywhere in the output, and don't guess at data that isn't actually in the paystub or the lookup result.
+Don't expose the full SSN anywhere in the output, and don't guess at data that isn't actually in the paystub or the lookup result. Calculating the monthly income from figures on the paystub is fine; making up figures isn't.
 
 At the end, upload the agent into the existing solution in UiPath Studio Web at the following URL: {URL of the project from Studio Web}
 ```
