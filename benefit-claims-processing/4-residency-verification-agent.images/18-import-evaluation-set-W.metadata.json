@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "18-import-evaluation-set-W.png",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/17.png",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Explorer                                      +   🔍\n\nBenefit Claims Processing Template\n  Action App\n  Addition Tool\n  Benefit Claims Processing\n    Benefit Claims Processing.bpmn\n  DownloadFileFromStorageBucket\n  Multiplication Tool\n  Process Benefits Application\n  Residency Verification Agent\n    Definition\n    Evaluation Sets\n    Evaluators\n\nDefinition        Evaluation Sets\n\nEvaluation Sets\n\nEvaluation sets\nCreate and manage your evaluation sets.\n\nCreate ▾\n  Create new evaluation set\n  Generate new evaluation set\n  Import\n\nSample Eval Set\n10 evaluations • Last ran: 18 minutes ago with 10 evaluations\n\nOptimize        Run        ⋮\n\nResidency Validation Evaluator     Deterministic\n100.00%  ↑ 10.00%",
+    "description": "The screenshot shows the UiPath Studio Web/Agents workspace on the Residency Verification Agent's Evaluation Sets page. The left Explorer panel is open with Evaluation Sets selected under the agent, and the main panel displays an existing “Sample Eval Set” with a 100.00% score for the Residency Validation Evaluator. The Create button dropdown is open, showing options to create, generate, or import an evaluation set, with Import visually highlighted.",
+    "step_instructions": "Click on the dropdown arrow next to the Create button if it is not already open.\nClick on Import from the dropdown menu to import an evaluation set."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 708,
+    "aspect_ratio": 4.28,
+    "image_size": "2048x479",
+    "rationale": "High density (708 chars) + wide (4.28) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2924,
+    "completion_tokens": 567,
+    "total_tokens": 3491
+  },
+  "generated_at": "2026-08-18T11:43:35.528911+00:00"
+}

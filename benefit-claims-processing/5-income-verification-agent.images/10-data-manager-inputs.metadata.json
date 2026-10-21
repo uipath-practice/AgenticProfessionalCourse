@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "10-data-manager-inputs.png",
+  "image_path": "docs/benefit-claims-processing/5-income-verification-agent.images/10.png",
+  "lesson": "5-income-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "1\n\nData manager\n\nInputs\n\nPaystub*  \n\nType*\nFile\n\nDescription\n\nRequired",
+    "description": "The screenshot shows the UiPath Studio Web/Agent Builder Data manager panel. Under Inputs, the Paystub* input is expanded and configured with Type set to File, an empty Description field, and the Required checkbox selected.",
+    "step_instructions": "Click on the Paystub* input under Inputs if it is not already expanded. Select File from the Type dropdown. Ensure the Required checkbox is checked."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 70,
+    "aspect_ratio": 1.41,
+    "image_size": "488x346",
+    "rationale": "Low text density (70 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 1981,
+    "completion_tokens": 282,
+    "total_tokens": 2263
+  },
+  "generated_at": "2026-08-18T11:44:19.661254+00:00"
+}

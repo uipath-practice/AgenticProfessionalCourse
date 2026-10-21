@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "13-execution-continues.png",
+  "image_path": "docs/benefit-claims-processing/7-configure-human-validation.images/13.png",
+  "lesson": "7-configure-human-validation",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "GenAI activities to create a\nbenefits application\nrejection email\n\nNo\n\nGenerate\nRejection Email\n\nSend Rejection\nEmail\n\nCase Worker\nReview\n\nApplicant\nEligible?\n\nYes\n\nGenerate\nApproval Email\n\nSend Approval\nEmail\n\nUpdate Records\n\nProcess end\n\nCase worker\nproductivity\nsuite (Action\nCenter +\nApps)\n\n+    −",
+    "description": "The screenshot shows a UiPath Studio Web-style BPMN/process designer canvas for a Benefit Claims Processing workflow. The “Case Worker Review” human validation activity is selected and highlighted in blue, followed by an eligibility decision gateway. The No path routes through GenAI rejection email generation and sending before ending the process, while the Yes path generates and sends an approval email, updates records, and then ends.",
+    "step_instructions": "Click on the highlighted “Case Worker Review” activity to configure or review the human validation step. Then verify that the decision gateway routes “No” to “Generate Rejection Email” and “Send Rejection Email,” and routes “Yes” to “Generate Approval Email,” “Send Approval Email,” and “Update Records.”"
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 301,
+    "aspect_ratio": 1.59,
+    "image_size": "696x437",
+    "rationale": "Medium text density (301 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2077,
+    "completion_tokens": 703,
+    "total_tokens": 2780
+  },
+  "generated_at": "2026-08-18T11:46:48.802838+00:00"
+}

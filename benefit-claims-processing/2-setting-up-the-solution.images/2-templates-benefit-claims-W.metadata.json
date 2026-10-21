@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "2-templates-benefit-claims-W.jpg",
+  "image_path": "docs/benefit-claims-processing/2-setting-up-the-solution.images/02.jpg",
+  "lesson": "2-setting-up-the-solution",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "UiPath Studio\n\nCloud Workspace    Local Workspace  Preview    Templates\n\nBenefit Claim\n\nProject type: All ˅\n\nSolution        ⋮\nBenefit Claims Processing Template\n\nTemplate used for the Benefit Claims\nProcess exercise\n\nCreated by TPEN Labs\n\n•••",
+    "description": "The screenshot shows the UiPath Studio start page with the Templates tab selected. A search has been performed for “Benefit Claim,” and the results show a Solution template card named “Benefit Claims Processing Template,” created by TPEN Labs. The visible template is intended for the Benefit Claims Process exercise.",
+    "step_instructions": "Click on the Templates tab. In the search field, enter Benefit Claim. Click on the Benefit Claims Processing Template card to select or create a project from this template."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 243,
+    "aspect_ratio": 2.22,
+    "image_size": "1357x611",
+    "rationale": "Low text density (243 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2750,
+    "completion_tokens": 440,
+    "total_tokens": 3190
+  },
+  "generated_at": "2026-08-18T11:40:11.680255+00:00"
+}

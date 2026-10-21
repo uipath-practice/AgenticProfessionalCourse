@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "15-evaluators-create-new-W.png",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/14.png",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": ">  Action App\n>  Addition Tool\n>  Benefit Claims Processing\n>  DownloadFileFromStorageBucket\n>  Multiplication Tool\n>  Process Benefits Application\n⌄  Residency Verification Agent\n   Definition\n   Evaluation Sets\n   Evaluators\n>  Retrieve Income Information\n\nƒx\nEvaluators  ✎\nCreate and manage your evaluators.\n\nCreate New\n\nDefault Trajectory Evaluator    ⋮\nAn evaluator that judges the agent based on it's run history and expected\nbehavior\n\nCategory: Trajectory    Type: Trajectory\n\nTarget: *\n\nDefault Evaluator    ⋮\nAn evaluator that uses a LLM to score the similarity of the actual output to the\nexpected output\n\nCategory: LLM as a Judge    Type: Custom\n\nTarget: *",
+    "description": "The screenshot shows the UiPath Agents evaluator management page for the expanded \"Residency Verification Agent\" project. The \"Evaluators\" item is selected in the left navigation, and the main panel lists two existing evaluator cards: \"Default Trajectory Evaluator\" and \"Default Evaluator.\" A \"Create New\" button is highlighted in the top-right corner for adding another evaluator.",
+    "step_instructions": "Click on the \"Create New\" button in the top-right corner to create a new evaluator."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 667,
+    "aspect_ratio": 5.17,
+    "image_size": "2048x396",
+    "rationale": "High density (667 chars) + wide (5.17) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2770,
+    "completion_tokens": 541,
+    "total_tokens": 3311
+  },
+  "generated_at": "2026-08-18T11:43:26.619666+00:00"
+}

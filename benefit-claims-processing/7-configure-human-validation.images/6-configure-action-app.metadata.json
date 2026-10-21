@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "6-configure-action-app.png",
+  "image_path": "docs/benefit-claims-processing/7-configure-human-validation.images/06.png",
+  "lesson": "7-configure-human-validation",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Connect\n\nCase Worker\nReview\n\nCase worker\nproductivity\nsuite (Action\nCenter +\nApps)\n\nAction\nCreate action app task\n\nAction *\nAction App ×\n\nTask title *\nBenefits Application Review (Your Name)     @\n\nAdditional properties\n\nAssignment\nAssignment Criteria\nUser\n\nAssignee\nMihai Iorga     ×",
+    "description": "The screenshot shows the UiPath Studio Web workflow designer with a human validation/action task activity selected on the canvas. The selected step is labeled “Case Worker Review,” and the right-side configuration panel is open for a “Create action app task” action. The task title and assignment settings are highlighted, with the assignee set to Mihai Iorga.",
+    "step_instructions": "Click on the “Case Worker Review” activity on the canvas. In the “Task title” field, enter “Benefits Application Review (Your Name)”. Expand the “Assignment” section if it is not already open. Select “User” from the “Assignment Criteria” dropdown. In the “Assignee” field, enter or select “Mihai Iorga”."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 284,
+    "aspect_ratio": 1.62,
+    "image_size": "871x536",
+    "rationale": "Low text density (284 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2279,
+    "completion_tokens": 629,
+    "total_tokens": 2908
+  },
+  "generated_at": "2026-08-18T11:46:23.821568+00:00"
+}

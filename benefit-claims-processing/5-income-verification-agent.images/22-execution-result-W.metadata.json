@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "22-execution-result-W.png",
+  "image_path": "docs/benefit-claims-processing/5-income-verification-agent.images/22.png",
+  "lesson": "5-income-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "← Back to design mode\n\nApplication\nReceived\n\nProcess\nBenefits\nApplication\n\nIntelligent\ndocument\nextraction of\napplication\nfields\n\nGet missing\ninfo from\napplicant\n\nAll required\nfields\nextracted?\n\nYes\n\nFraud research agents\n\nResidency\nVerification\nAgent\n\nDownloadFileFr\nomStorageBuck\net\n\nIncome\nVerification\nAgent\n\nEligibility\nDetermination\n\nAgentic AI\nassisted\neligibility\nresearch &\ndetermination\n\nCase Worker\nReview\n\nCase worker\nproductivity\nsuite (Action\nCenter +\nApps)\n\nApp[...]\nElig[...]\n\nNo\n\nGenAI activities to create a\nbenefits application\nrejection email\n\nGenerate\nRejection Email\n\nSend Rejectio...\nEmail\n\n+\n−\n\nExecution trail\n\nStatus & step                         Ended at                  Dura...\nInstance: 8072afc2-0736-460...        2026-03-31 15:41:37       1 min, 1\nApplication Received (Start...        2026-03-31 15:40:26       < 1 sec\nProcess Benefits Applicatio...        2026-03-31 15:40:56       29 sec\nRobot Job 515705f9-4967-4...          2026-03-31 15:40:55       23 sec\n\nDetails     Variables\n\nName                  Directi...     Value\n{} JobArguments       In            {\"Paystub\":{\"MimeType\":\"image/png\",\"Ic...  ⛶\nTt decision           Out           valid\nTt rationale          Out           Paystub shows monthly income of $900.00 for",
+    "description": "The screenshot shows a UiPath process/agent execution view in debug mode for a Benefit Claims Processing workflow. The canvas displays a flow with fraud research agents, and the Income Verification Agent activity is selected with a blue outline. At the bottom, the Execution trail and Variables panel are open, showing output variables highlighted for the selected step: decision is set to valid and rationale explains the paystub income.",
+    "step_instructions": "Informational screenshot — no user action required. Review the highlighted Variables output for the selected Income Verification Agent, confirming that decision is valid and the rationale states that the paystub shows monthly income of $900.00."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 1264,
+    "aspect_ratio": 1.55,
+    "image_size": "1488x960",
+    "rationale": "High density (1264 chars) + wide (1.55) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2864,
+    "completion_tokens": 1053,
+    "total_tokens": 3917
+  },
+  "generated_at": "2026-08-18T11:44:50.693056+00:00"
+}

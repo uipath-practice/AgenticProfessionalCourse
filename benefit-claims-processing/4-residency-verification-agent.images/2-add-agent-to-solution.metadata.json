@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "2-add-agent-to-solution.jpg",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/02.jpg",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Debug ▾    Debug step-by-step    Publish\n\nExplorer\n\nBenefit Claims Processing Te[...]\n  Action App\n  Addition Tool\n  Benefit Claims Processing\n  DownloadFileFromStorag[...]\n  Multiplication Tool\n  Process Benefits Applicati[...]\n  Retrieve Income Informat[...]\n  Subtraction Tool\n\nBenefit ... .bpmn\n\nAdd project to solution\n  Agentic process\n  Agent\n  RPA Workflow\n  API Workflow\n  App\n  Escalation app\n\n  Import existing",
+    "description": "The screenshot shows UiPath Studio Web with the Explorer panel open for a Benefit Claims Processing solution. The plus button in the Explorer header has been clicked, opening the “Add project to solution” menu, and the “Agent” option is visually highlighted for selection.",
+    "step_instructions": "Click on the highlighted Agent option in the Add project to solution menu to add a new Agent project to the solution."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 421,
+    "aspect_ratio": 1.63,
+    "image_size": "746x457",
+    "rationale": "Medium text density (421 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2204,
+    "completion_tokens": 649,
+    "total_tokens": 2853
+  },
+  "generated_at": "2026-08-18T11:42:54.440835+00:00"
+}

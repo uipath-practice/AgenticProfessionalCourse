@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "7-select-body-variable.png",
+  "image_path": "docs/benefit-claims-processing/8-configure-api-integration-benefit-approval.images/07.png",
+  "lesson": "8-configure-api-integration-benefit-approval",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Use variable                                      Search variable\n\n        [...] value (Number)\n\n    Tt   element (string)\n\nTt   DenialReason (string)\n\n⌄  Generate Approval Email\n\n    Tt   emailContent (string)\n\n    ⌄   response (object)\n\n        ⛓   Include salutation (boolean)\n\n        ⛓   Include sign off (boolean)\n\n        123  Total words (integer)\n\n        Tt   Email output (string)",
+    "description": "The screenshot shows a UiPath Studio Web variable picker panel titled “Use variable.” The “Generate Approval Email” section is expanded, and the `emailContent (string)` variable is visually emphasized with a red outline. Additional response fields are visible below, including boolean, integer, and string outputs.",
+    "step_instructions": "Click on `emailContent (string)` under `Generate Approval Email` to insert or select that variable."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 391,
+    "aspect_ratio": 1.44,
+    "image_size": "635x442",
+    "rationale": "Medium text density (391 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2058,
+    "completion_tokens": 557,
+    "total_tokens": 2615
+  },
+  "generated_at": "2026-08-18T11:47:17.658595+00:00"
+}

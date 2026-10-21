@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "5-data-manager-inputs.jpg",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/05.jpg",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "1\n\nData manager\n\n▾  Inputs\n\n▾  Tt  declared_applicant_address*  ✎        🗑\n\nType*\nString                                      ˅\n\nDescription\nApplicant's full declared address          ↕\n\n☑  Required\n\n▾  Tt  SSN\n\nType*\nString                                      ˅\n\nDescription\nApplicant's social security number         ↕\n\n☐  Required",
+    "description": "The screenshot shows the UiPath Studio Web Agent Builder Data manager panel. The Inputs section is expanded and displays two input arguments: declared_applicant_address, configured as a required String with a description, and SSN, configured as a String with a description but not marked as required. The Data manager icon in the left sidebar and the Inputs header are highlighted.",
+    "step_instructions": "Click on the Data manager icon in the left sidebar. Click on Inputs to expand the input arguments section. Configure declared_applicant_address as Type String, enter \"Applicant's full declared address\" in the Description field, and check Required. Configure SSN as Type String and enter \"Applicant's social security number\" in the Description field."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 334,
+    "aspect_ratio": 0.89,
+    "image_size": "528x593",
+    "rationale": "Medium text density (334 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2159,
+    "completion_tokens": 397,
+    "total_tokens": 2556
+  },
+  "generated_at": "2026-08-18T11:43:02.218168+00:00"
+}

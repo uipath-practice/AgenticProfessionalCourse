@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "6-select-action-type.jpg",
+  "image_path": "docs/benefit-claims-processing/3-configure-a-robot.images/06.jpg",
+  "lesson": "3-configure-a-robot",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Implementation\n\nAction\nStart and wait for RPA workflow\n\nAutomation *\nSelect an RPA automation\n\nSearch processes        + Resource\n\nDefined resources\n  Addition Tool\n  DownloadFileFromStorageBucket\n  Multiplication Tool\n  Process Benefits Application\n  Retrieve Income Information\n  Subtraction Tool\n  UploadFileToStorageBucket\n\n- Platform resources\n  Autopilot\n    Autopilot\n    Autopilot FAQ\n\nOpen Orchestrator",
+    "description": "The screenshot shows a UiPath automation configuration panel, likely in Agent Builder or a related workflow/action designer. The Implementation section is open with the Action set to “Start and wait for RPA workflow.” The Automation dropdown/resource picker is open, showing defined RPA process resources, with “Process Benefits Application” highlighted as the intended selection.",
+    "step_instructions": "Click on “Process Benefits Application” under Defined resources to select it for the Automation field."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 411,
+    "aspect_ratio": 0.81,
+    "image_size": "631x782",
+    "rationale": "Medium text density (411 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2342,
+    "completion_tokens": 683,
+    "total_tokens": 3025
+  },
+  "generated_at": "2026-08-18T11:42:34.519792+00:00"
+}

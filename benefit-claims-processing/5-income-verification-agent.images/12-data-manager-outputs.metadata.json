@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "12-data-manager-outputs.png",
+  "image_path": "docs/benefit-claims-processing/5-income-verification-agent.images/12.png",
+  "lesson": "5-income-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Data manager\n\nInputs\n  Paystub\n\nOutputs\n  Tt  decision*\n      Type*\n      String\n      Description\n      Decision on whether the\n      income validation is valid or\n      invalid\n      ☑ Required\n\n  Tt  rationale*\n      Type*\n      String\n      Description\n      Brief explanation for the\n      decision\n      ☑ Required\n\n1",
+    "description": "The screenshot shows the UiPath Studio Web/Agent Builder Data manager panel. The Outputs section is expanded and highlighted, showing two configured required string output arguments: decision and rationale. Each output has a description explaining its purpose for the income verification result.",
+    "step_instructions": "Click on the Outputs section in the Data manager. Configure the decision output with Type set to String, enter the description \"Decision on whether the income validation is valid or invalid\", and keep Required checked. Configure the rationale output with Type set to String, enter the description \"Brief explanation for the decision\", and keep Required checked."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 323,
+    "aspect_ratio": 0.64,
+    "image_size": "479x750",
+    "rationale": "Medium text density (323 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2202,
+    "completion_tokens": 376,
+    "total_tokens": 2578
+  },
+  "generated_at": "2026-08-18T11:44:24.598606+00:00"
+}

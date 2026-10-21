@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "6-configure-email-properties.png",
+  "image_path": "docs/benefit-claims-processing/9-configure-api-integration-benefit-rejection.images/06.png",
+  "lesson": "9-configure-api-integration-benefit-rejection",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Tt emailContent   ×                         @   [slider icon]\n\nAttachment\nThe attachment to be sent w\n\n›  Additional Options\n\n⌄  Output\n\nEmail\n{} response\n\n+ Add new\n\nUse\nTt  Rich text editor HTML\n{x}  Variables\nfₓ  JS expression editor\n{}  C# expression editor\n{;}  JSON editor\n▣  Date and time\n▣  Date\n◇  Data Fabric",
+    "description": "The screenshot shows a UiPath Studio Web activity configuration panel with an input field currently containing the rich text value/token `emailContent`. The expression/input type selector menu is open, displaying available input modes such as Rich text editor HTML, Variables, JS expression editor, C# expression editor, JSON editor, Date and time, and Date. The `Variables` option is highlighted, indicating the user is about to switch the field to use a variable.",
+    "step_instructions": "Click on `Variables` in the open `Use` dropdown menu to select a variable-based input for the field."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 318,
+    "aspect_ratio": 1.53,
+    "image_size": "600x391",
+    "rationale": "Medium text density (318 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2018,
+    "completion_tokens": 525,
+    "total_tokens": 2543
+  },
+  "generated_at": "2026-08-18T11:47:42.437247+00:00"
+}

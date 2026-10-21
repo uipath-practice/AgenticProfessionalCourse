@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "image_file": "8-gateway-configuration.png",
+  "image_path": "docs/benefit-claims-processing/7-configure-human-validation.images/08.png",
+  "lesson": "7-configure-human-validation",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "GenAI activities to create a\nbenefits application\nrejection email\n\nNo\n\nConnect\n\nGenerate\n[...] mail\n\nSend Rejection\nEmail\n\nApplicant\nEligible?\n\nYes\n\nGenerate\nApproval Email\n\nSend Approval\nEmail\n\nDescription\n\nConditions\n\nNo\n\nLabel\nNo\n\nMake default path\nIf no other path conditions are true, the default path will be used\nautomatically.\n\nCondition\n\nYes\n\nLabel\nYes\n\nMake default path\nIf no other path conditions are true, the default path will be used\nautomatically.\n\nCondition\nfx  vars.action == \"Approve\"  ×\n\nUse\nfx  JS expression editor\n{}  C# expression editor",
+    "description": "The screenshot shows a UiPath workflow/BPMN-style designer for a Benefit Claims Processing automation. The selected element is the decision gateway labeled “Applicant Eligible?”, with Yes and No paths leading to approval and rejection email generation/sending steps. On the right, the Conditions properties panel is open, showing the No path set as the default path and the Yes path configured with the condition `vars.action == \"Approve\"`; an expression editor menu is open with “JS expression editor” highlighted.",
+    "step_instructions": [
+      "Click on the “Applicant Eligible?” gateway to configure its outgoing conditions.",
+      "In the No condition section, ensure the Label field is set to “No” and turn on “Make default path”.",
+      "In the Yes condition section, ensure the Label field is set to “Yes”.",
+      "In the Yes Condition field, enter `vars.action == \"Approve\"`.",
+      "Click the expression editor/options icon next to the Condition field, then select “JS expression editor” from the menu."
+    ]
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 561,
+    "aspect_ratio": 1.5,
+    "image_size": "1302x867",
+    "rationale": "Medium text density (561 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2773,
+    "completion_tokens": 802,
+    "total_tokens": 3575
+  },
+  "generated_at": "2026-08-18T11:46:33.113612+00:00"
+}

@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "3-action-app-designer-W.png",
+  "image_path": "docs/benefit-claims-processing/7-configure-human-validation.images/03.png",
+  "lesson": "7-configure-human-validation",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Explorer                                      +    🔍\n\nBenefit C....bpmn     MainPage\n\nBenefit Claims Processing Template\n\n▾  Action App\n   ▾  MainPage                                      ⚡\n      ▾  Container\n         Approve                                   ⚡\n         Deny                                      ⚡\n         Tabs\n   BenefitClaimDetailsPage                         ⚡\n   SupportingDocs\n   DenialPage\n   BenefitClaimDetailsPage_BenefitCla...\n   DenialPage_Close_click.xaml\n   DenialPage_Deny_click.xaml\n   MainPage_Approve_click.xaml\n   MainPage_Deny_click.xaml\n   MainPage_MainPage_load.xaml\n   SupportingDocs_Criteria_click.xaml\n   SupportingDocs_Identification_click...\n\nApps\nAssets\nConnections\nContext\nProcesses\nQueues\nStorage buckets\nTask catalogs\nDependencies\n\nApprove     Deny\n\nBenefit Application     Supporting Docs\n\nBenefit Claim Details\n\nAutomatic Recommendation\n\nEligibility\n=Expression\nReason\n=Expression\nMonthly Benefit Calculation\n=Expression\n\nFraud Risk Analysis\n\nResidency\n=Expression\n=Expression\nIncome\n=Expression\n=Expression",
+    "description": "The screenshot shows UiPath Studio Web/Action App designer for the Benefit Claims Processing Template, with the MainPage action app open. The Explorer panel is expanded to show the Action App hierarchy, including the Approve and Deny button controls and their generated click workflows. The canvas displays a benefit validation page with Approve and Deny buttons at the top and tabs for Benefit Application and Supporting Docs.",
+    "step_instructions": "Click on the Approve button control under Container or on the green Approve button in the canvas to configure its click behavior. Click on the Deny button control under Container or on the red Deny button in the canvas to configure its click behavior. Verify that the corresponding event workflow files MainPage_Approve_click.xaml and MainPage_Deny_click.xaml are present in the Explorer."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 1057,
+    "aspect_ratio": 1.67,
+    "image_size": "1948x1166",
+    "rationale": "High density (1057 chars) + wide (1.67) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2888,
+    "completion_tokens": 937,
+    "total_tokens": 3825
+  },
+  "generated_at": "2026-08-18T11:46:12.218662+00:00"
+}

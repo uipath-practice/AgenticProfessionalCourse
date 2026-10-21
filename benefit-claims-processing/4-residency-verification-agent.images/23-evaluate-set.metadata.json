@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "23-evaluate-set.png",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/21.png",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Generate to set    Add to set    Evaluate set    ⚙\n\n⋮    Simulation instructions",
+    "description": "The screenshot shows the UiPath Agents evaluation interface, likely within an evaluation set configuration area. The top toolbar includes options to generate or add items to a set, and the blue \"Evaluate set\" button is prominently highlighted. Below, a section labeled \"Simulation instructions\" is visible with a side menu icon.",
+    "step_instructions": "Click on the highlighted \"Evaluate set\" button to run the evaluation set."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 80,
+    "aspect_ratio": 3.35,
+    "image_size": "546x163",
+    "rationale": "Low text density (80 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 1901,
+    "completion_tokens": 187,
+    "total_tokens": 2088
+  },
+  "generated_at": "2026-08-18T11:43:40.130238+00:00"
+}

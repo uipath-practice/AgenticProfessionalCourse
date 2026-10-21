@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "6-agent-input-output-schema.png",
+  "image_path": "docs/benefit-claims-processing/5-income-verification-agent.images/06.png",
+  "lesson": "5-income-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Inputs:\n\nPaystub (file downloaded previously\nfrom storage bucket)\n\nIncome Verification\nAgent\n\nOutputs:\ndecision (valid or invalid)\nrationale",
+    "description": "The screenshot shows a conceptual flow diagram for an Income Verification Agent in the Benefit Claims Processing exercise. A Paystub file is provided as the input, the Income Verification Agent processes it, and the outputs are a decision indicating valid or invalid plus a rationale.",
+    "step_instructions": "Informational screenshot — no user action required. It illustrates the agent’s expected input and output structure for the income verification workflow."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 140,
+    "aspect_ratio": 2.57,
+    "image_size": "932x362",
+    "rationale": "Low text density (140 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2202,
+    "completion_tokens": 215,
+    "total_tokens": 2417
+  },
+  "generated_at": "2026-08-18T11:44:07.516537+00:00"
+}

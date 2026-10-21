@@ -1,0 +1,2354 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Participant's handbook for the UiPath Agentic Automation Workshop — build an end-to-end agentic Benefit Claims process.">
+      
+      
+        <meta name="author" content="Mihai Iorga">
+      
+      
+        <link rel="canonical" href="https://uipath-practice.github.io/AgenticCodingAgents/benefit-claims-processing/6-eligibility-determination-agent-coded/">
+      
+      
+        <link rel="prev" href="../5-income-verification-agent/">
+      
+      
+        <link rel="next" href="../7-configure-human-validation/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>6. Build the Eligibility Determination Agent - Agentic Automation Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#build-the-eligibility-determination-agent" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Agentic Automation Workshop" class="md-header__button md-logo" aria-label="Agentic Automation Workshop" data-md-component="logo">
+      
+  <img src="../../assets/images/Partner Success Logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Agentic Automation Workshop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6. Build the Eligibility Determination Agent
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../prerequisites/" class="md-tabs__link">
+          
+  
+  
+  Prerequisites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started-with-coding-agents/1-practice-the-cli/" class="md-tabs__link">
+          
+  
+  
+  Getting Started with Coding Agents
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Benefit Claims Processing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../next-steps/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Next Steps
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Agentic Automation Workshop" class="md-nav__button md-logo" aria-label="Agentic Automation Workshop" data-md-component="logo">
+      
+  <img src="../../assets/images/Partner Success Logo.png" alt="logo">
+
+    </a>
+    Agentic Automation Workshop
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prerequisites
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prerequisites
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prerequisites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prerequisites/installation-guides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation Guides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started with Coding Agents
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started with Coding Agents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started-with-coding-agents/1-practice-the-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Practicing the CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started-with-coding-agents/2-build-your-first-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Build Your First Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started-with-coding-agents/you-did-it/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    You did it!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benefit Claims Processing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Benefit Claims Processing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-create-bpmn-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Automating Business Processes using BPMN canvas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-setting-up-the-solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Setting up the Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-configure-a-robot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Add an RPA automation to your Maestro workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-residency-verification-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Build the Residency Verification Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5-income-verification-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Build the Income Verification Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Build the Eligibility Determination Agent
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Build the Eligibility Determination Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Goal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-steps-for-eligibility-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General steps for Eligibility &amp; Calculation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-build-an-ai-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Let's build an AI Agent!
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#low-code-vs-coded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Low-code vs. coded
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sign-in-to-your-tenant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Sign in to your tenant
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-create-the-project-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Create the project folder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-scaffold-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Scaffold the project
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-start-mainpy-imports-and-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Start main.py: imports and settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-define-the-input-and-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Define the input and output
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-agents-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring Agent's Prompts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring Agent&#39;s Prompts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#6-add-the-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Add the prompts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context-grounding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Context Grounding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tools
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7-add-the-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Add the tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-build-the-agent-and-the-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Build the agent and the graph
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-generate-entry-points-and-add-the-binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Generate entry points and add the binding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-test-the-agent-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Test the agent locally
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-the-agent-to-your-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding the agent to your solution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding the agent to your solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-create-a-coded-agent-project-and-copy-its-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Create a coded agent project and copy its ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-link-the-project-and-push" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Link the project and push
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-debug-it-in-studio-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Debug it in Studio Web
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-agentic-task-in-maestro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring the Agentic Task in Maestro
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring the Agentic Task in Maestro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#14-point-the-task-at-your-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Point the task at your agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-map-the-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Map the inputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-run-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Run it
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7-configure-human-validation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Add an Action App for human validation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8-configure-api-integration-benefit-approval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Update external systems using API — Benefit Approval Case
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../9-configure-api-integration-benefit-rejection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Update external systems using API — Benefit Rejection Case
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-benefit-claims-assistant-conversational-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Benefit Claims Assistant - Conversational Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-publish-the-solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Publish the Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../next-steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Next Steps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="build-the-eligibility-determination-agent">Build the Eligibility Determination Agent<a class="headerlink" href="#build-the-eligibility-determination-agent" title="Permanent link">&para;</a></h1>
+<div class="admonition tip">
+<p class="admonition-title">Here is our plan for this lesson:</p>
+<ol>
+<li>Build a <strong>Benefit Eligibility Determination</strong> AI Agent from scratch as a <strong>coded agent</strong> in Python<ul>
+<li>Agent will use the declared applicant's household size and monthly gross income</li>
+<li>Using benefit claims guidelines and rules, as part of context grounding, it will decide
+  whether the applicant qualifies, what amount they will receive, and a justification</li>
+</ul>
+</li>
+<li>Test the Agent locally, then push it into your solution and debug it in <strong>Studio Web</strong></li>
+<li>Configure the Agent in the Maestro workflow</li>
+<li>Use the output of the Agent when presenting the Benefits Claim case to a human for review</li>
+</ol>
+</div>
+<h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<p>Implement an agent which decides if the applicant is eligible for benefits and calculates the amount,
+according to the guidelines. LLMs are ideal for this job, because the guidelines can be in an
+unstructured format. LLMs can be instructed to treat such scenarios accordingly.</p>
+<h2 id="general-steps-for-eligibility-calculation">General steps for Eligibility &amp; Calculation<a class="headerlink" href="#general-steps-for-eligibility-calculation" title="Permanent link">&para;</a></h2>
+<p>This is a two-phase approach to determine benefits: first verifying household eligibility through
+income thresholds, then calculating the actual benefit amount based on net income and household size.</p>
+<ol>
+<li><strong>Income Eligibility Check</strong>: Compare the household's gross monthly income against threshold tables based on household size. For example, a single person must have gross income at or below $1,950/month ($23,400/year), while a family of four has a threshold of $4,050/month ($48,600/year). Each additional person adds $700/month to the threshold.</li>
+<li><strong>Net Income Calculation</strong>: Apply standard deductions to gross income: $198 for households of 1-3 people, $199 for 4 people, $234 for 5 people, and $268 for 6+ people (2025 rates). This yields the household's net monthly income.</li>
+<li><strong>Benefit Determination</strong>: Use the formula below. Maximum benefits range from $300/month for a single person to $1,785/month for 8-person households, with $225 added per additional person beyond 8.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>SNAP Benefit = Maximum Benefit for Household Size - (Net Income × 0.15)
+</code></pre></div>
+<h2 id="lets-build-an-ai-agent">Let's build an AI Agent!<a class="headerlink" href="#lets-build-an-ai-agent" title="Permanent link">&para;</a></h2>
+<p>Let's use Python to create our <strong>Eligibility Determination Agent</strong>!</p>
+<div class="img-cols img-cols-30">
+<div>
+<p>Here is the structure of the agent's inputs and outputs.
+  </p>
+</div>
+<div>
+<p><img alt="Diagram of the Eligibility Determination Agent's expected inputs and outputs" class="screenshot" src="../6-eligibility-determination-agent-coded.images/1-agent-input-output-schema.png" />
+  </p>
+</div>
+</div>
+<h2 id="low-code-vs-coded">Low-code vs. coded<a class="headerlink" href="#low-code-vs-coded" title="Permanent link">&para;</a></h2>
+<p>In lessons 4 and 5 you built agents in <strong>Agent Builder</strong>, by filling in forms. A coded agent has the
+same building blocks, written in Python instead:</p>
+<table>
+<thead>
+<tr>
+<th>Agent Builder (low-code)</th>
+<th>Coded agent (Python)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input and output arguments</td>
+<td>Pydantic <code>Input</code> and <code>Output</code> classes</td>
+</tr>
+<tr>
+<td>Model <strong>GPT-5.4</strong>, temperature 0</td>
+<td><code>UiPathChat(model="gpt-5.4", temperature=0)</code>, routed through the LLM Gateway, no API key</td>
+</tr>
+<tr>
+<td>System prompt and user prompt</td>
+<td><code>SYSTEM_PROMPT</code> and <code>USER_PROMPT_TEMPLATE</code> strings</td>
+</tr>
+<tr>
+<td><strong>Context Grounding</strong> index <strong>Eligibility</strong></td>
+<td>A tool that searches the index with <code>ContextGroundingRetriever</code></td>
+</tr>
+<tr>
+<td>Addition, Subtraction and Multiplication tools</td>
+<td>Three small Python <code>@tool</code> functions</td>
+</tr>
+<tr>
+<td>The agent loop (think → call tool → answer)</td>
+<td><code>create_agent(...)</code>, wrapped in a LangGraph <code>StateGraph</code></td>
+</tr>
+<tr>
+<td><em>Debug</em> in Studio Web</td>
+<td><code>uip codedagent run</code> locally, then <em>Debug</em> in Studio Web</td>
+</tr>
+</tbody>
+</table>
+<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
+<details class="note">
+<summary>Install the prerequisites (skip this if your machine is already set up)</summary>
+<p>You need three tools: <strong>Node.js</strong> (for the <code>uip</code> CLI), the <strong><code>uip</code> CLI</strong> itself and <strong>uv</strong>, a fast
+Python package manager. You don't need to install Python separately: uv downloads the right
+version in step 2.</p>
+<p><strong>Where to run these commands:</strong> in a terminal window.</p>
+<ul>
+<li><strong>Windows</strong>: open <strong>PowerShell</strong>: press the <strong>Windows</strong> key, type <code>PowerShell</code> and press <strong>Enter</strong>.</li>
+<li><strong>Mac</strong>: open <strong>Terminal</strong>: press <strong>Cmd + Space</strong>, type <code>Terminal</code> and press <strong>Enter</strong>.</li>
+</ul>
+<p>You can run the install commands from any folder. They install the tools for your whole machine,
+not for one project. After installing a tool, close the terminal and open a new one, so it can find
+the tool.</p>
+<p>For Node.js and uv, <strong>check first</strong>: if the tool is already installed, update it when needed and
+move on. Install it only if the check fails with <em>"not recognized"</em> (Windows) or <em>"command not found"</em> (Mac).</p>
+<p><strong>1. Node.js</strong></p>
+<p>Check:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>node<span class="w"> </span>--version
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>npm<span class="w"> </span>--version
+</code></pre></div>
+<ul>
+<li>
+<p><strong>Both print a version</strong>: Node.js is installed, don't reinstall it. Just make sure <code>npm</code> is
+  <strong>11.x.x</strong>. If it isn't, upgrade it:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>npm@11
+</code></pre></div>
+</li>
+<li>
+<p><strong><code>node</code> is not found</strong>: install the LTS version:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">Mac</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">winget</span> <span class="n">install</span> <span class="n">OpenJS</span><span class="p">.</span><span class="n">NodeJS</span><span class="p">.</span><span class="n">LTS</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Download and run the LTS installer from <a href="https://nodejs.org">nodejs.org</a>.</p>
+</div>
+</div>
+</div>
+<p>Open a <strong>new</strong> terminal and run the check again. If <code>npm</code> isn't <strong>11.x.x</strong>, upgrade it with the
+command above.</p>
+</li>
+</ul>
+<p><strong>2. UiPath CLI</strong></p>
+<p>No check needed here. This command installs the CLI if it's missing, or updates it to the latest
+version if you already have it:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>@uipath/cli@latest
+</code></pre></div>
+<p><strong>3. uv</strong></p>
+<p>Check:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>uv<span class="w"> </span>--version
+</code></pre></div>
+<ul>
+<li>
+<p><strong>It prints a version</strong>: update it:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label><label for="__tabbed_2_2">Mac</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">winget</span> <span class="n">upgrade</span> <span class="n">astral-sh</span><span class="p">.</span><span class="n">uv</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>uv<span class="w"> </span>self<span class="w"> </span>update
+</code></pre></div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong><code>uv</code> is not found</strong>: install it:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Windows</label><label for="__tabbed_3_2">Mac</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">winget</span> <span class="n">install</span> <span class="n">astral-sh</span><span class="p">.</span><span class="n">uv</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>curl<span class="w"> </span>-LsSf<span class="w"> </span>https://astral.sh/uv/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+</code></pre></div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<p><strong>4. Final check</strong></p>
+<p>Open a <strong>new</strong> terminal, so it finds the newly installed tools, and run:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>node<span class="w"> </span>--version
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>npm<span class="w"> </span>--version
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>uip<span class="w"> </span>--version
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>uv<span class="w"> </span>--version
+</code></pre></div>
+<p>Every command prints a version, and <code>npm</code> is <strong>11.x.x</strong>.</p>
+</details>
+<h3 id="1-sign-in-to-your-tenant">1. Sign in to your tenant<a class="headerlink" href="#1-sign-in-to-your-tenant" title="Permanent link">&para;</a></h3>
+<p>Open a terminal (<strong>PowerShell</strong> on Windows, <strong>Terminal</strong> on Mac) and check whether you're already
+signed in:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>uip<span class="w"> </span>login<span class="w"> </span>status
+</code></pre></div>
+<p>If it shows <strong>Logged in</strong> for tenant <strong>AgenticWorkshop</strong>, you're done. Otherwise sign in. A browser
+window opens, complete the sign-in there:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>uip<span class="w"> </span>login<span class="w"> </span>--authority<span class="w"> </span>https://cloud.uipath.com<span class="w"> </span>--organization<span class="w"> </span>tpenlabs<span class="w"> </span>-t<span class="w"> </span>AgenticWorkshop
+</code></pre></div>
+<p>Run <code>uip login status</code> again. It should now show <strong>Logged in</strong> for tenant <strong>AgenticWorkshop</strong>.</p>
+<h3 id="2-create-the-project-folder">2. Create the project folder<a class="headerlink" href="#2-create-the-project-folder" title="Permanent link">&para;</a></h3>
+<p>In the same terminal, go to your <strong>Desktop</strong>, create an empty folder for the agent and a Python
+virtual environment inside it.
+The virtual environment keeps this agent's packages separate from everything else on your machine.
+It's the coded counterpart of the dependencies Studio Web manages for you.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Windows</label><label for="__tabbed_4_2">Mac</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">cd </span><span class="p">(</span><span class="no">[Environment]</span><span class="p">::</span><span class="n">GetFolderPath</span><span class="p">(</span><span class="s2">"Desktop"</span><span class="p">))</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">mkdir</span> <span class="n">eligibility-determination-coded-agent</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="nb">cd </span><span class="n">eligibility-determination-coded-agent</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="n">uv</span> <span class="n">venv</span> <span class="p">-</span><span class="n">-python</span> <span class="n">3</span><span class="p">.</span><span class="n">13</span> <span class="p">-</span><span class="n">-managed-python</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="p">.</span><span class="n">venv</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">Activate</span><span class="p">.</span><span class="n">ps1</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nb">cd</span><span class="w"> </span>~/Desktop
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>mkdir<span class="w"> </span>eligibility-determination-coded-agent
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="nb">cd</span><span class="w"> </span>eligibility-determination-coded-agent
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>uv<span class="w"> </span>venv<span class="w"> </span>--python<span class="w"> </span><span class="m">3</span>.13<span class="w"> </span>--managed-python
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><code>--managed-python</code> makes uv download its own Python 3.13 instead of picking whatever is already
+installed. Coded agents need Python 3.11 to 3.13.</p>
+<div class="admonition tip">
+<p class="admonition-title">Run the rest of the commands here</p>
+<p>From now on, run every command in <strong>this folder</strong>, with the virtual environment active. Your
+prompt shows <code>(eligibility-determination-coded-agent)</code>. If you open a new terminal, go back into
+the folder and activate it again:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Windows</label><label for="__tabbed_5_2">Mac</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nb">cd </span><span class="p">(</span><span class="nb">Join-Path</span> <span class="p">(</span><span class="no">[Environment]</span><span class="p">::</span><span class="n">GetFolderPath</span><span class="p">(</span><span class="s2">"Desktop"</span><span class="p">))</span> <span class="s2">"eligibility-determination-coded-agent"</span><span class="p">)</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="p">.</span><span class="n">venv</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">Activate</span><span class="p">.</span><span class="n">ps1</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nb">cd</span><span class="w"> </span>~/Desktop/eligibility-determination-coded-agent
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Windows: running scripts is disabled</p>
+<p>If activation fails with <em>"running scripts is disabled on this system"</em>, run this once, then
+activate again:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nb">Set-ExecutionPolicy</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">RemoteSigned</span>
+</code></pre></div>
+</div>
+<h3 id="3-scaffold-the-project">3. Scaffold the project<a class="headerlink" href="#3-scaffold-the-project" title="Permanent link">&para;</a></h3>
+<p>Install the UiPath LangGraph integration, point the CLI at your virtual environment and create the
+project files:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>uipath-langchain
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>uip<span class="w"> </span>codedagent<span class="w"> </span>setup<span class="w"> </span>--force
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>uip<span class="w"> </span>codedagent<span class="w"> </span>new<span class="w"> </span>eligibility-determination-coded-agent
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>uv<span class="w"> </span>sync
+</code></pre></div>
+<ul>
+<li><code>uipath-langchain</code> brings in the UiPath SDK, LangGraph and LangChain. Installing it first makes
+  <code>uip codedagent new</code> produce a LangGraph template.</li>
+<li><code>uip codedagent new</code> creates <code>main.py</code>, <code>langgraph.json</code> and <code>pyproject.toml</code> in the <strong>current</strong> folder.</li>
+<li><code>uv sync</code> installs exactly what <code>pyproject.toml</code> lists and pins the versions in <code>uv.lock</code>, the file
+  Studio Web uses later to install the same versions in the cloud.</li>
+</ul>
+<p>Open the folder in your code editor. In <code>pyproject.toml</code>, replace the placeholder author
+(<code>John Doe</code>) with your own name:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">authors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s2">"Your Name"</span><span class="w"> </span><span class="p">}]</span>
+</code></pre></div>
+<h3 id="4-start-mainpy-imports-and-settings">4. Start main.py: imports and settings<a class="headerlink" href="#4-start-mainpy-imports-and-settings" title="Permanent link">&para;</a></h3>
+<p>Delete everything in <code>main.py</code>. Start with the imports and three settings: the model and the
+<strong>Context Grounding</strong> index the agent will search.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="sd">"""SNAP Eligibility Determination agent (LangGraph)."""</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">langchain.agents</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_agent</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">langchain_core.messages</span><span class="w"> </span><span class="kn">import</span> <span class="n">HumanMessage</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">langchain_core.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">tool</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">langgraph.graph</span><span class="w"> </span><span class="kn">import</span> <span class="n">END</span><span class="p">,</span> <span class="n">START</span><span class="p">,</span> <span class="n">StateGraph</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">Field</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="kn">from</span><span class="w"> </span><span class="nn">uipath_langchain.chat.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">UiPathChat</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="kn">from</span><span class="w"> </span><span class="nn">uipath_langchain.retrievers</span><span class="w"> </span><span class="kn">import</span> <span class="n">ContextGroundingRetriever</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="n">MODEL</span> <span class="o">=</span> <span class="s2">"gpt-5.4"</span>
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="n">INDEX_NAME</span> <span class="o">=</span> <span class="s2">"Eligibility"</span>
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="n">INDEX_FOLDER</span> <span class="o">=</span> <span class="s2">"Benefit Claims"</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Where is the index?</p>
+<p>The <strong>Eligibility</strong> index lives in the Orchestrator folder <strong>Benefit Claims</strong>. To check it, run:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>uip<span class="w"> </span>context-grounding<span class="w"> </span>list<span class="w"> </span>--folder-path<span class="w"> </span><span class="s2">"Benefit Claims"</span>
+</code></pre></div>
+<p>If your trainer gives you a different folder, change <code>INDEX_FOLDER</code>.</p>
+</div>
+<h3 id="5-define-the-input-and-output">5. Define the input and output<a class="headerlink" href="#5-define-the-input-and-output" title="Permanent link">&para;</a></h3>
+<p><strong>Agent arguments</strong> let your agent take in information about a business case and return a result, just
+as you might have activities or processes do. This can allow you to pass information from a trigger in
+Orchestrator or use the output of an agent to launch another automation.</p>
+<p>In a coded agent the arguments are two Python classes, <code>Input</code> and <code>Output</code>. <code>Field(description=...)</code>
+works like an argument description, and the LLM reads it too. Add them below the settings:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c1"># ---------- Input / Output ----------</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="k">class</span><span class="w"> </span><span class="nc">Input</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>    <span class="n">Household_Size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>        <span class="n">description</span><span class="o">=</span><span class="s2">"The number of people living in the applicant's house"</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>    <span class="p">)</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>    <span class="n">Monthly_Gross_Income</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>        <span class="n">description</span><span class="o">=</span><span class="s2">"The amount of money the applicant's household makes in a month"</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>    <span class="p">)</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="k">class</span><span class="w"> </span><span class="nc">Output</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>    <span class="n">Conclusion</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+<a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>        <span class="n">description</span><span class="o">=</span><span class="s2">"Result of criteria evaluation against provided context"</span>
+<a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a>    <span class="p">)</span>
+<a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a>    <span class="n">Justification</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+<a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a>        <span class="n">description</span><span class="o">=</span><span class="s2">"An explanation for the conclusion, or of the inability to verify the criteria."</span>
+<a id="__codelineno-22-17" name="__codelineno-22-17" href="#__codelineno-22-17"></a>    <span class="p">)</span>
+<a id="__codelineno-22-18" name="__codelineno-22-18" href="#__codelineno-22-18"></a>    <span class="n">Calculation</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+<a id="__codelineno-22-19" name="__codelineno-22-19" href="#__codelineno-22-19"></a>        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-22-20" name="__codelineno-22-20" href="#__codelineno-22-20"></a>        <span class="n">description</span><span class="o">=</span><span class="s2">"The amount of money the applicant is entitled to per month, if they are determined eligible for benefits."</span><span class="p">,</span>
+<a id="__codelineno-22-21" name="__codelineno-22-21" href="#__codelineno-22-21"></a>    <span class="p">)</span>
+<a id="__codelineno-22-22" name="__codelineno-22-22" href="#__codelineno-22-22"></a>
+<a id="__codelineno-22-23" name="__codelineno-22-23" href="#__codelineno-22-23"></a>
+<a id="__codelineno-22-24" name="__codelineno-22-24" href="#__codelineno-22-24"></a><span class="k">class</span><span class="w"> </span><span class="nc">State</span><span class="p">(</span><span class="n">Input</span><span class="p">):</span>
+<a id="__codelineno-22-25" name="__codelineno-22-25" href="#__codelineno-22-25"></a><span class="w">    </span><span class="sd">"""Graph state = the input fields plus the output fields filled in by the agent."""</span>
+<a id="__codelineno-22-26" name="__codelineno-22-26" href="#__codelineno-22-26"></a>
+<a id="__codelineno-22-27" name="__codelineno-22-27" href="#__codelineno-22-27"></a>    <span class="n">Conclusion</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<a id="__codelineno-22-28" name="__codelineno-22-28" href="#__codelineno-22-28"></a>    <span class="n">Justification</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<a id="__codelineno-22-29" name="__codelineno-22-29" href="#__codelineno-22-29"></a>    <span class="n">Calculation</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+</code></pre></div>
+<p>Fields without a default (<code>Household_Size</code>, <code>Conclusion</code>, <code>Justification</code>) are required. <code>State</code> is
+what the graph carries around internally: the inputs plus the outputs the agent fills in.</p>
+<h2 id="configuring-agents-prompts">Configuring Agent's Prompts<a class="headerlink" href="#configuring-agents-prompts" title="Permanent link">&para;</a></h2>
+<div class="img-cols img-cols-30">
+<div>
+<p><img alt="Illustration accompanying the prompt-writing advice" src="../6-eligibility-determination-agent-coded.images/18-prompt-precision-illustration.png" />
+  </p>
+</div>
+<div>
+<blockquote>
+<p>Precision in prompts, like in coding, leads to powerful and predictable results. If your prompt is
+messy, expect messy output. Treat it like code, and write every word with purpose!</p>
+<p><em>(another advice from gpt-4o)</em>
+  </p>
+</blockquote>
+</div>
+</div>
+<p>First, let's understand the difference between <strong>System prompt</strong> and <strong>User prompt</strong>.</p>
+<ul>
+<li><strong>System prompt</strong>: describes in natural language the agent's role, goal and constraints: the rules it follows and when to use its tools and context.</li>
+<li><strong>User prompt</strong>: structures how the inputs are passed to the agent, so the system prompt can refer to them.</li>
+</ul>
+<h3 id="6-add-the-prompts">6. Add the prompts<a class="headerlink" href="#6-add-the-prompts" title="Permanent link">&para;</a></h3>
+<p>The System Prompt below ends with one line that tells the model which tool reads the "Eligibility"
+context. In the User Prompt, <code>{Household_Size}</code> and <code>{Monthly_Gross_Income}</code> are placeholders that
+Python's <code>.format()</code> fills in with the agent's inputs:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1"># ---------- Prompts ----------</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="n">SYSTEM_PROMPT</span> <span class="o">=</span> <span class="s2">"""#Role</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="s2">You are a decision agent whose role is to evaluate if an applicant meets the eligibility criteria for Supplemental Nutrition Assistance Program (SNAP) benefits. The eligibility criteria is specified in the "Eligibility" context.</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="s2">#Goals</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="s2">Assess whether the given applicant information qualifies them for SNAP benefits. Output a conclusion along with an explanation for the decision. For qualified applicants, calculate the monthly benefit amount.</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="s2"># Instructions</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="s2">1. Determine the net income. Use the ##SNAP Eligibility## context to do this.</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="s2">2. Determine if the applicant qualifies for benefits, according to the thresholds from the context.</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="s2">- Set the Boolean value of ##Conclusion## to True if they qualify, or False if they don't.</span>
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="s2">3. Set the string value of ##Justification## to your explanation of the eligibility recommendation.</span>
+<a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a><span class="s2">If they qualify for benefits:</span>
+<a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a><span class="s2"> a. Calculate the maximum benefit amount for the household size.</span>
+<a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a><span class="s2"> b. Set the value of ##Calculation## to the final benefit amount.</span>
+<a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a><span class="s2">If they don't qualify for benefits:</span>
+<a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a><span class="s2"> a. Set the value of ##Calculation## to "0".</span>
+<a id="__codelineno-23-18" name="__codelineno-23-18" href="#__codelineno-23-18"></a>
+<a id="__codelineno-23-19" name="__codelineno-23-19" href="#__codelineno-23-19"></a><span class="s2">##Calculation Rules</span>
+<a id="__codelineno-23-20" name="__codelineno-23-20" href="#__codelineno-23-20"></a><span class="s2">**DO NOT** make calculations directly, instead use the available tools (**Addition Tool**, **Subtraction Tool**, **Multiplication tool**) to make calculations.</span>
+<a id="__codelineno-23-21" name="__codelineno-23-21" href="#__codelineno-23-21"></a>
+<a id="__codelineno-23-22" name="__codelineno-23-22" href="#__codelineno-23-22"></a><span class="s2">Use the search_eligibility_context tool to read the "Eligibility" context."""</span>
+<a id="__codelineno-23-23" name="__codelineno-23-23" href="#__codelineno-23-23"></a>
+<a id="__codelineno-23-24" name="__codelineno-23-24" href="#__codelineno-23-24"></a><span class="n">USER_PROMPT_TEMPLATE</span> <span class="o">=</span> <span class="p">(</span>
+<a id="__codelineno-23-25" name="__codelineno-23-25" href="#__codelineno-23-25"></a>    <span class="s2">"Decide whether this applicant qualifies for SNAP benefits:</span><span class="se">\n</span><span class="s2">"</span>
+<a id="__codelineno-23-26" name="__codelineno-23-26" href="#__codelineno-23-26"></a>    <span class="s2">"Household Size: </span><span class="si">{Household_Size}</span><span class="se">\n</span><span class="s2">"</span>
+<a id="__codelineno-23-27" name="__codelineno-23-27" href="#__codelineno-23-27"></a>    <span class="s2">"Monthly Gross Income: </span><span class="si">{Monthly_Gross_Income}</span><span class="s2">"</span>
+<a id="__codelineno-23-28" name="__codelineno-23-28" href="#__codelineno-23-28"></a><span class="p">)</span>
+</code></pre></div>
+<h2 id="context-grounding">Context Grounding<a class="headerlink" href="#context-grounding" title="Permanent link">&para;</a></h2>
+<p><a href="https://docs.uipath.com/automation-cloud/automation-cloud/latest/admin-guide/about-context-grounding">Context Grounding</a>
+is a component of the UiPath AI Trust Layer which allows you to bring in your data to generate more
+accurate, reliable GenAI predictions.</p>
+<p>You can create representative
+<a href="https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-indexes">indexes</a> and
+embeddings of business data that UiPath GenAI features can reference for contextual evidence at
+runtime. An index is a searchable copy of your documents: when the agent asks a question, it gets
+back the passages that match best.</p>
+<p>In this case, we are going to use context grounding to provide the agent with the Benefit Eligibility
+criteria and calculation rules, to enable it to make the right decisions.</p>
+<p>The <strong>Eligibility Criteria</strong> and <strong>Benefit Calculation Rules</strong> documents are indexed inside the
+<strong>Eligibility</strong> context grounding index.</p>
+<div class="img-cols img-cols-50">
+<div>
+<p>Benefit Calculation Rules.
+  </p>
+</div>
+<div>
+<p><img alt="The SNAP benefit calculation rules document" class="screenshot" src="../6-eligibility-determination-agent-coded.images/9-benefit-calculation-rules.png" />
+  </p>
+</div>
+</div>
+<div class="img-cols img-cols-50">
+<div>
+<p>Eligibility Criteria.
+  </p>
+</div>
+<div>
+<p><img alt="The benefit eligibility criteria document" class="screenshot" src="../6-eligibility-determination-agent-coded.images/10-eligibility-criteria.png" />
+  </p>
+</div>
+</div>
+<p>A coded agent reaches the index through a <strong>tool</strong>: the LLM decides what to search for, and the tool
+returns the most relevant passages.</p>
+<h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h2>
+<p>Agent by itself is good at making decisions and analyzing data. But LLMs naturally can't go and
+interact with databases and applications... yet. We are going to use
+<a href="https://docs.uipath.com/agents/automation-cloud/latest/user-guide/agent-tools">tools</a> for that. Tools
+offer agents both access to critical context from data stored in business applications, and the ability
+to execute actions based on objectives outlined in the prompt. Tools are how the agent's reasoning and
+planning can turn into action.</p>
+<h3 id="7-add-the-tools">7. Add the tools<a class="headerlink" href="#7-add-the-tools" title="Permanent link">&para;</a></h3>
+<p>Four tools: one searches the <strong>Eligibility</strong> index, and three do the arithmetic the benefit amount
+needs. The <strong>docstring</strong> of each tool is the description the LLM reads to decide when to use it.</p>
+<div class="admonition note">
+<p class="admonition-title">Why local math tools?</p>
+<p>You could give the agent RPA or API workflows as tools for the arithmetic. We are going to use
+Python functions instead, because they run inside the agent: they're faster, and they don't start
+an Orchestrator job for every calculation. The prompt rule "<strong>DO NOT</strong> make calculations directly"
+stays, so the LLM still has to use a tool for every step.</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c1"># ---------- Tools ----------</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="nd">@tool</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">search_eligibility_context</span><span class="p">(</span><span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w">    </span><span class="sd">"""Search the "Eligibility" context (SNAP eligibility rules: deductions,</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="sd">    income thresholds and maximum benefit amounts by household size).</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="sd">    Args:</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="sd">        query: Natural-language question about the SNAP eligibility rules.</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="sd">    """</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>    <span class="n">retriever</span> <span class="o">=</span> <span class="n">ContextGroundingRetriever</span><span class="p">(</span>
+<a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a>        <span class="n">index_name</span><span class="o">=</span><span class="n">INDEX_NAME</span><span class="p">,</span>
+<a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a>        <span class="n">folder_path</span><span class="o">=</span><span class="n">INDEX_FOLDER</span><span class="p">,</span>
+<a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a>        <span class="n">number_of_results</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a>    <span class="p">)</span>
+<a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a>    <span class="n">documents</span> <span class="o">=</span> <span class="k">await</span> <span class="n">retriever</span><span class="o">.</span><span class="n">ainvoke</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<a id="__codelineno-24-16" name="__codelineno-24-16" href="#__codelineno-24-16"></a>    <span class="k">return</span> <span class="s2">"</span><span class="se">\n\n</span><span class="s2">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">page_content</span> <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">documents</span><span class="p">)</span>
+<a id="__codelineno-24-17" name="__codelineno-24-17" href="#__codelineno-24-17"></a>
+<a id="__codelineno-24-18" name="__codelineno-24-18" href="#__codelineno-24-18"></a>
+<a id="__codelineno-24-19" name="__codelineno-24-19" href="#__codelineno-24-19"></a><span class="nd">@tool</span>
+<a id="__codelineno-24-20" name="__codelineno-24-20" href="#__codelineno-24-20"></a><span class="k">def</span><span class="w"> </span><span class="nf">addition_tool</span><span class="p">(</span><span class="n">FirstValue</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">SecondValue</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<a id="__codelineno-24-21" name="__codelineno-24-21" href="#__codelineno-24-21"></a><span class="w">    </span><span class="sd">"""Addition Tool: adds two numbers and returns FirstValue + SecondValue."""</span>
+<a id="__codelineno-24-22" name="__codelineno-24-22" href="#__codelineno-24-22"></a>    <span class="k">return</span> <span class="p">{</span><span class="s2">"AdditionResult"</span><span class="p">:</span> <span class="n">FirstValue</span> <span class="o">+</span> <span class="n">SecondValue</span><span class="p">}</span>
+<a id="__codelineno-24-23" name="__codelineno-24-23" href="#__codelineno-24-23"></a>
+<a id="__codelineno-24-24" name="__codelineno-24-24" href="#__codelineno-24-24"></a>
+<a id="__codelineno-24-25" name="__codelineno-24-25" href="#__codelineno-24-25"></a><span class="nd">@tool</span>
+<a id="__codelineno-24-26" name="__codelineno-24-26" href="#__codelineno-24-26"></a><span class="k">def</span><span class="w"> </span><span class="nf">subtraction_tool</span><span class="p">(</span><span class="n">FirstValue</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">SecondValue</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<a id="__codelineno-24-27" name="__codelineno-24-27" href="#__codelineno-24-27"></a><span class="w">    </span><span class="sd">"""Subtraction Tool: subtracts two numbers and returns FirstValue - SecondValue."""</span>
+<a id="__codelineno-24-28" name="__codelineno-24-28" href="#__codelineno-24-28"></a>    <span class="k">return</span> <span class="p">{</span><span class="s2">"SubtractionResult"</span><span class="p">:</span> <span class="n">FirstValue</span> <span class="o">-</span> <span class="n">SecondValue</span><span class="p">}</span>
+<a id="__codelineno-24-29" name="__codelineno-24-29" href="#__codelineno-24-29"></a>
+<a id="__codelineno-24-30" name="__codelineno-24-30" href="#__codelineno-24-30"></a>
+<a id="__codelineno-24-31" name="__codelineno-24-31" href="#__codelineno-24-31"></a><span class="nd">@tool</span>
+<a id="__codelineno-24-32" name="__codelineno-24-32" href="#__codelineno-24-32"></a><span class="k">def</span><span class="w"> </span><span class="nf">multiplication_tool</span><span class="p">(</span><span class="n">FirstValue</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">SecondValue</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<a id="__codelineno-24-33" name="__codelineno-24-33" href="#__codelineno-24-33"></a><span class="w">    </span><span class="sd">"""Multiplication tool: multiplies two numbers and returns FirstValue * SecondValue."""</span>
+<a id="__codelineno-24-34" name="__codelineno-24-34" href="#__codelineno-24-34"></a>    <span class="k">return</span> <span class="p">{</span><span class="s2">"MultiplicationResult"</span><span class="p">:</span> <span class="n">FirstValue</span> <span class="o">*</span> <span class="n">SecondValue</span><span class="p">}</span>
+<a id="__codelineno-24-35" name="__codelineno-24-35" href="#__codelineno-24-35"></a>
+<a id="__codelineno-24-36" name="__codelineno-24-36" href="#__codelineno-24-36"></a>
+<a id="__codelineno-24-37" name="__codelineno-24-37" href="#__codelineno-24-37"></a><span class="n">TOOLS</span> <span class="o">=</span> <span class="p">[</span><span class="n">search_eligibility_context</span><span class="p">,</span> <span class="n">addition_tool</span><span class="p">,</span> <span class="n">subtraction_tool</span><span class="p">,</span> <span class="n">multiplication_tool</span><span class="p">]</span>
+</code></pre></div>
+<ul>
+<li><code>number_of_results=3</code> returns the three most relevant passages. The default would be 10.</li>
+</ul>
+<h3 id="8-build-the-agent-and-the-graph">8. Build the agent and the graph<a class="headerlink" href="#8-build-the-agent-and-the-graph" title="Permanent link">&para;</a></h3>
+<p><code>create_agent</code> runs the familiar loop: the LLM reads the prompt, calls tools, reads the results and
+repeats until it can answer. <code>response_format=Output</code> makes it return a validated <code>Output</code> object.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="c1"># ---------- Agent ----------</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">determine_eligibility</span><span class="p">(</span><span class="n">state</span><span class="p">:</span> <span class="n">State</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>    <span class="c1"># The LLM and the ReAct agent are created inside the node (never at import time).</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>    <span class="n">llm</span> <span class="o">=</span> <span class="n">UiPathChat</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">MODEL</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>    <span class="n">agent</span> <span class="o">=</span> <span class="n">create_agent</span><span class="p">(</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>        <span class="n">model</span><span class="o">=</span><span class="n">llm</span><span class="p">,</span>
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>        <span class="n">tools</span><span class="o">=</span><span class="n">TOOLS</span><span class="p">,</span>
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>        <span class="n">system_prompt</span><span class="o">=</span><span class="n">SYSTEM_PROMPT</span><span class="p">,</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>        <span class="n">response_format</span><span class="o">=</span><span class="n">Output</span><span class="p">,</span>
+<a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>    <span class="p">)</span>
+<a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>    <span class="n">user_prompt</span> <span class="o">=</span> <span class="n">USER_PROMPT_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+<a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a>        <span class="n">Household_Size</span><span class="o">=</span><span class="n">state</span><span class="o">.</span><span class="n">Household_Size</span><span class="p">,</span>
+<a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a>        <span class="n">Monthly_Gross_Income</span><span class="o">=</span><span class="n">state</span><span class="o">.</span><span class="n">Monthly_Gross_Income</span><span class="p">,</span>
+<a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a>    <span class="p">)</span>
+<a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a>    <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">agent</span><span class="o">.</span><span class="n">ainvoke</span><span class="p">(</span>
+<a id="__codelineno-25-16" name="__codelineno-25-16" href="#__codelineno-25-16"></a>        <span class="p">{</span><span class="s2">"messages"</span><span class="p">:</span> <span class="p">[</span><span class="n">HumanMessage</span><span class="p">(</span><span class="n">content</span><span class="o">=</span><span class="n">user_prompt</span><span class="p">)]},</span>
+<a id="__codelineno-25-17" name="__codelineno-25-17" href="#__codelineno-25-17"></a>        <span class="n">config</span><span class="o">=</span><span class="p">{</span><span class="s2">"recursion_limit"</span><span class="p">:</span> <span class="mi">50</span><span class="p">},</span>  <span class="c1"># up to 25 agent iterations</span>
+<a id="__codelineno-25-18" name="__codelineno-25-18" href="#__codelineno-25-18"></a>    <span class="p">)</span>
+<a id="__codelineno-25-19" name="__codelineno-25-19" href="#__codelineno-25-19"></a>    <span class="n">output</span><span class="p">:</span> <span class="n">Output</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">"structured_response"</span><span class="p">]</span>
+<a id="__codelineno-25-20" name="__codelineno-25-20" href="#__codelineno-25-20"></a>    <span class="k">return</span> <span class="n">output</span><span class="o">.</span><span class="n">model_dump</span><span class="p">()</span>
+</code></pre></div>
+<p>The graph wraps the agent in a single step and tells UiPath what the inputs and outputs are:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="c1"># ---------- Graph ----------</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="n">builder</span> <span class="o">=</span> <span class="n">StateGraph</span><span class="p">(</span><span class="n">State</span><span class="p">,</span> <span class="n">input_schema</span><span class="o">=</span><span class="n">Input</span><span class="p">,</span> <span class="n">output_schema</span><span class="o">=</span><span class="n">Output</span><span class="p">)</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="n">builder</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">"determine_eligibility"</span><span class="p">,</span> <span class="n">determine_eligibility</span><span class="p">)</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="n">builder</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">START</span><span class="p">,</span> <span class="s2">"determine_eligibility"</span><span class="p">)</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="n">builder</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s2">"determine_eligibility"</span><span class="p">,</span> <span class="n">END</span><span class="p">)</span>
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="n">graph</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">compile</span><span class="p">()</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Create the LLM inside the function</p>
+<p><code>UiPathChat(...)</code> needs your UiPath login. Creating it at the top of the file would try to
+authenticate as soon as the file is imported, and the next step would fail.</p>
+</div>
+<details class="note">
+<summary>The complete main.py (to compare with yours)</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="sd">"""SNAP Eligibility Determination agent (LangGraph)."""</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">langchain.agents</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_agent</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">langchain_core.messages</span><span class="w"> </span><span class="kn">import</span> <span class="n">HumanMessage</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">langchain_core.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">tool</span>
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">langgraph.graph</span><span class="w"> </span><span class="kn">import</span> <span class="n">END</span><span class="p">,</span> <span class="n">START</span><span class="p">,</span> <span class="n">StateGraph</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">Field</span>
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="kn">from</span><span class="w"> </span><span class="nn">uipath_langchain.chat.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">UiPathChat</span>
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a><span class="kn">from</span><span class="w"> </span><span class="nn">uipath_langchain.retrievers</span><span class="w"> </span><span class="kn">import</span> <span class="n">ContextGroundingRetriever</span>
+<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>
+<a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a><span class="n">MODEL</span> <span class="o">=</span> <span class="s2">"gpt-5.4"</span>
+<a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a><span class="n">INDEX_NAME</span> <span class="o">=</span> <span class="s2">"Eligibility"</span>
+<a id="__codelineno-27-13" name="__codelineno-27-13" href="#__codelineno-27-13"></a><span class="n">INDEX_FOLDER</span> <span class="o">=</span> <span class="s2">"Benefit Claims"</span>
+<a id="__codelineno-27-14" name="__codelineno-27-14" href="#__codelineno-27-14"></a>
+<a id="__codelineno-27-15" name="__codelineno-27-15" href="#__codelineno-27-15"></a>
+<a id="__codelineno-27-16" name="__codelineno-27-16" href="#__codelineno-27-16"></a><span class="c1"># ---------- Input / Output ----------</span>
+<a id="__codelineno-27-17" name="__codelineno-27-17" href="#__codelineno-27-17"></a><span class="k">class</span><span class="w"> </span><span class="nc">Input</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<a id="__codelineno-27-18" name="__codelineno-27-18" href="#__codelineno-27-18"></a>    <span class="n">Household_Size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+<a id="__codelineno-27-19" name="__codelineno-27-19" href="#__codelineno-27-19"></a>        <span class="n">description</span><span class="o">=</span><span class="s2">"The number of people living in the applicant's house"</span>
+<a id="__codelineno-27-20" name="__codelineno-27-20" href="#__codelineno-27-20"></a>    <span class="p">)</span>
+<a id="__codelineno-27-21" name="__codelineno-27-21" href="#__codelineno-27-21"></a>    <span class="n">Monthly_Gross_Income</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+<a id="__codelineno-27-22" name="__codelineno-27-22" href="#__codelineno-27-22"></a>        <span class="n">description</span><span class="o">=</span><span class="s2">"The amount of money the applicant's household makes in a month"</span>
+<a id="__codelineno-27-23" name="__codelineno-27-23" href="#__codelineno-27-23"></a>    <span class="p">)</span>
+<a id="__codelineno-27-24" name="__codelineno-27-24" href="#__codelineno-27-24"></a>
+<a id="__codelineno-27-25" name="__codelineno-27-25" href="#__codelineno-27-25"></a>
+<a id="__codelineno-27-26" name="__codelineno-27-26" href="#__codelineno-27-26"></a><span class="k">class</span><span class="w"> </span><span class="nc">Output</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<a id="__codelineno-27-27" name="__codelineno-27-27" href="#__codelineno-27-27"></a>    <span class="n">Conclusion</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+<a id="__codelineno-27-28" name="__codelineno-27-28" href="#__codelineno-27-28"></a>        <span class="n">description</span><span class="o">=</span><span class="s2">"Result of criteria evaluation against provided context"</span>
+<a id="__codelineno-27-29" name="__codelineno-27-29" href="#__codelineno-27-29"></a>    <span class="p">)</span>
+<a id="__codelineno-27-30" name="__codelineno-27-30" href="#__codelineno-27-30"></a>    <span class="n">Justification</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+<a id="__codelineno-27-31" name="__codelineno-27-31" href="#__codelineno-27-31"></a>        <span class="n">description</span><span class="o">=</span><span class="s2">"An explanation for the conclusion, or of the inability to verify the criteria."</span>
+<a id="__codelineno-27-32" name="__codelineno-27-32" href="#__codelineno-27-32"></a>    <span class="p">)</span>
+<a id="__codelineno-27-33" name="__codelineno-27-33" href="#__codelineno-27-33"></a>    <span class="n">Calculation</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+<a id="__codelineno-27-34" name="__codelineno-27-34" href="#__codelineno-27-34"></a>        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-27-35" name="__codelineno-27-35" href="#__codelineno-27-35"></a>        <span class="n">description</span><span class="o">=</span><span class="s2">"The amount of money the applicant is entitled to per month, if they are determined eligible for benefits."</span><span class="p">,</span>
+<a id="__codelineno-27-36" name="__codelineno-27-36" href="#__codelineno-27-36"></a>    <span class="p">)</span>
+<a id="__codelineno-27-37" name="__codelineno-27-37" href="#__codelineno-27-37"></a>
+<a id="__codelineno-27-38" name="__codelineno-27-38" href="#__codelineno-27-38"></a>
+<a id="__codelineno-27-39" name="__codelineno-27-39" href="#__codelineno-27-39"></a><span class="k">class</span><span class="w"> </span><span class="nc">State</span><span class="p">(</span><span class="n">Input</span><span class="p">):</span>
+<a id="__codelineno-27-40" name="__codelineno-27-40" href="#__codelineno-27-40"></a><span class="w">    </span><span class="sd">"""Graph state = the input fields plus the output fields filled in by the agent."""</span>
+<a id="__codelineno-27-41" name="__codelineno-27-41" href="#__codelineno-27-41"></a>
+<a id="__codelineno-27-42" name="__codelineno-27-42" href="#__codelineno-27-42"></a>    <span class="n">Conclusion</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<a id="__codelineno-27-43" name="__codelineno-27-43" href="#__codelineno-27-43"></a>    <span class="n">Justification</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<a id="__codelineno-27-44" name="__codelineno-27-44" href="#__codelineno-27-44"></a>    <span class="n">Calculation</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<a id="__codelineno-27-45" name="__codelineno-27-45" href="#__codelineno-27-45"></a>
+<a id="__codelineno-27-46" name="__codelineno-27-46" href="#__codelineno-27-46"></a>
+<a id="__codelineno-27-47" name="__codelineno-27-47" href="#__codelineno-27-47"></a><span class="c1"># ---------- Prompts ----------</span>
+<a id="__codelineno-27-48" name="__codelineno-27-48" href="#__codelineno-27-48"></a><span class="n">SYSTEM_PROMPT</span> <span class="o">=</span> <span class="s2">"""#Role</span>
+<a id="__codelineno-27-49" name="__codelineno-27-49" href="#__codelineno-27-49"></a><span class="s2">You are a decision agent whose role is to evaluate if an applicant meets the eligibility criteria for Supplemental Nutrition Assistance Program (SNAP) benefits. The eligibility criteria is specified in the "Eligibility" context.</span>
+<a id="__codelineno-27-50" name="__codelineno-27-50" href="#__codelineno-27-50"></a>
+<a id="__codelineno-27-51" name="__codelineno-27-51" href="#__codelineno-27-51"></a><span class="s2">#Goals</span>
+<a id="__codelineno-27-52" name="__codelineno-27-52" href="#__codelineno-27-52"></a><span class="s2">Assess whether the given applicant information qualifies them for SNAP benefits. Output a conclusion along with an explanation for the decision. For qualified applicants, calculate the monthly benefit amount.</span>
+<a id="__codelineno-27-53" name="__codelineno-27-53" href="#__codelineno-27-53"></a>
+<a id="__codelineno-27-54" name="__codelineno-27-54" href="#__codelineno-27-54"></a><span class="s2"># Instructions</span>
+<a id="__codelineno-27-55" name="__codelineno-27-55" href="#__codelineno-27-55"></a><span class="s2">1. Determine the net income. Use the ##SNAP Eligibility## context to do this.</span>
+<a id="__codelineno-27-56" name="__codelineno-27-56" href="#__codelineno-27-56"></a><span class="s2">2. Determine if the applicant qualifies for benefits, according to the thresholds from the context.</span>
+<a id="__codelineno-27-57" name="__codelineno-27-57" href="#__codelineno-27-57"></a><span class="s2">- Set the Boolean value of ##Conclusion## to True if they qualify, or False if they don't.</span>
+<a id="__codelineno-27-58" name="__codelineno-27-58" href="#__codelineno-27-58"></a><span class="s2">3. Set the string value of ##Justification## to your explanation of the eligibility recommendation.</span>
+<a id="__codelineno-27-59" name="__codelineno-27-59" href="#__codelineno-27-59"></a><span class="s2">If they qualify for benefits:</span>
+<a id="__codelineno-27-60" name="__codelineno-27-60" href="#__codelineno-27-60"></a><span class="s2"> a. Calculate the maximum benefit amount for the household size.</span>
+<a id="__codelineno-27-61" name="__codelineno-27-61" href="#__codelineno-27-61"></a><span class="s2"> b. Set the value of ##Calculation## to the final benefit amount.</span>
+<a id="__codelineno-27-62" name="__codelineno-27-62" href="#__codelineno-27-62"></a><span class="s2">If they don't qualify for benefits:</span>
+<a id="__codelineno-27-63" name="__codelineno-27-63" href="#__codelineno-27-63"></a><span class="s2"> a. Set the value of ##Calculation## to "0".</span>
+<a id="__codelineno-27-64" name="__codelineno-27-64" href="#__codelineno-27-64"></a>
+<a id="__codelineno-27-65" name="__codelineno-27-65" href="#__codelineno-27-65"></a><span class="s2">##Calculation Rules</span>
+<a id="__codelineno-27-66" name="__codelineno-27-66" href="#__codelineno-27-66"></a><span class="s2">**DO NOT** make calculations directly, instead use the available tools (**Addition Tool**, **Subtraction Tool**, **Multiplication tool**) to make calculations.</span>
+<a id="__codelineno-27-67" name="__codelineno-27-67" href="#__codelineno-27-67"></a>
+<a id="__codelineno-27-68" name="__codelineno-27-68" href="#__codelineno-27-68"></a><span class="s2">Use the search_eligibility_context tool to read the "Eligibility" context."""</span>
+<a id="__codelineno-27-69" name="__codelineno-27-69" href="#__codelineno-27-69"></a>
+<a id="__codelineno-27-70" name="__codelineno-27-70" href="#__codelineno-27-70"></a><span class="n">USER_PROMPT_TEMPLATE</span> <span class="o">=</span> <span class="p">(</span>
+<a id="__codelineno-27-71" name="__codelineno-27-71" href="#__codelineno-27-71"></a>    <span class="s2">"Decide whether this applicant qualifies for SNAP benefits:</span><span class="se">\n</span><span class="s2">"</span>
+<a id="__codelineno-27-72" name="__codelineno-27-72" href="#__codelineno-27-72"></a>    <span class="s2">"Household Size: </span><span class="si">{Household_Size}</span><span class="se">\n</span><span class="s2">"</span>
+<a id="__codelineno-27-73" name="__codelineno-27-73" href="#__codelineno-27-73"></a>    <span class="s2">"Monthly Gross Income: </span><span class="si">{Monthly_Gross_Income}</span><span class="s2">"</span>
+<a id="__codelineno-27-74" name="__codelineno-27-74" href="#__codelineno-27-74"></a><span class="p">)</span>
+<a id="__codelineno-27-75" name="__codelineno-27-75" href="#__codelineno-27-75"></a>
+<a id="__codelineno-27-76" name="__codelineno-27-76" href="#__codelineno-27-76"></a>
+<a id="__codelineno-27-77" name="__codelineno-27-77" href="#__codelineno-27-77"></a><span class="c1"># ---------- Tools ----------</span>
+<a id="__codelineno-27-78" name="__codelineno-27-78" href="#__codelineno-27-78"></a><span class="nd">@tool</span>
+<a id="__codelineno-27-79" name="__codelineno-27-79" href="#__codelineno-27-79"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">search_eligibility_context</span><span class="p">(</span><span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-27-80" name="__codelineno-27-80" href="#__codelineno-27-80"></a><span class="w">    </span><span class="sd">"""Search the "Eligibility" context (SNAP eligibility rules: deductions,</span>
+<a id="__codelineno-27-81" name="__codelineno-27-81" href="#__codelineno-27-81"></a><span class="sd">    income thresholds and maximum benefit amounts by household size).</span>
+<a id="__codelineno-27-82" name="__codelineno-27-82" href="#__codelineno-27-82"></a>
+<a id="__codelineno-27-83" name="__codelineno-27-83" href="#__codelineno-27-83"></a><span class="sd">    Args:</span>
+<a id="__codelineno-27-84" name="__codelineno-27-84" href="#__codelineno-27-84"></a><span class="sd">        query: Natural-language question about the SNAP eligibility rules.</span>
+<a id="__codelineno-27-85" name="__codelineno-27-85" href="#__codelineno-27-85"></a><span class="sd">    """</span>
+<a id="__codelineno-27-86" name="__codelineno-27-86" href="#__codelineno-27-86"></a>    <span class="n">retriever</span> <span class="o">=</span> <span class="n">ContextGroundingRetriever</span><span class="p">(</span>
+<a id="__codelineno-27-87" name="__codelineno-27-87" href="#__codelineno-27-87"></a>        <span class="n">index_name</span><span class="o">=</span><span class="n">INDEX_NAME</span><span class="p">,</span>
+<a id="__codelineno-27-88" name="__codelineno-27-88" href="#__codelineno-27-88"></a>        <span class="n">folder_path</span><span class="o">=</span><span class="n">INDEX_FOLDER</span><span class="p">,</span>
+<a id="__codelineno-27-89" name="__codelineno-27-89" href="#__codelineno-27-89"></a>        <span class="n">number_of_results</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-27-90" name="__codelineno-27-90" href="#__codelineno-27-90"></a>    <span class="p">)</span>
+<a id="__codelineno-27-91" name="__codelineno-27-91" href="#__codelineno-27-91"></a>    <span class="n">documents</span> <span class="o">=</span> <span class="k">await</span> <span class="n">retriever</span><span class="o">.</span><span class="n">ainvoke</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<a id="__codelineno-27-92" name="__codelineno-27-92" href="#__codelineno-27-92"></a>    <span class="k">return</span> <span class="s2">"</span><span class="se">\n\n</span><span class="s2">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">page_content</span> <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">documents</span><span class="p">)</span>
+<a id="__codelineno-27-93" name="__codelineno-27-93" href="#__codelineno-27-93"></a>
+<a id="__codelineno-27-94" name="__codelineno-27-94" href="#__codelineno-27-94"></a>
+<a id="__codelineno-27-95" name="__codelineno-27-95" href="#__codelineno-27-95"></a><span class="nd">@tool</span>
+<a id="__codelineno-27-96" name="__codelineno-27-96" href="#__codelineno-27-96"></a><span class="k">def</span><span class="w"> </span><span class="nf">addition_tool</span><span class="p">(</span><span class="n">FirstValue</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">SecondValue</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<a id="__codelineno-27-97" name="__codelineno-27-97" href="#__codelineno-27-97"></a><span class="w">    </span><span class="sd">"""Addition Tool: adds two numbers and returns FirstValue + SecondValue."""</span>
+<a id="__codelineno-27-98" name="__codelineno-27-98" href="#__codelineno-27-98"></a>    <span class="k">return</span> <span class="p">{</span><span class="s2">"AdditionResult"</span><span class="p">:</span> <span class="n">FirstValue</span> <span class="o">+</span> <span class="n">SecondValue</span><span class="p">}</span>
+<a id="__codelineno-27-99" name="__codelineno-27-99" href="#__codelineno-27-99"></a>
+<a id="__codelineno-27-100" name="__codelineno-27-100" href="#__codelineno-27-100"></a>
+<a id="__codelineno-27-101" name="__codelineno-27-101" href="#__codelineno-27-101"></a><span class="nd">@tool</span>
+<a id="__codelineno-27-102" name="__codelineno-27-102" href="#__codelineno-27-102"></a><span class="k">def</span><span class="w"> </span><span class="nf">subtraction_tool</span><span class="p">(</span><span class="n">FirstValue</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">SecondValue</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<a id="__codelineno-27-103" name="__codelineno-27-103" href="#__codelineno-27-103"></a><span class="w">    </span><span class="sd">"""Subtraction Tool: subtracts two numbers and returns FirstValue - SecondValue."""</span>
+<a id="__codelineno-27-104" name="__codelineno-27-104" href="#__codelineno-27-104"></a>    <span class="k">return</span> <span class="p">{</span><span class="s2">"SubtractionResult"</span><span class="p">:</span> <span class="n">FirstValue</span> <span class="o">-</span> <span class="n">SecondValue</span><span class="p">}</span>
+<a id="__codelineno-27-105" name="__codelineno-27-105" href="#__codelineno-27-105"></a>
+<a id="__codelineno-27-106" name="__codelineno-27-106" href="#__codelineno-27-106"></a>
+<a id="__codelineno-27-107" name="__codelineno-27-107" href="#__codelineno-27-107"></a><span class="nd">@tool</span>
+<a id="__codelineno-27-108" name="__codelineno-27-108" href="#__codelineno-27-108"></a><span class="k">def</span><span class="w"> </span><span class="nf">multiplication_tool</span><span class="p">(</span><span class="n">FirstValue</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">SecondValue</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<a id="__codelineno-27-109" name="__codelineno-27-109" href="#__codelineno-27-109"></a><span class="w">    </span><span class="sd">"""Multiplication tool: multiplies two numbers and returns FirstValue * SecondValue."""</span>
+<a id="__codelineno-27-110" name="__codelineno-27-110" href="#__codelineno-27-110"></a>    <span class="k">return</span> <span class="p">{</span><span class="s2">"MultiplicationResult"</span><span class="p">:</span> <span class="n">FirstValue</span> <span class="o">*</span> <span class="n">SecondValue</span><span class="p">}</span>
+<a id="__codelineno-27-111" name="__codelineno-27-111" href="#__codelineno-27-111"></a>
+<a id="__codelineno-27-112" name="__codelineno-27-112" href="#__codelineno-27-112"></a>
+<a id="__codelineno-27-113" name="__codelineno-27-113" href="#__codelineno-27-113"></a><span class="n">TOOLS</span> <span class="o">=</span> <span class="p">[</span><span class="n">search_eligibility_context</span><span class="p">,</span> <span class="n">addition_tool</span><span class="p">,</span> <span class="n">subtraction_tool</span><span class="p">,</span> <span class="n">multiplication_tool</span><span class="p">]</span>
+<a id="__codelineno-27-114" name="__codelineno-27-114" href="#__codelineno-27-114"></a>
+<a id="__codelineno-27-115" name="__codelineno-27-115" href="#__codelineno-27-115"></a>
+<a id="__codelineno-27-116" name="__codelineno-27-116" href="#__codelineno-27-116"></a><span class="c1"># ---------- Agent ----------</span>
+<a id="__codelineno-27-117" name="__codelineno-27-117" href="#__codelineno-27-117"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">determine_eligibility</span><span class="p">(</span><span class="n">state</span><span class="p">:</span> <span class="n">State</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<a id="__codelineno-27-118" name="__codelineno-27-118" href="#__codelineno-27-118"></a>    <span class="c1"># The LLM and the ReAct agent are created inside the node (never at import time).</span>
+<a id="__codelineno-27-119" name="__codelineno-27-119" href="#__codelineno-27-119"></a>    <span class="n">llm</span> <span class="o">=</span> <span class="n">UiPathChat</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">MODEL</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-27-120" name="__codelineno-27-120" href="#__codelineno-27-120"></a>    <span class="n">agent</span> <span class="o">=</span> <span class="n">create_agent</span><span class="p">(</span>
+<a id="__codelineno-27-121" name="__codelineno-27-121" href="#__codelineno-27-121"></a>        <span class="n">model</span><span class="o">=</span><span class="n">llm</span><span class="p">,</span>
+<a id="__codelineno-27-122" name="__codelineno-27-122" href="#__codelineno-27-122"></a>        <span class="n">tools</span><span class="o">=</span><span class="n">TOOLS</span><span class="p">,</span>
+<a id="__codelineno-27-123" name="__codelineno-27-123" href="#__codelineno-27-123"></a>        <span class="n">system_prompt</span><span class="o">=</span><span class="n">SYSTEM_PROMPT</span><span class="p">,</span>
+<a id="__codelineno-27-124" name="__codelineno-27-124" href="#__codelineno-27-124"></a>        <span class="n">response_format</span><span class="o">=</span><span class="n">Output</span><span class="p">,</span>
+<a id="__codelineno-27-125" name="__codelineno-27-125" href="#__codelineno-27-125"></a>    <span class="p">)</span>
+<a id="__codelineno-27-126" name="__codelineno-27-126" href="#__codelineno-27-126"></a>    <span class="n">user_prompt</span> <span class="o">=</span> <span class="n">USER_PROMPT_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+<a id="__codelineno-27-127" name="__codelineno-27-127" href="#__codelineno-27-127"></a>        <span class="n">Household_Size</span><span class="o">=</span><span class="n">state</span><span class="o">.</span><span class="n">Household_Size</span><span class="p">,</span>
+<a id="__codelineno-27-128" name="__codelineno-27-128" href="#__codelineno-27-128"></a>        <span class="n">Monthly_Gross_Income</span><span class="o">=</span><span class="n">state</span><span class="o">.</span><span class="n">Monthly_Gross_Income</span><span class="p">,</span>
+<a id="__codelineno-27-129" name="__codelineno-27-129" href="#__codelineno-27-129"></a>    <span class="p">)</span>
+<a id="__codelineno-27-130" name="__codelineno-27-130" href="#__codelineno-27-130"></a>    <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">agent</span><span class="o">.</span><span class="n">ainvoke</span><span class="p">(</span>
+<a id="__codelineno-27-131" name="__codelineno-27-131" href="#__codelineno-27-131"></a>        <span class="p">{</span><span class="s2">"messages"</span><span class="p">:</span> <span class="p">[</span><span class="n">HumanMessage</span><span class="p">(</span><span class="n">content</span><span class="o">=</span><span class="n">user_prompt</span><span class="p">)]},</span>
+<a id="__codelineno-27-132" name="__codelineno-27-132" href="#__codelineno-27-132"></a>        <span class="n">config</span><span class="o">=</span><span class="p">{</span><span class="s2">"recursion_limit"</span><span class="p">:</span> <span class="mi">50</span><span class="p">},</span>  <span class="c1"># up to 25 agent iterations</span>
+<a id="__codelineno-27-133" name="__codelineno-27-133" href="#__codelineno-27-133"></a>    <span class="p">)</span>
+<a id="__codelineno-27-134" name="__codelineno-27-134" href="#__codelineno-27-134"></a>    <span class="n">output</span><span class="p">:</span> <span class="n">Output</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">"structured_response"</span><span class="p">]</span>
+<a id="__codelineno-27-135" name="__codelineno-27-135" href="#__codelineno-27-135"></a>    <span class="k">return</span> <span class="n">output</span><span class="o">.</span><span class="n">model_dump</span><span class="p">()</span>
+<a id="__codelineno-27-136" name="__codelineno-27-136" href="#__codelineno-27-136"></a>
+<a id="__codelineno-27-137" name="__codelineno-27-137" href="#__codelineno-27-137"></a>
+<a id="__codelineno-27-138" name="__codelineno-27-138" href="#__codelineno-27-138"></a><span class="c1"># ---------- Graph ----------</span>
+<a id="__codelineno-27-139" name="__codelineno-27-139" href="#__codelineno-27-139"></a><span class="n">builder</span> <span class="o">=</span> <span class="n">StateGraph</span><span class="p">(</span><span class="n">State</span><span class="p">,</span> <span class="n">input_schema</span><span class="o">=</span><span class="n">Input</span><span class="p">,</span> <span class="n">output_schema</span><span class="o">=</span><span class="n">Output</span><span class="p">)</span>
+<a id="__codelineno-27-140" name="__codelineno-27-140" href="#__codelineno-27-140"></a><span class="n">builder</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">"determine_eligibility"</span><span class="p">,</span> <span class="n">determine_eligibility</span><span class="p">)</span>
+<a id="__codelineno-27-141" name="__codelineno-27-141" href="#__codelineno-27-141"></a><span class="n">builder</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">START</span><span class="p">,</span> <span class="s2">"determine_eligibility"</span><span class="p">)</span>
+<a id="__codelineno-27-142" name="__codelineno-27-142" href="#__codelineno-27-142"></a><span class="n">builder</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s2">"determine_eligibility"</span><span class="p">,</span> <span class="n">END</span><span class="p">)</span>
+<a id="__codelineno-27-143" name="__codelineno-27-143" href="#__codelineno-27-143"></a>
+<a id="__codelineno-27-144" name="__codelineno-27-144" href="#__codelineno-27-144"></a><span class="n">graph</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">compile</span><span class="p">()</span>
+</code></pre></div>
+</details>
+<h3 id="9-generate-entry-points-and-add-the-binding">9. Generate entry points and add the binding<a class="headerlink" href="#9-generate-entry-points-and-add-the-binding" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>uip<span class="w"> </span>codedagent<span class="w"> </span>init
+</code></pre></div>
+<p><code>init</code> reads your <code>Input</code> and <code>Output</code> classes and generates <code>entry-points.json</code>, the argument
+schema Studio Web, Orchestrator and Maestro show for the agent.</p>
+<p>It also creates an empty <code>bindings.json</code>. Replace its content with this, so the index name and
+folder can be changed per environment without touching the code. It's the coded counterpart of a
+solution resource:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="p">{</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0"</span><span class="p">,</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">  </span><span class="nt">"resources"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="w">      </span><span class="nt">"resource"</span><span class="p">:</span><span class="w"> </span><span class="s2">"index"</span><span class="p">,</span>
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a><span class="w">      </span><span class="nt">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Eligibility.Benefit Claims"</span><span class="p">,</span>
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a><span class="w">      </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a><span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a><span class="w">          </span><span class="nt">"defaultValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Eligibility"</span><span class="p">,</span>
+<a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a><span class="w">          </span><span class="nt">"isExpression"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a><span class="w">          </span><span class="nt">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Name"</span>
+<a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a><span class="w">        </span><span class="nt">"folderPath"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-14" name="__codelineno-29-14" href="#__codelineno-29-14"></a><span class="w">          </span><span class="nt">"defaultValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Benefit Claims"</span><span class="p">,</span>
+<a id="__codelineno-29-15" name="__codelineno-29-15" href="#__codelineno-29-15"></a><span class="w">          </span><span class="nt">"isExpression"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-29-16" name="__codelineno-29-16" href="#__codelineno-29-16"></a><span class="w">          </span><span class="nt">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Folder Path"</span>
+<a id="__codelineno-29-17" name="__codelineno-29-17" href="#__codelineno-29-17"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-29-18" name="__codelineno-29-18" href="#__codelineno-29-18"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-29-19" name="__codelineno-29-19" href="#__codelineno-29-19"></a><span class="w">      </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-20" name="__codelineno-29-20" href="#__codelineno-29-20"></a><span class="w">        </span><span class="nt">"ActivityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"retrieve_async"</span><span class="p">,</span>
+<a id="__codelineno-29-21" name="__codelineno-29-21" href="#__codelineno-29-21"></a><span class="w">        </span><span class="nt">"BindingsVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.2"</span><span class="p">,</span>
+<a id="__codelineno-29-22" name="__codelineno-29-22" href="#__codelineno-29-22"></a><span class="w">        </span><span class="nt">"DisplayLabel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FullName"</span>
+<a id="__codelineno-29-23" name="__codelineno-29-23" href="#__codelineno-29-23"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-29-24" name="__codelineno-29-24" href="#__codelineno-29-24"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-29-25" name="__codelineno-29-25" href="#__codelineno-29-25"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-29-26" name="__codelineno-29-26" href="#__codelineno-29-26"></a><span class="p">}</span>
+</code></pre></div>
+<p>If you changed <code>INDEX_FOLDER</code> in step 4, change <code>folderPath</code> and the second half of <code>key</code> to match.</p>
+<h3 id="10-test-the-agent-locally">10. Test the agent locally<a class="headerlink" href="#10-test-the-agent-locally" title="Permanent link">&para;</a></h3>
+<p>Time to test it by giving it some sample inputs. Usually you will need to come back multiple times and
+improve the prompt in order for it to be more flexible. This way users need to perform less manual
+validations and it will work more reliably.</p>
+<p>Each command passes the input straight to the agent. The result appears in the terminal when the run
+finishes: <strong>Conclusion</strong>, <strong>Justification</strong> and <strong>Calculation</strong>, followed by <code>✓ Successful execution.</code></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Qualifies: household of 4</label><label for="__tabbed_6_2">Does not qualify: household of 1</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Windows</label><label for="__tabbed_7_2">Mac</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">uip</span> <span class="n">codedagent</span> <span class="n">run</span> <span class="n">agent</span> <span class="s1">'{\"Household_Size\": 4, \"Monthly_Gross_Income\": \"2500\"}'</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>uip<span class="w"> </span>codedagent<span class="w"> </span>run<span class="w"> </span>agent<span class="w"> </span><span class="s1">'{"Household_Size": 4, "Monthly_Gross_Income": "2500"}'</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>According to the guidelines, the applicant qualifies, because the maximum allowed gross income
+for a household of 4 is $4,050.</p>
+<p>Output should be <strong>Conclusion: true</strong>, <strong>Calculation: 649.85</strong></p>
+</div>
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Windows</label><label for="__tabbed_8_2">Mac</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n">uip</span> <span class="n">codedagent</span> <span class="n">run</span> <span class="n">agent</span> <span class="s1">'{\"Household_Size\": 1, \"Monthly_Gross_Income\": \"2000\"}'</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>uip<span class="w"> </span>codedagent<span class="w"> </span>run<span class="w"> </span>agent<span class="w"> </span><span class="s1">'{"Household_Size": 1, "Monthly_Gross_Income": "2000"}'</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>According to the guidelines, the applicant does not qualify, because the maximum allowed gross
+income for a household of 1 is $1,950, which the applicant's income exceeds.</p>
+<p>Output should be <strong>Conclusion: false</strong>, <strong>Calculation: 0</strong></p>
+</div>
+</div>
+</div>
+<ul>
+<li><code>agent</code> is the entry-point name from <code>langgraph.json</code>, not the project name.</li>
+<li>Add <code>--output-file result.json</code> if you also want to save the result as a JSON file.</li>
+<li>Add <code>--trace-file trace.jsonl</code> to save every LLM and tool call. For the household of 4 you'll see
+  one search of the index, then <code>subtraction_tool(2500, 199)</code>, <code>multiplication_tool(2301, 0.15)</code> and
+  <code>subtraction_tool(995, 345.15)</code>. The tools did the maths, not the LLM.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Windows quoting</p>
+<p>Windows PowerShell 5.1 drops the double quotes inside a JSON argument, so each <code>"</code> is written as
+<code>\"</code>. In PowerShell 7.3 or newer, use the Mac form instead. Check your version with
+<code>$PSVersionTable.PSVersion</code>.</p>
+</div>
+<h2 id="adding-the-agent-to-your-solution">Adding the agent to your solution<a class="headerlink" href="#adding-the-agent-to-your-solution" title="Permanent link">&para;</a></h2>
+<p>Your agent works on your machine. Next, you copy it into your <strong>Studio Web</strong> solution, next to the
+other agents and the Maestro process. <code>uip codedagent push</code> uploads the code into a <strong>Coded Agent
+project</strong> in the solution. From there you debug and publish it like any other project.</p>
+<h3 id="11-create-a-coded-agent-project-and-copy-its-id">11. Create a coded agent project and copy its ID<a class="headerlink" href="#11-create-a-coded-agent-project-and-copy-its-id" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Open your solution in <strong>Studio Web</strong> and add a new <strong>Agent</strong> project: click <strong>+</strong>, then <strong>Agent</strong>
+   under <strong>Building Blocks</strong>. Name it <strong>Eligibility Determination Agent</strong>.</p>
+<p><img alt="Studio Web Explorer with the add (+) button and the Agent option under Building Blocks highlighted" class="screenshot" src="../6-eligibility-determination-agent-coded.images/19-add-agent-to-solution.png" /></p>
+</li>
+<li>
+<p>Open your newly created agent's <strong>Definition</strong> and select the <strong>Coded</strong> agent option, then click
+   <strong>Set up coded agent</strong>.</p>
+<p><img alt="Select agent type dialog with the Coded option selected and the Set up coded agent button highlighted" class="screenshot" src="../6-eligibility-determination-agent-coded.images/20-select-coded-agent-type-W.png" width="900" /></p>
+</li>
+<li>
+<p>In the new agent definition page, select the <strong>LangChain</strong> option and copy the project ID.</p>
+<p><img alt="Setup your coded agent page with the copy button next to the UIPATH_PROJECT_ID line highlighted" class="screenshot" src="../6-eligibility-determination-agent-coded.images/21-copy-project-id.png" /></p>
+</li>
+</ol>
+<h3 id="12-link-the-project-and-push">12. Link the project and push<a class="headerlink" href="#12-link-the-project-and-push" title="Permanent link">&para;</a></h3>
+<p>Open the <code>.env</code> file in the agent folder. Paste the project ID line you copied, so the file contains:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>UIPATH_PROJECT_ID=&lt;PROJECT-ID&gt;
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Mac: can't see the .env file?</p>
+<p>macOS hides files whose name starts with a dot. To show them in <strong>Finder</strong>, open the agent folder
+and press <strong>Cmd + Shift + .</strong> (period). Press the same keys again to hide them. Or open the agent
+folder in your code editor: most editors show hidden files like <code>.env</code> in their file list.</p>
+</div>
+<p>Then push:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>uip<span class="w"> </span>codedagent<span class="w"> </span>push
+</code></pre></div>
+<p>Push uploads the code and <code>uv.lock</code>, and adds the <strong>Eligibility</strong> index to your solution as a
+resource. <code>.env</code> and <code>.venv</code> stay on your machine.</p>
+<div class="admonition tip">
+<p class="admonition-title">Error: UIPATH_PROJECT_ID not found</p>
+<p>You ran <code>push</code> from another folder. Go back into the agent folder (step 2) and try again.</p>
+</div>
+<h3 id="13-debug-it-in-studio-web">13. Debug it in Studio Web<a class="headerlink" href="#13-debug-it-in-studio-web" title="Permanent link">&para;</a></h3>
+<p>Refresh <strong>Studio Web</strong> and open the coded agent project. You'll see your <code>main.py</code> and the agent's
+input and output arguments. Click <strong>Debug</strong> and run both scenarios again:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Qualifies: household of 4</label><label for="__tabbed_9_2">Does not qualify: household of 1</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="p">{</span><span class="nt">"Household_Size"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="nt">"Monthly_Gross_Income"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2500"</span><span class="p">}</span>
+</code></pre></div>
+<p>Output should be <strong>Conclusion: true</strong>, <strong>Calculation: 649.85</strong></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="p">{</span><span class="nt">"Household_Size"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">"Monthly_Gross_Income"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2000"</span><span class="p">}</span>
+</code></pre></div>
+<p>Output should be <strong>Conclusion: false</strong>, <strong>Calculation: 0</strong></p>
+</div>
+</div>
+</div>
+<p>The first debug run takes longer, because the Python environment is built in the cloud from <code>uv.lock</code>.</p>
+<h2 id="configuring-the-agentic-task-in-maestro">Configuring the Agentic Task in Maestro<a class="headerlink" href="#configuring-the-agentic-task-in-maestro" title="Permanent link">&para;</a></h2>
+<p>Let's get back to Studio and continue editing our Agentic Process.</p>
+<h3 id="14-point-the-task-at-your-agent">14. Point the task at your agent<a class="headerlink" href="#14-point-the-task-at-your-agent" title="Permanent link">&para;</a></h3>
+<div class="img-cols img-cols-50">
+<div>
+<p>Configure the <strong>Eligibility Determination</strong> task to use our freshly prepared AI Agent! This is done in
+the same way as the Robotic task: pick <strong>Agent → Start and wait for agent</strong>, then search for the agent in your
+solution.
+  </p>
+</div>
+<div>
+<p><img alt="Eligibility Determination step selected with the agent picker open" class="screenshot" src="../6-eligibility-determination-agent-coded.images/27-select-agent-in-task.png" />
+  </p>
+</div>
+</div>
+<h3 id="15-map-the-inputs">15. Map the inputs<a class="headerlink" href="#15-map-the-inputs" title="Permanent link">&para;</a></h3>
+<div class="img-cols img-cols-30">
+<div>
+<p>Now we need to pick outputs from the <strong>Process Benefits Application</strong> RPA Task, and add them as inputs
+to the Agent — here is how you do it in your Agentic task's <strong>Settings</strong>.
+  </p>
+</div>
+<div>
+<p><img alt="Eligibility Determination agent activity selected with its input mappings" class="screenshot" src="../6-eligibility-determination-agent-coded.images/28-map-agent-inputs.png" />
+  </p>
+</div>
+</div>
+<p>In the end:</p>
+<ul>
+<li>Robot's <strong>HouseHoldSize</strong> should map into Agent's <strong>Household_Size</strong></li>
+<li>Robot's <strong>MonthlyIncome</strong> should map into Agent's <strong>Monthly_Gross_Income</strong></li>
+</ul>
+<h3 id="16-run-it">16. Run it<a class="headerlink" href="#16-run-it" title="Permanent link">&para;</a></h3>
+<p>Process is ready for testing — click on the <strong>Debug</strong> button! This time we can check the output of the
+<strong>Eligibility Determination Agent</strong>.</p>
+<p><img alt="Completed execution showing the Eligibility Determination Agent's output" class="screenshot" src="../6-eligibility-determination-agent-coded.images/29-execution-result-W.png" width="900" /></p>
+<p><strong>Time to move to the next one!</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../5-income-verification-agent/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 5. Build the Income Verification Agent">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                5. Build the Income Verification Agent
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../7-configure-human-validation/" class="md-footer__link md-footer__link--next" aria-label="Next: 7. Add an Action App for human validation">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                7. Add an Action App for human validation
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "toc.integrate", "search.highlight", "search.suggest", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

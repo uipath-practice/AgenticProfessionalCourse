@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "10-residency-verification-context-W.png",
+  "image_path": "docs/benefit-claims-processing/2-setting-up-the-solution.images/10-residency-verification-context-W.png",
+  "lesson": "2-setting-up-the-solution",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Explorer\n\nBenefit Claims Processing - Mihai Iorga 18...\n  Action App\n  Addition Tool\n  Benefit Claims Processing\n  DownloadFileFromStorageBucket\n  Multiplication Tool\n\nApps\nAssets\nConnections\nIndexes\n  Eligibility\n  Income Verification\n  Residency Verification\nIXP Models\n\nBenefit Claims Processing.bpmn\nuipathlabs@gmail.com\nGenAI Connection\nEligibility\nIncome Verification\nResidency Verification\n\nDebug configuration\nWill be deployed in Debug folder\n\nResidency Verification\nNo fields to display for filter valu[...]\n\nSearch context grounding indexes\n\nPlatform resources\n  Benefit Claims\n    Eligibility\n    Income Verification\n    Residency Verification\n  Compliance Inspection\n    Index Workplace Safety and Compliance Regulati...\n  Shared\n    IT_FAQ_Documents",
+    "description": "The screenshot shows UiPath Studio Web with the Benefit Claims Processing project open. In the Explorer panel, the Indexes section is expanded and the Residency Verification index is selected. A context grounding index picker is open on the right, showing Platform resources with Benefit Claims expanded and the Residency Verification index visible and highlighted.",
+    "step_instructions": "Click on Indexes > Residency Verification in the Explorer. In the context grounding index picker, select Benefit Claims > Residency Verification from Platform resources."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 762,
+    "aspect_ratio": 3.27,
+    "image_size": "1755x536",
+    "rationale": "High density (762 chars) + wide (3.27) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 3086,
+    "completion_tokens": 802,
+    "total_tokens": 3888
+  },
+  "generated_at": "2026-08-18T15:23:03.792248+00:00"
+}

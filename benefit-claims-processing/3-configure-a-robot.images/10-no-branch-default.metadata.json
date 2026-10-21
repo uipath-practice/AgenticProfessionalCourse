@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "10-no-branch-default.jpg",
+  "image_path": "docs/benefit-claims-processing/3-configure-a-robot.images/10.jpg",
+  "lesson": "3-configure-a-robot",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "applicant\n\nNo\n\nAll required\nfields\nextracted?\n\nConditions\n\nMake default path\nIf no other path conditions are true, the default path will be used\nautomatically.\n\nCondition",
+    "description": "The screenshot shows a UiPath workflow/BPMN-style designer with a decision gateway labeled “All required fields extracted?” and the connector/path labeled “No” selected. On the right properties panel, the “Conditions” section is open and the “Make default path” toggle is enabled, meaning this path will be used if no other path conditions are true. The Condition input field is visible but empty.",
+    "step_instructions": "Click on the “No” connector/path from the decision gateway. In the Conditions panel, enable the “Make default path” toggle so this path is used automatically when no other path conditions are true."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 170,
+    "aspect_ratio": 1.75,
+    "image_size": "757x433",
+    "rationale": "Low text density (170 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2145,
+    "completion_tokens": 380,
+    "total_tokens": 2525
+  },
+  "generated_at": "2026-08-18T11:42:41.782475+00:00"
+}

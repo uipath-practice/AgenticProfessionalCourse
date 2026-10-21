@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "6-gmail-connection.jpg",
+  "image_path": "docs/benefit-claims-processing/2-setting-up-the-solution.images/06.jpg",
+  "lesson": "2-setting-up-the-solution",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Name*\n\nuipathlabs@gmail.com\n\nDescription\n\nGmail connection  *\n\nuipathlabs@gmail.com  ×\n\nSearch connections\n\n+  Connection\n\n- Platform resources\n\nBenefit Claims\n\nuipathlabs@gmail.com\n\nCompliance Inspection\n\nuipathlabs@gmail.com\n\nOpen connections",
+    "description": "The screenshot shows a UiPath Automation Cloud configuration form for a Gmail-related resource or connection. The Name field is filled with uipathlabs@gmail.com, the Description field is empty, and the Gmail connection dropdown is open. A Gmail connection named uipathlabs@gmail.com is selected, with matching available connections shown under Platform resources, including Benefit Claims and Compliance Inspection.",
+    "step_instructions": "Click on the Gmail connection field. Select the uipathlabs@gmail.com connection under Benefit Claims. If not already filled, in the Name field, enter uipathlabs@gmail.com."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 244,
+    "aspect_ratio": 1.25,
+    "image_size": "832x667",
+    "rationale": "Low text density (244 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2373,
+    "completion_tokens": 483,
+    "total_tokens": 2856
+  },
+  "generated_at": "2026-08-18T11:40:17.432886+00:00"
+}

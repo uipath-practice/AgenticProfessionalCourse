@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "2-select-connector-activity-W.png",
+  "image_path": "docs/benefit-claims-processing/8-configure-api-integration-benefit-approval.images/2-select-connector-activity.png",
+  "lesson": "8-configure-api-integration-benefit-approval",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "generate email\n\nGenerate Email                         UiPath GenAI Activities\nCompose draft emails in a specific style for use cases like marketing c...\n\nDelete Email                           Microsoft Outlook 365\nDelete Email\n\nForward Email                          Microsoft Outlook 365\nForward Email\n\nSend Email                             Mailjet\nSend a transactional email to a specified email address using Mailjet.\n\nSend Email                             Amazon SES\nSend emails using Amazon Simple Email Service (SES).\n\nSend Email                             Gmail\nSends an email message\n\nDownload Email                         Microsoft Outlook 365\nDownload email\n\nSuggest us something new\n\nBackground color\n\nImplementation\nAction\nExecute connector activity\n\nSelect activity *\nSelect activity\n\nError handling\nConditional throw\nThrow errors when certain conditions are met\n\nError retry policy\nConfigure automatic retries when errors occur",
+    "description": "The screenshot shows the UiPath Maestro task configuration interface with an activity picker modal open. In the right properties panel, the Implementation section has the Action dropdown set to “Execute connector activity.” The activity picker is searching for “generate email,” and the “Generate Email” result from UiPath GenAI Activities is highlighted.",
+    "step_instructions": "Click on the highlighted “Generate Email” result under “UiPath GenAI Activities” in the activity picker. If not already done, ensure the Action dropdown is set to “Execute connector activity” before selecting the activity."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 947,
+    "aspect_ratio": 2.82,
+    "image_size": "1654x587",
+    "rationale": "High density (947 chars) + wide (2.82) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 3195,
+    "completion_tokens": 735,
+    "total_tokens": 3930
+  },
+  "generated_at": "2026-08-20T09:40:31.952695+00:00"
+}

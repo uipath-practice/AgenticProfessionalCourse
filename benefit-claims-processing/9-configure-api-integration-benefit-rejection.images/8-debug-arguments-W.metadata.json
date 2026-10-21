@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "8-debug-arguments-W.png",
+  "image_path": "docs/benefit-claims-processing/9-configure-api-integration-benefit-rejection.images/08.png",
+  "lesson": "9-configure-api-integration-benefit-rejection",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Debug configuration  Benefit Claims Processing Template  >  Benefit Claims Processing\nEntry point: /content/Benefit Claims Processing.bpmn#Event_RKT5Di\n\nSolution resources    Entrypoint arguments\n\nInput arguments                                                                                                      { }\n\nTt  in_emailAddress\nyour_email_address\n\nTt  in_ExamplePaystub\nSample pay stub.png\n\nTt  in_Application\nSample application.pdf\n\nDeploy resources before debugging  ⓘ\nShow before debugging  ⓘ\n\nCancel    Save & Debug",
+    "description": "The screenshot shows the UiPath Studio Web debug configuration dialog for the Benefit Claims Processing process. The Entrypoint arguments tab is open, displaying input arguments for an email address, an example paystub file, and an application PDF. The in_emailAddress field is currently focused, while the two document input fields already contain sample file names.",
+    "step_instructions": "1. In the in_emailAddress field, enter your email address.\n2. Verify that in_ExamplePaystub is set to Sample pay stub.png.\n3. Verify that in_Application is set to Sample application.pdf.\n4. Click on Save & Debug to start debugging with these entry point arguments."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 530,
+    "aspect_ratio": 1.55,
+    "image_size": "1775x1148",
+    "rationale": "Medium text density (530 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2862,
+    "completion_tokens": 588,
+    "total_tokens": 3450
+  },
+  "generated_at": "2026-08-18T11:47:49.114265+00:00"
+}

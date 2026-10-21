@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "2-action-center-task-form-W.png",
+  "image_path": "docs/benefit-claims-processing/7-configure-human-validation.images/02.png",
+  "lesson": "7-configure-human-validation",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "\"Benefit Claim Review\" #13806635  Pending\n\nApprove    Deny\n\nBenefit Application        Supporting Docs\n\nBenefit Claim Details\n\nAutomatic Recommendation\n\nEligibility\nYes\nReason\nThe applicant qualifies for SNAP benefits as their gross monthly\nincome of $900 is below the maximum allowable income of $3,350\nfor a household size of 3. After applying the standard deduction of\n$198, their net income is $702. The calculated benefit amount is\n$679.70, which is rounded to $679.70.\nMonthly Benefit Calculation\n679.70\n\nFraud Risk Analysis\n\nResidency\nValid\nThe applicant provided address \"123 Main St, Springfield, MO\n65803\" matches the residency record for SSN 703-48-9234: Address:\n\"123 Main St\", City: \"Springfield\", State: \"MO\", ZIP: 65803. Minor\nformatting (trailing space in stored Address) is ignored per\nmatching rules.\nIncome\nvalid\nThe paystub monthly income matches the existing income record\nexactly for the applicant.\n\n1 / 12\n\nMissouri Department of\nSocial Services\nApplication for Supplemental Nutrition\nAssistance Program (SNAP)\n\nTo apply:\n• You have the right to apply for SNAP benefits at any time.\n• If an interview is required, it can be completed by phone or in\n  person. An interview is required in most cases.\n• Family Support Division (FSD) will attempt to call you, if\n  you provided a phone number on the application, the next\n  business day after your application is registered to complete\n  an interview. Answering this phone call is the quickest way to\n  complete your interview.\n• If you did not provide a phone number, or if you are unable to\n  complete your interview at the time we call, please call (855)\n  823-4908 to complete your interview or visit an FSD office to\n  complete this as soon as possible. (Review the next page for\n  more information about what to do after you’ve submitted\n  your SNAP Application).\n• We may ask you for proof of some of the information you give\n  to FSD.\n• Please write as neatly as possible.\n\nWays to return a SNAP application:\nUpload:\nmydssupload.mo.gov\nMail:\nFamily Support\nDivision PO Box 2700\nJefferson City, MO 65102\nIn Person:\nFind an office:\ndss.mo.gov/offices.htm\nFax:\n573-526-9400\n\nDate of application:\nBenefits are provided from the date FSD receives your application, which must contain your name, address and\nsignature. Please complete sections 2 through 6 to help FSD process your application faster.\nIf approved, your SNAP benefits are provided from the date FSD receives your application. This is your filing date. If you\nare in an institution and apply for SNAP benefits and Supplemental Security Income (SSI) at the same time, your filing\ndate is the date of release from the institution.\n\nAuthorized Representative:\nYou can choose more than one person or facility to complete your application and/or manage your benefits on\nyour behalf. They will act as your authorized representative. If you want an authorized representative, complete the\nAuthorized Representative Form (IM-6AR) at https://dssmanuals.mo.gov/wp-content/uploads/2020/09/im-6ar-app.pdf\nor call FSD.\n\nApplying for SNAP just got faster and easier.\nApply online at: https://mydss.mo.gov/apply\n\nMO 886-0460 (11-2025)        Cover        FS-1 (11-2025)",
+    "description": "The screenshot shows a UiPath Action Center human validation task titled \"Benefit Claim Review\" with status Pending. The Benefit Application tab is selected, displaying AI-generated benefit claim details and fraud risk analysis on the left, while a PDF viewer on the right shows the first page of a SNAP application supporting document. Approve and Deny buttons are available at the top for the reviewer’s decision.",
+    "step_instructions": "Review the automatic recommendation, eligibility reason, monthly benefit calculation, and fraud risk analysis. Compare the details against the SNAP application document shown in the PDF viewer. Click on Approve if the recommendation is correct, or click on Deny if the claim should not be approved."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 3190,
+    "aspect_ratio": 1.25,
+    "image_size": "1515x1212",
+    "rationale": "High density (3190 chars) + wide (1.25) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2572,
+    "completion_tokens": 1988,
+    "total_tokens": 4560
+  },
+  "generated_at": "2026-08-18T11:46:20.525783+00:00"
+}

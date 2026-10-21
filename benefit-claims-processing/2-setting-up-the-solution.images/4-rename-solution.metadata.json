@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "4-rename-solution.jpg",
+  "image_path": "docs/benefit-claims-processing/2-setting-up-the-solution.images/04.jpg",
+  "lesson": "2-setting-up-the-solution",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Explorer                                      +    🔍        Main\n\n▸  Benefit Claims Processing Te[...]\n\n   ›  Action App\n   ›  Addition Tool\n   ›  Benefit Claims Processi[...]\n   ›  DownloadFileFromStora[...]\n   ›  Multiplication Tool\n   ›  Process Benefits Applica[...]\n   ›  Retrieve Income Informa[...]\n   ›  Subtraction Tool\n   ›  UploadFileToStorageBuc[...]\n\nAdd project to solution\n\nAgentic process\nAgent\nRPA Workflow\nAPI Workflow\nApp\nEscalation app\n\nImport existing\nOpen in Studio Desktop\n\nRename\nProperties",
+    "description": "The screenshot shows UiPath Studio Web with the Explorer panel open for a solution named “Benefit Claims Processing Te[...]”. A context menu is open for the solution/project item, showing options to add projects, import or open in Studio Desktop, and manage the item. The “Rename” option in the context menu is highlighted, indicating the user is about to rename the selected solution or project.",
+    "step_instructions": "Click on the highlighted “Rename” option in the context menu for the selected “Benefit Claims Processing Te[...]” item."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 514,
+    "aspect_ratio": 1.08,
+    "image_size": "632x586",
+    "rationale": "Medium text density (514 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2174,
+    "completion_tokens": 480,
+    "total_tokens": 2654
+  },
+  "generated_at": "2026-08-18T11:40:10.186873+00:00"
+}

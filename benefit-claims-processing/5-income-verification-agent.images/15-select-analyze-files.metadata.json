@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "15-select-analyze-files.png",
+  "image_path": "docs/benefit-claims-processing/5-income-verification-agent.images/15.png",
+  "lesson": "5-income-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Choose tool\n\nanalyze fi        ×\n\nRPA workflows                                      Create new\n\nNo results\n\nAPI workflows                                      Create new\n\nNo results\n\nAgents                                             Create new\n\nNo results\n\nBuilt-in tools\n\nAnalyze Files    Preview\nAnalyze one or more files with an LLM to extract, synth...",
+    "description": "The screenshot shows the UiPath Agent Builder/Studio Web tool selection panel titled \"Choose tool.\" The search box contains \"analyze fi,\" filtering results so the RPA workflows, API workflows, and Agents sections show no results, while the Built-in tools section displays the \"Analyze Files\" tool with a Preview badge. The \"Analyze Files\" result is visually highlighted with a red rectangle.",
+    "step_instructions": "Click on the \"Analyze Files\" built-in tool result to add/select it."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 358,
+    "aspect_ratio": 0.88,
+    "image_size": "560x640",
+    "rationale": "Medium text density (358 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2202,
+    "completion_tokens": 250,
+    "total_tokens": 2452
+  },
+  "generated_at": "2026-08-18T11:44:29.133564+00:00"
+}

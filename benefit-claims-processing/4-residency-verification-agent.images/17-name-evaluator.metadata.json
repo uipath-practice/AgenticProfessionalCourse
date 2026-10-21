@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "17-name-evaluator.png",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/16.png",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Edit evaluator\n\nName *\nResidency Validation Evaluator\n\nCategory\nDeterministic\nDeterministic evaluators use exact matching rules\n\nType\nExact Match\nDeterministic evaluators use predefined rules\n\nDescription\nAn evaluator that checks for exact string matches between expected and actual outputs\n\nTarget output fields\nResidencyValidationDecision\nUse * for all fields, or specify field",
+    "description": "The screenshot shows the UiPath Agents evaluations interface on an \"Edit evaluator\" form. A deterministic \"Exact Match\" evaluator is configured with the name \"Residency Validation Evaluator\" and a description explaining that it checks exact string matches. The Name field and Target output fields area are visually highlighted, with the target output set to \"ResidencyValidationDecision\".",
+    "step_instructions": "Click on the Name field and enter \"Residency Validation Evaluator\". Select \"Deterministic\" in the Category dropdown. Select \"Exact Match\" in the Type dropdown. In the Target output fields field, enter \"ResidencyValidationDecision\"."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 379,
+    "aspect_ratio": 1.11,
+    "image_size": "958x860",
+    "rationale": "Medium text density (379 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2549,
+    "completion_tokens": 316,
+    "total_tokens": 2865
+  },
+  "generated_at": "2026-08-18T11:43:28.300682+00:00"
+}

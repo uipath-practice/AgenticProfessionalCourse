@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "1-human-loop-flow-diagram.png",
+  "image_path": "docs/benefit-claims-processing/7-configure-human-validation.images/01.png",
+  "lesson": "7-configure-human-validation",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Human in the loop\n\nRobots +\nAgents output\n\nCase Worker Review\n\nHuman decision +\noutputs\n\nInputs:\n\nSummary\nEligibilityStatus\nCalculation\nFraudResidencyRisk\nFraudResidencyExplanation\nFraudIncomeRisk\nFraudIncomeExplanation\nApplicationFilePath\n\nOutputs:\n\nAction\nDenialReason",
+    "description": "The screenshot shows an instructional diagram for the Human in the Loop validation flow in the Benefit Claims Processing exercise. Robot and agent outputs feed into a Case Worker Review step, after which the human decision produces outputs. The diagram lists the inputs sent to the case worker and the expected outputs returned from the human review.",
+    "step_instructions": "Informational screenshot — no user action required. It shows the inputs to provide to the Case Worker Review human validation step and the outputs expected from the review: Action and DenialReason."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 270,
+    "aspect_ratio": 1.96,
+    "image_size": "1420x726",
+    "rationale": "Low text density (270 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2950,
+    "completion_tokens": 241,
+    "total_tokens": 3191
+  },
+  "generated_at": "2026-08-18T11:45:59.535046+00:00"
+}

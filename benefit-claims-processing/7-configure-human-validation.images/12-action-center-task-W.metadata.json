@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "12-action-center-task-W.png",
+  "image_path": "docs/benefit-claims-processing/7-configure-human-validation.images/12.png",
+  "lesson": "7-configure-human-validation",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Approve    Deny\n\nBenefit Application    Supporting Docs\n\nBenefit Claim Details\n\nAutomatic Recommendation\n\nEligibility\nYes\nReason\nThe applicant qualifies for SNAP benefits under the provided guidelines. For a household size of 3,\nthe maximum allowable gross monthly income is $3,350, and the applicant's gross monthly income\nis $900, which is below that threshold. Using the available information, no allowable deductions\nwere provided, so net monthly income is treated as $900. The maximum monthly benefit for a\nhousehold of 3 is $785. Fifteen percent of net income is $135, and subtracting that from $785 results\nin a monthly benefit amount of $650.\nMonthly Benefit Calculation\n650\n\nFraud Risk Analysis\n\nResidency\nValid\nA residency record was found for SSN 703-48-9234 with address 123 Main St, Springfield, MO 65803.\nThe stored address included a trailing space in the street field (\"123 Main St \"), which is a formatting\ndifference only and does not affect the match. Address, City, State, and ZIP all match the declared\naddress.\nIncome\nvalid\nPaystub shows monthly income of $900.00 for Adrian Cole (Employee ID/SSN 703-48-9234), which\nmatches existing records monthly income of $900.\n\nPDF viewer toolbar:\n886-0460 (11-...    1 / 12    -    91%    +\n\nMissouri Department of\nSocial Services\n\nApplication for Supplemental Nutrition\nAssistance Program (SNAP)\n\nTo apply:\n• You have the right to apply for SNAP benefits at any time.\n• If an interview is required, it can be completed by phone or in\n  person. An interview is required in most cases.\n• Family Support Division (FSD) will attempt to call you, if\n  you provided a phone number on the application, the next\n  business day after your application is registered to complete\n  an interview. Answering this phone call is the quickest way to\n  complete your interview.\n• If you did not provide a phone number, or if you are unable to\n  complete your interview at the time we call, please call (855)\n  823-4908 to complete your interview or visit an FSD office to\n  complete this as soon as possible. (Review the next page for\n  more information about what to do after you've submitted\n  your SNAP application).\n• We may ask you for proof of some of the information you give\n  to FSD.\n• Please write as neatly as possible.\n\nWays to return a SNAP application:\nUpload:\nmydssupload.mo.gov\nMail:\nFamily Support\nDivision PO Box 2700\nJefferson City, MO 65102\nIn Person:\nFind an office:\ndss.mo.gov/offices.htm\nFax:\n573-526-9400\n\nDate of application:\nBenefits are provided from the date FSD receives your application, which must contain your name, address and\nsignature. Please complete sections 2 through 6 to help FSD process your application faster.\nIf approved, your SNAP benefits are provided from the date FSD receives your application. This is your filing date. If you\n[...] are in an institution and apply for SNAP benefits and Supplemental Security Income (SSI) at the same time, your filing\n[...] date is the date of release from the institution.",
+    "description": "The screenshot shows a UiPath human validation/action screen for Benefit Claims Processing. The Benefit Application tab is active, displaying benefit claim details, an automatic eligibility recommendation, monthly benefit calculation, and fraud risk analysis on the left. A PDF viewer on the right shows the applicant’s SNAP application document, while Approve and Deny action buttons are available at the top.",
+    "step_instructions": "Review the Automatic Recommendation and Fraud Risk Analysis sections on the left. Review the SNAP application document in the PDF viewer on the right and use the Supporting Docs tab if additional evidence is needed. Click on Approve to accept the recommended benefit claim decision, or click on Deny to reject it."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 3001,
+    "aspect_ratio": 1.76,
+    "image_size": "2033x1152",
+    "rationale": "High density (3001 chars) + wide (1.76) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2946,
+    "completion_tokens": 1815,
+    "total_tokens": 4761
+  },
+  "generated_at": "2026-08-18T11:46:53.968946+00:00"
+}

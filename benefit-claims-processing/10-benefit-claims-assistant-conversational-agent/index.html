@@ -1,0 +1,1693 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Participant's handbook for the UiPath Agentic Automation Workshop — build an end-to-end agentic Benefit Claims process.">
+      
+      
+        <meta name="author" content="Mihai Iorga">
+      
+      
+        <link rel="canonical" href="https://uipath-practice.github.io/AgenticCodingAgents/benefit-claims-processing/10-benefit-claims-assistant-conversational-agent/">
+      
+      
+        <link rel="prev" href="../9-configure-api-integration-benefit-rejection/">
+      
+      
+        <link rel="next" href="../11-publish-the-solution/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>10. Benefit Claims Assistant - Conversational Agent - Agentic Automation Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#build-the-benefit-claims-assistant-conversational-agent" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Agentic Automation Workshop" class="md-header__button md-logo" aria-label="Agentic Automation Workshop" data-md-component="logo">
+      
+  <img src="../../assets/images/Partner Success Logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Agentic Automation Workshop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              10. Benefit Claims Assistant - Conversational Agent
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../prerequisites/" class="md-tabs__link">
+          
+  
+  
+  Prerequisites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started-with-coding-agents/1-practice-the-cli/" class="md-tabs__link">
+          
+  
+  
+  Getting Started with Coding Agents
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Benefit Claims Processing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../next-steps/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Next Steps
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Agentic Automation Workshop" class="md-nav__button md-logo" aria-label="Agentic Automation Workshop" data-md-component="logo">
+      
+  <img src="../../assets/images/Partner Success Logo.png" alt="logo">
+
+    </a>
+    Agentic Automation Workshop
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prerequisites
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prerequisites
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prerequisites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prerequisites/installation-guides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation Guides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started with Coding Agents
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started with Coding Agents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started-with-coding-agents/1-practice-the-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Practicing the CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started-with-coding-agents/2-build-your-first-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Build Your First Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started-with-coding-agents/you-did-it/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    You did it!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benefit Claims Processing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Benefit Claims Processing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-create-bpmn-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Automating Business Processes using BPMN canvas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-setting-up-the-solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Setting up the Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-configure-a-robot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Add an RPA automation to your Maestro workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-residency-verification-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Build the Residency Verification Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5-income-verification-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Build the Income Verification Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6-eligibility-determination-agent-coded/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Build the Eligibility Determination Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7-configure-human-validation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Add an Action App for human validation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8-configure-api-integration-benefit-approval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Update external systems using API — Benefit Approval Case
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../9-configure-api-integration-benefit-rejection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Update external systems using API — Benefit Rejection Case
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Benefit Claims Assistant - Conversational Agent
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Benefit Claims Assistant - Conversational Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Goal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-we-are-building" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What we are building
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conversational-vs-autonomous-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversational vs. autonomous agents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-the-conversational-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Create the conversational agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-add-the-eligibility-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Add the Eligibility context
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-add-the-uploadfiletostoragebucket-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Add the UploadFileToStorageBucket tool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-add-the-start-benefit-claim-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Add the Start Benefit Claim tool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-write-the-system-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Write the System Prompt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-test-the-agent-ask-a-question" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Test the agent: ask a question
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-test-the-agent-register-an-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Test the agent: register an application
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-publish-the-solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Publish the Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../next-steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Next Steps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="build-the-benefit-claims-assistant-conversational-agent">Build the Benefit Claims Assistant (Conversational Agent)<a class="headerlink" href="#build-the-benefit-claims-assistant-conversational-agent" title="Permanent link">&para;</a></h1>
+<div class="admonition tip">
+<p class="admonition-title">Here is our plan for this lesson:</p>
+<ol>
+<li>Build a <strong>conversational</strong> AI Agent in <strong>Studio Web</strong> that answers questions about the benefits program, using the <strong>Eligibility</strong> context</li>
+<li>Let the same agent register new applications: collect the documents in the chat, upload them and start the <strong>Benefit Claims Processing</strong> workflow</li>
+<li>Test both scenarios in the agent's chat</li>
+</ol>
+</div>
+<h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<p>By the end of this lesson you'll have a <strong>Benefits Assistant</strong> that applicants can chat with. It answers questions about the SNAP program from the official documents, and it registers a new application end to end: it asks for the applicant's email, then the application, then the paystub, stores both files and starts the existing <strong>Benefit Claims Processing</strong> workflow, without waiting for the decision.</p>
+<h2 id="what-we-are-building">What we are building<a class="headerlink" href="#what-we-are-building" title="Permanent link">&para;</a></h2>
+<p>The agent has two jobs:</p>
+<ul>
+<li><strong>Job A: answer questions</strong> about the SNAP benefits program, using only the official program documents in the <code>Eligibility</code> index.</li>
+<li><strong>Job B: register a new application.</strong> It collects the applicant's email address, then the application, then the paystub, uploads each file, and starts the existing <strong>Benefit Claims Processing</strong> workflow.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>                        Applicant (chat window)
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                                  |
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>                                  v
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>              +-----------------------------------------+
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>              | Benefits Assistant Conversational Agent |
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>              +-----------------------------------------+
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>                 |                 |                  |
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>     Job A       |       Job B     |                  |   Job B (after "yes")
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>                 v                 v                  v
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        +--------------+  +---------------------+  +----------------------+
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        | Eligibility  |  | UploadFileTo        |  | Start Benefit Claim  |
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        | index (RAG)  |  | StorageBucket  (x2) |  | (robot, no waiting)  |
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        +--------------+  +---------------------+  +----------------------+
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>                                   |                          |
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>                                   v                          v
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>                        "Input Documents" bucket   BenefitClaimsProcessing (BPMN)
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>                        application + paystub      agents, case worker review,
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>                                                   approval / rejection email
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Piece</th>
+<th>Type</th>
+<th>What it does</th>
+<th>Why it is there</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Benefits Assistant Conversational Agent</strong></td>
+<td>Low-code agent, <strong>Conversational</strong></td>
+<td>Chats with the applicant, answers questions, runs the registration flow</td>
+<td>One friendly front door for applicants</td>
+</tr>
+<tr>
+<td><strong>Eligibility</strong></td>
+<td>Context Grounding index (already in the solution)</td>
+<td>Returns the most relevant passages from the program documents</td>
+<td>The agent answers from official rules, not from its own memory</td>
+</tr>
+<tr>
+<td><strong>UploadFileToStorageBucket</strong></td>
+<td>RPA robot (already in the template)</td>
+<td>Saves a file the user attached in the chat into the <strong>Input Documents</strong> bucket and returns the real file name</td>
+<td>The BPMN reads its input files from that bucket. A robot with a file argument also lets the chat accept file uploads</td>
+</tr>
+<tr>
+<td><strong>Start Benefit Claim</strong></td>
+<td>RPA robot (already in the template)</td>
+<td>Starts the <code>BenefitClaimsProcessing</code> process with the two file names and the email, then returns right away</td>
+<td>No Integration Service connector needed. It does not wait, because the BPMN can run for days</td>
+</tr>
+<tr>
+<td><strong>BenefitClaimsProcessing</strong></td>
+<td>BPMN agentic process (already in the solution)</td>
+<td>Extracts data, runs the verification agents, sends the case to a case worker, emails the result</td>
+<td>Unchanged. The chat simply becomes a new way to start it</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Key idea</p>
+<p>The agent decides <em>what</em> to do and <em>when</em>. Robots do the parts that must be exact: storing files, stamping the real time, starting a process. An LLM has no reliable clock and should never guess a timestamp.</p>
+</div>
+<h2 id="conversational-vs-autonomous-agents">Conversational vs. autonomous agents<a class="headerlink" href="#conversational-vs-autonomous-agents" title="Permanent link">&para;</a></h2>
+<p>An <strong>autonomous</strong> agent, like the ones you built in the earlier lessons, takes one input and returns one structured output. A <strong>conversational</strong> agent talks with a person over many turns, streams its replies and can ask follow-up questions. Registration needs exactly that.</p>
+<p>That's also why a conversational agent looks different:</p>
+<ul>
+<li><strong>No output arguments.</strong> A conversational agent's "output" is the chat itself: its messages and the tool calls it makes. Nothing would ever fill an output schema, so leave it empty.</li>
+<li><strong>The user prompt stays blank.</strong> In an autonomous agent, the user prompt turns input arguments into a task. Here, <strong>each chat message from the user is the input</strong>. The platform sends the whole conversation to the agent on every turn.</li>
+</ul>
+<p>You also don't add any input argument for "message" or "chat history". The platform provides the conversation automatically.</p>
+<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
+<h3 id="1-create-the-conversational-agent">1. Create the conversational agent<a class="headerlink" href="#1-create-the-conversational-agent" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>In the Explorer, click <strong>Add</strong> (<strong>+</strong>) and choose <strong>Agent</strong> under <strong>Building Blocks</strong>.</p>
+<p><img alt="Studio Web Explorer with the add (+) button and the Agent option under Building Blocks highlighted" class="screenshot" src="../10-benefit-claims-assistant-conversational-agent.images/1-add-agent-to-solution.png" /></p>
+</li>
+<li>
+<p>Name the agent:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Benefits Assistant Conversational Agent
+</code></pre></div>
+</li>
+<li>
+<p>In the <strong>Select agent type</strong> dialog, choose <strong>Conversational</strong> under <strong>LOW-CODE</strong> and click <strong>Start fresh</strong>.</p>
+<p><img alt="Select agent type dialog with the Conversational option selected under LOW-CODE and the Start fresh button highlighted" class="screenshot" src="../10-benefit-claims-assistant-conversational-agent.images/2-select-conversational-agent-type.png" /></p>
+</li>
+<li>
+<p>In the agent settings, choose the model <code>anthropic.claude-sonnet-5</code> (Claude Sonnet 5).</p>
+<p><img alt="Benefits Assistant Conversational Agent selected on the canvas, with the agent settings panel showing the anthropic.claude-sonnet-5 model highlighted" class="screenshot" src="../10-benefit-claims-assistant-conversational-agent.images/3-select-model-W.png" width="900" /></p>
+</li>
+</ol>
+<p>The agent now appears in the Explorer, its type is <strong>Conversational</strong>, and it has no input or output arguments.</p>
+<h3 id="2-add-the-eligibility-context">2. Add the Eligibility context<a class="headerlink" href="#2-add-the-eligibility-context" title="Permanent link">&para;</a></h3>
+<p><a href="https://docs.uipath.com/automation-cloud/automation-cloud/latest/admin-guide/about-context-grounding">Context Grounding</a>
+is a component of the UiPath AI Trust Layer which allows you to bring in your data to generate more
+accurate, reliable GenAI predictions. It stores your documents in an
+<a href="https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-indexes">index</a>: a
+searchable copy that returns the passages that best match a question.</p>
+<p>The index contains the program documents (eligibility criteria and benefit calculation rules). With it, the agent answers from the official text and can show where the answer came from. Without it, the agent would answer from general knowledge, which may be outdated or simply wrong for this program.</p>
+<ol>
+<li>
+<p>In the agent, click <strong>Add Context</strong>.</p>
+<p><img alt="Agent canvas with the add (+) button under Context highlighted" class="screenshot" src="../10-benefit-claims-assistant-conversational-agent.images/4-add-context.png" /></p>
+</li>
+<li>
+<p>Select <strong>Context Grounding Indexes</strong>.</p>
+<p><img alt="New context dialog with Context Grounding Indexes highlighted above Data Fabric Entities" class="screenshot" src="../10-benefit-claims-assistant-conversational-agent.images/5-select-context-type.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Eligibility</strong> index from the current solution.</p>
+<p><img alt="Indexes picker with Eligibility highlighted under the Benefit Claims folder in Available resources" class="screenshot" src="../10-benefit-claims-assistant-conversational-agent.images/6-select-eligibility-index.png" /></p>
+</li>
+<li>
+<p>Choose the <strong>Semantic</strong> search strategy.</p>
+<p><img alt="Strategy dropdown with the Semantic option highlighted" class="screenshot" src="../10-benefit-claims-assistant-conversational-agent.images/7-select-semantic-strategy.png" /></p>
+</li>
+<li>
+<p>Paste this as the context <strong>description</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>SNAP program eligibility rules: income limits, deductions, household size rules and benefit amounts.
+</code></pre></div>
+<p><img alt="Eligibility context settings with the Description field filled in and highlighted" class="screenshot" src="../10-benefit-claims-assistant-conversational-agent.images/8-context-description.png" /></p>
+</li>
+<li>
+<p>Keep the search query <strong>dynamic</strong> (the agent writes the query) and paste this as the query description:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>A focused natural-language question about SNAP eligibility rules, income limits, deductions or benefit amounts.
+</code></pre></div>
+<p><img alt="Eligibility context settings with the dynamic Query field filled in and highlighted" class="screenshot" src="../10-benefit-claims-assistant-conversational-agent.images/9-context-query.png" /></p>
+</li>
+</ol>
+<h3 id="3-add-the-uploadfiletostoragebucket-tool">3. Add the UploadFileToStorageBucket tool<a class="headerlink" href="#3-add-the-uploadfiletostoragebucket-tool" title="Permanent link">&para;</a></h3>
+<p>This robot stores each attached file in the <strong>Input Documents</strong> bucket. It also has a <strong>file</strong> argument (<code>In_File</code>): a tool that can process files is what enables file uploads in the chat. Without it, users can't attach files.</p>
+<ol>
+<li>
+<p>In the tools section, click <strong>+</strong>.</p>
+<p><img alt="Agent canvas with the Eligibility context attached and the add (+) button under Tools highlighted" class="screenshot" src="../10-benefit-claims-assistant-conversational-agent.images/10-add-tool.png" /></p>
+</li>
+<li>
+<p>Search for <strong>UploadFileToStorageBucket</strong> under RPA workflows and select it.</p>
+<p><img alt="Choose tool panel with UploadFile typed in the search box and UploadFileToStorageBucket highlighted under RPA workflows in solution_folder" class="screenshot" src="../10-benefit-claims-assistant-conversational-agent.images/11-select-upload-tool.png" /></p>
+</li>
+<li>
+<p>Paste this into the tool <strong>Description</strong>. It tells the agent what the tool does and when to call it. The details of each value go in the argument descriptions, in the next step.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Uploads ONE file the user attached in the chat to the 'Input Documents' storage bucket and returns the exact name it was stored under. Call it once per document, one at a time: first for the application, then, after the user has attached it, for the paystub.
+</code></pre></div>
+</li>
+<li>
+<p>Fill in the argument descriptions (the text the agent reads to decide what to pass):</p>
+<ul>
+<li>
+<p><code>In_File</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>The single file the user attached for the current document: the application (PDF) or the paystub (PDF or PNG)
+</code></pre></div>
+</li>
+<li>
+<p><code>in_emailAddress</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Applicant email address, exactly as provided by the user
+</code></pre></div>
+</li>
+<li>
+<p><code>in_FileName</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Target file name: &lt;sanitized email&gt;_&lt;application|paystub&gt;_{timestamp}.&lt;pdf|png&gt;. Sanitized email = the email with every '@' and '.' replaced by '_'. Keep the literal text {timestamp}, the robot replaces it. The application is always .pdf; the paystub extension must match the attached file. Example: jane_doe_example_com_paystub_{timestamp}.png
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ol>
+<p><img alt="UploadFileToStorageBucket tool settings with the Description and the In_File, in_emailAddress and in_FileName argument descriptions filled in and highlighted" class="screenshot" src="../10-benefit-claims-assistant-conversational-agent.images/12-upload-tool-configuration.png" /></p>
+<h3 id="4-add-the-start-benefit-claim-tool">4. Add the Start Benefit Claim tool<a class="headerlink" href="#4-add-the-start-benefit-claim-tool" title="Permanent link">&para;</a></h3>
+<p>Let's add the tool that triggers the Maestro process for claim submission.</p>
+<ol>
+<li>
+<p>In the tools section, click <strong>+</strong>.</p>
+<p><img alt="Agent canvas with the add (+) button under Tools highlighted" class="screenshot" src="../10-benefit-claims-assistant-conversational-agent.images/10-add-tool.png" /></p>
+</li>
+<li>
+<p>Search for <strong>Start Benefit Claim</strong> and select it.</p>
+<p><img alt="Choose tool panel with Start Benefit Claim typed in the search box and the Start Benefit Claim workflow highlighted under RPA workflows in solution_folder" class="screenshot" src="../10-benefit-claims-assistant-conversational-agent.images/13-select-start-benefit-claim-tool.png" /></p>
+</li>
+<li>
+<p>Paste this into the tool <strong>Description</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Registers and starts a new SNAP benefit claim by launching the Benefit Claims Processing workflow in the background. Call it only once per application, after both documents are uploaded and the user has explicitly confirmed the summary. It does not return an eligibility outcome.
+</code></pre></div>
+</li>
+<li>
+<p>Fill in the argument descriptions:</p>
+<ul>
+<li>
+<p><code>in_Application</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>The out_FileName returned by UploadFileToStorageBucket for the application PDF, exactly as returned
+</code></pre></div>
+</li>
+<li>
+<p><code>in_ExamplePaystub</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>The out_FileName returned by UploadFileToStorageBucket for the paystub (PDF or PNG), exactly as returned
+</code></pre></div>
+</li>
+<li>
+<p><code>in_emailAddress</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Applicant email address, the same one used for the uploads
+</code></pre></div>
+</li>
+</ul>
+<p><img alt="Start Benefit Claim tool settings with the Description and the in_Application, in_ExamplePaystub and in_emailAddress argument descriptions filled in and highlighted" class="screenshot" src="../10-benefit-claims-assistant-conversational-agent.images/14-start-benefit-claim-tool-configuration.png" /></p>
+</li>
+</ol>
+<h3 id="5-write-the-system-prompt">5. Write the System Prompt<a class="headerlink" href="#5-write-the-system-prompt" title="Permanent link">&para;</a></h3>
+<p>The system prompt is the agent's job description. It sets the scope, the two jobs, the exact registration steps and the rules for tools. A vague prompt is the most common reason an agent misbehaves.</p>
+<p>The prompt covers:</p>
+<ul>
+<li><strong>Job A, answer program questions:</strong> only from the Eligibility context; at most 3 searches per question; if the documents don't contain the answer, say so; never decide whether a specific person is eligible or estimate their benefit (that's the case worker's job, through the BPMN).</li>
+<li><strong>Job B, register an application, one file at a time:</strong><ol>
+<li>Ask for the email address.</li>
+<li>Ask for the <strong>application</strong> (PDF, max 5 MB), upload it as <code>&lt;sanitized email&gt;_application_{timestamp}.pdf</code>, and confirm it was received.</li>
+<li>Only then ask for the <strong>paystub</strong> (PDF or PNG, max 5 MB) and upload it as <code>&lt;sanitized email&gt;_paystub_{timestamp}.pdf</code> or <code>.png</code>, matching the file.</li>
+<li>If the user attaches two files at once, ask them to send one at a time, starting with the application.</li>
+<li>Summarise (email + the two stored file names) and ask for confirmation.</li>
+<li>Call <strong>Start Benefit Claim</strong> with the two returned <code>out_FileName</code> values and the email.</li>
+<li>Tell the user the application was submitted and they'll be contacted by email.</li>
+</ol>
+</li>
+</ul>
+<p>The "sanitized email" replaces every <code>@</code> and <code>.</code> with <code>_</code>. Example: for <code>jane.doe@example.com</code> the agent sends <code>jane_doe_example_com_application_{timestamp}.pdf</code>, and the robot stores it as, for example, <code>jane_doe_example_com_application_20261016143005.pdf</code>.</p>
+<p>Open the agent, select the <strong>System prompt</strong> field and paste the prompt below. Leave the <strong>User prompt</strong> empty.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>You are the Benefits Assistant for the SNAP benefits program. You help members of the public understand the program rules and register a new benefit application. Tone: friendly, patient, clear and concise. Use plain language and avoid jargon.
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>Scope:
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>- In scope (Job A): questions about SNAP eligibility rules, deductions, income limits, household size rules and benefit amounts.
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>- In scope (Job B): registering a new benefit application by collecting the applicant's email, then the application (PDF), then the paystub (PDF or PNG), one at a time, and submitting the claim.
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>- Out of scope: any other topic, legal or tax advice, the status or outcome of an existing claim, and changes to a submitted claim. Politely say you cannot help with that and, where relevant, point the user to the benefits office.
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>Conversation behavior:
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>- On the first turn, greet the user briefly and explain that you can answer questions about SNAP eligibility rules or help them submit a new application.
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>- If the user's intent is unclear, ask one short clarifying question before acting.
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>- Handle one job at a time. If the user switches from questions to applying (or back), follow the new request.
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>Job A: answering eligibility questions
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>- Answer ONLY from information retrieved from the Eligibility context. Do not use outside knowledge about SNAP or other programs.
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>- Search the Eligibility context with a focused query. Search at most 3 times per user question. After the third search, stop searching and answer with what you already have.
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>- If the retrieved content does not cover the question, or only covers part of it, say so clearly and do not guess.
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>- Explain rules in general terms. Never make an eligibility decision for a specific person, never say that someone qualifies or does not qualify, and never promise or estimate a benefit amount for a specific person or household. If the user asks whether they personally qualify or how much they will get, explain the relevant general rules and invite them to submit an application so the program can assess their case.
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>Job B: registering a new application
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>Follow these steps in order. Do not skip steps.
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>1. Ask for the applicant's email address. If the value does not look like a valid email address, ask again.
+<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a>2. Collect and upload the application first. Ask the user to attach ONLY the completed application form (a PDF file, at most 5 MB) and wait for it. Treat the file attached in reply to this request as the application. If it is missing, is not a PDF, or is larger than 5 MB, explain the problem and ask for a correct file. Then upload it with the UploadFileToStorageBucket tool: In_File = the attached application, in_emailAddress = the email address, in_FileName = &lt;sanitized email&gt;_application_{timestamp}.pdf. Keep the returned out_FileName and tell the user the application was received.
+<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>3. Then collect and upload the paystub. Only after the application upload has succeeded, ask the user to attach ONLY a recent paystub (a PDF or a PNG image, at most 5 MB) and wait for it. Treat the file attached in reply to this request as the paystub. If it is missing, has another format, or is larger than 5 MB, explain the problem and ask for a correct file. Then upload it with the UploadFileToStorageBucket tool: In_File = the attached paystub, in_emailAddress = the email address, in_FileName = &lt;sanitized email&gt;_paystub_{timestamp}.pdf for a PDF, or &lt;sanitized email&gt;_paystub_{timestamp}.png for a PNG. The extension must match the attached file. Keep the returned out_FileName.
+<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a>   Rules for both uploads:
+<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a>   - Build the sanitized email by replacing every "@" and every "." in the email address with "_". Example: jane.doe@example.com becomes jane_doe_example_com.
+<a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a>   - Write the text {timestamp} literally, including the curly braces. The tool replaces it with the real timestamp.
+<a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a>   - Ask for one file at a time. If the user attaches more than one file in a single message, do not guess which is which: ask them to send the files one at a time, starting with the application.
+<a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a>   - If an upload fails, tell the user and offer to try again; do not continue to step 4 until both uploads have succeeded.
+<a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a>4. Show a short summary: the email address and the two file names returned by the tool (application and paystub). Ask the user to confirm that the details are correct and that they want to submit the application.
+<a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a>5. Only after the user explicitly confirms, call the Start Benefit Claim tool once with in_Application = the out_FileName returned for the application, in_ExamplePaystub = the out_FileName returned for the paystub, and in_emailAddress = the email address. If the user does not confirm, ask what they want to change.
+<a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a>6. Tell the user that the application has been submitted and that they will be contacted by email about the next steps. Do not wait for the processing result, and do not guess or predict the outcome.
+<a id="__codelineno-12-32" name="__codelineno-12-32" href="#__codelineno-12-32"></a>
+<a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a>Tools:
+<a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a>- Eligibility context: use only for Job A questions, at most 3 searches per question.
+<a id="__codelineno-12-35" name="__codelineno-12-35" href="#__codelineno-12-35"></a>- UploadFileToStorageBucket: call only in Job B steps 2 and 3, once per document, and only with a file the user attached in this conversation.
+<a id="__codelineno-12-36" name="__codelineno-12-36" href="#__codelineno-12-36"></a>- Start Benefit Claim: call only in Job B step 5, after explicit user confirmation, and only once per application.
+<a id="__codelineno-12-37" name="__codelineno-12-37" href="#__codelineno-12-37"></a>- Never invent, edit or reformat file names. Only pass out_FileName values exactly as returned by UploadFileToStorageBucket.
+<a id="__codelineno-12-38" name="__codelineno-12-38" href="#__codelineno-12-38"></a>
+<a id="__codelineno-12-39" name="__codelineno-12-39" href="#__codelineno-12-39"></a>Privacy:
+<a id="__codelineno-12-40" name="__codelineno-12-40" href="#__codelineno-12-40"></a>- Ask only for the information needed: the applicant's email and the two documents. Do not ask for social security numbers, bank details or other personal data.
+<a id="__codelineno-12-41" name="__codelineno-12-41" href="#__codelineno-12-41"></a>- Do not repeat the contents of the uploaded documents back to the user.
+<a id="__codelineno-12-42" name="__codelineno-12-42" href="#__codelineno-12-42"></a>
+<a id="__codelineno-12-43" name="__codelineno-12-43" href="#__codelineno-12-43"></a>Response style:
+<a id="__codelineno-12-44" name="__codelineno-12-44" href="#__codelineno-12-44"></a>- Default to 2 to 4 sentences. Use short bullet lists for multi-part rules or summaries.
+<a id="__codelineno-12-45" name="__codelineno-12-45" href="#__codelineno-12-45"></a>- Be warm and encouraging, but factual.
+<a id="__codelineno-12-46" name="__codelineno-12-46" href="#__codelineno-12-46"></a>
+<a id="__codelineno-12-47" name="__codelineno-12-47" href="#__codelineno-12-47"></a>Uncertainty:
+<a id="__codelineno-12-48" name="__codelineno-12-48" href="#__codelineno-12-48"></a>- If the Eligibility context does not cover something, say that you do not have that information and suggest contacting the benefits office.
+<a id="__codelineno-12-49" name="__codelineno-12-49" href="#__codelineno-12-49"></a>- If a tool returns an error or an unexpected result, explain it simply and offer to retry. Never pretend that an action succeeded.
+</code></pre></div>
+<p><img alt="Agent settings panel with the anthropic.claude-sonnet-5 model and the System prompt field filled in and highlighted" class="screenshot" src="../10-benefit-claims-assistant-conversational-agent.images/15-system-prompt.png" /></p>
+<h3 id="6-test-the-agent-ask-a-question">6. Test the agent: ask a question<a class="headerlink" href="#6-test-the-agent-ask-a-question" title="Permanent link">&para;</a></h3>
+<p>Conversational agents are tested in the chat in Studio Web. Tool calls during the test are <strong>real</strong>: files really land in the bucket and the BPMN really starts.</p>
+<p>Open the agent and start its test chat (<strong>Debug</strong>).</p>
+<p><img alt="Studio Web toolbar with the Debug button highlighted, and the Benefits Assistant Conversational Agent definition open" class="screenshot" src="../10-benefit-claims-assistant-conversational-agent.images/16-start-debug-W.png" width="900" /></p>
+<p>Then type:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>What's the gross monthly income limit for a household of 4?
+</code></pre></div>
+<p>In the details of the run you see a search in the <strong>Eligibility</strong> context and no tool calls.</p>
+<p><img alt="Debug chat showing the Eligibility search, the agent's answer about the gross monthly income limit and its source in the Eligibility Criteria document" class="screenshot" src="../10-benefit-claims-assistant-conversational-agent.images/17-question-answer-W.png" width="900" /></p>
+<p>Try a question the documents can't answer, for example "What's the weather tomorrow?", or a specific one like "Am I eligible? I earn $3,000." The agent should say it can't help with the first one. For the second, it should explain the general rules and invite you to submit an application, without saying whether you qualify.</p>
+<h3 id="7-test-the-agent-register-an-application">7. Test the agent: register an application<a class="headerlink" href="#7-test-the-agent-register-an-application" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Type:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>I'd like to apply for SNAP benefits.
+</code></pre></div>
+</li>
+<li>
+<p>When the agent asks, give <strong>your own</strong> email address. You'll receive the final decision email there.</p>
+</li>
+<li>The agent asks for the <strong>application</strong>. Use the attach (paperclip) button in the chat and send <a download="Sample application.pdf" href="../dependencies/Sample%20application.pdf">Sample application.pdf</a>.</li>
+<li>The agent uploads it and tells you the application was received. Then it asks for the <strong>paystub</strong>.</li>
+<li>Attach your paystub (for example <a download="Sample pay stub.png" href="../dependencies/Sample%20pay%20stub.png">Sample pay stub.png</a>).</li>
+<li>Read the summary. It should show your email and two file names.</li>
+<li>Answer <code>yes</code>.</li>
+</ol>
+<div class="img-cols img-cols-50" style="padding: 0; gap: 1rem;">
+<div>
+<p><img alt="Debug chat for a new application: the email is confirmed, the application PDF is attached and uploaded with UploadFileToStorageBucket, and the paystub PNG is attached" class="screenshot" src="../10-benefit-claims-assistant-conversational-agent.images/18-registration-chat-1-W.png" style="width: 100%;" />
+  </p>
+</div>
+<div>
+<p><img alt="Debug chat with the paystub uploaded, the summary of the two stored file names, the yes answer, the Start Benefit Claim call and the submission confirmation" class="screenshot" src="../10-benefit-claims-assistant-conversational-agent.images/19-registration-chat-2-W.png" style="width: 100%;" />
+  </p>
+</div>
+</div>
+<p>In the chat you should see:</p>
+<ul>
+<li>The agent calls <strong>UploadFileToStorageBucket</strong> twice, in two separate turns: first for the application, then for the paystub.</li>
+<li>The summary shows two <strong>different</strong> names, with a real timestamp, and the paystub keeps its own extension, for example:<ul>
+<li><code>jane_doe_example_com_application_20261016143005.pdf</code></li>
+<li><code>jane_doe_example_com_paystub_20261016143112.png</code></li>
+</ul>
+</li>
+<li>After your confirmation, the agent calls <strong>Start Benefit Claim</strong> once.</li>
+<li>The agent tells you the application was submitted and that you'll be contacted by email. It does <strong>not</strong> wait for a decision.</li>
+</ul>
+<p>In <strong>Orchestrator</strong> (in the folder your debug run uses; ask your trainer if you're not sure which one):</p>
+<table>
+<thead>
+<tr>
+<th>Where</th>
+<th>What you should see</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Storage Buckets</strong> → <strong>Input Documents</strong></td>
+<td>The two new files, with the names from the summary</td>
+</tr>
+<tr>
+<td><strong>Jobs</strong></td>
+<td>Two <code>UploadFileToStorageBucket</code> jobs and one <code>Start Benefit Claim</code> job, all <strong>Successful</strong> within seconds</td>
+</tr>
+<tr>
+<td><strong>Jobs</strong></td>
+<td>One <code>BenefitClaimsProcessing</code> job, <strong>Running</strong></td>
+</tr>
+<tr>
+<td><strong>Maestro</strong> → process instances</td>
+<td>The new <code>BenefitClaimsProcessing</code> instance with <code>in_Application</code>, <code>in_ExamplePaystub</code> and <code>in_emailAddress</code> filled with your values</td>
+</tr>
+</tbody>
+</table>
+<p>Later, after the case worker review, the approval or rejection email arrives in your inbox.</p>
+<p><strong>Time to move to the next one!</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../9-configure-api-integration-benefit-rejection/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 9. Update external systems using API — Benefit Rejection Case">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                9. Update external systems using API — Benefit Rejection Case
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../11-publish-the-solution/" class="md-footer__link md-footer__link--next" aria-label="Next: 11. Publish the Solution">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                11. Publish the Solution
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "toc.integrate", "search.highlight", "search.suggest", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

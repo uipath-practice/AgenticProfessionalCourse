@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "16-add-retrieve-income-tool.png",
+  "image_path": "docs/benefit-claims-processing/5-income-verification-agent.images/16.png",
+  "lesson": "5-income-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Choose tool\n\nretrieve\n\nRPA workflows                         Create new\n\nsolution_folder\n\nRetrieve Income Information\n\nLoad more\n\nAPI workflows                         Create new\n\nNo results\n\nAgents                                Create new",
+    "description": "The screenshot shows the UiPath Agent Builder/Studio Web tool selection panel titled “Choose tool.” The search field contains the query “retrieve,” filtering the available tools under RPA workflows. The workflow “Retrieve Income Information” is visible and highlighted, indicating it should be selected as the tool.",
+    "step_instructions": "Click on the highlighted “Retrieve Income Information” workflow under RPA workflows to add/select it as the tool."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 240,
+    "aspect_ratio": 1.09,
+    "image_size": "553x508",
+    "rationale": "Low text density (240 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2115,
+    "completion_tokens": 245,
+    "total_tokens": 2360
+  },
+  "generated_at": "2026-08-18T11:44:29.453595+00:00"
+}

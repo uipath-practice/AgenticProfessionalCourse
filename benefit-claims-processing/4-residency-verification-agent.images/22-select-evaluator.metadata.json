@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "22-select-evaluator.png",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/20.png",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Definition     Benefit C....bpmn     Evaluation Sets\n\nEvaluation Sets  >  Sample Eval Set (copy)\n\nSample Eval Set(copy)   ✎\n\nApplied Evaluators:    Residency Validation Evaluator  ×    ✎\n\nEvaluations     Results\n\nSearch\n\n☐  Default Trajectory Evaluator\n\n☐  Default Evaluator\n\n☑  Residency Validation Evaluator",
+    "description": "The screenshot shows the UiPath Agent Builder/Studio Web Evaluation Sets page for an evaluation set named \"Sample Eval Set(copy)\". The Applied Evaluators selector is open, showing available evaluators, with \"Residency Validation Evaluator\" selected. The Evaluations tab is active, and a search field is visible for filtering evaluations.",
+    "step_instructions": "Click on the checkbox for \"Residency Validation Evaluator\" if it is not already selected. Confirm that \"Residency Validation Evaluator\" appears under Applied Evaluators. Optionally, click the pencil icon next to \"Sample Eval Set(copy)\" to rename the evaluation set."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 309,
+    "aspect_ratio": 2.32,
+    "image_size": "956x412",
+    "rationale": "Medium text density (309 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2240,
+    "completion_tokens": 542,
+    "total_tokens": 2782
+  },
+  "generated_at": "2026-08-18T11:43:44.469209+00:00"
+}

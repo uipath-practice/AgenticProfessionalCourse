@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "11-eligibility-storage-bucket-W.jpg",
+  "image_path": "docs/benefit-claims-processing/2-setting-up-the-solution.images/11.jpg",
+  "lesson": "2-setting-up-the-solution",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Benefit Claims Processing Template\n  Action App\n  Addition Tool\n  Benefit Claims Processing\n  DownloadFileFromStorageBucket\n\nApps\nAssets\nConnections\nContext\nProcesses\nQueues\nStorage buckets\n  Eligibility\n  Input Documents\n\nDebug configuration  i\n\nEligibility ×\n\nEligibility\n\nBucket name *\nEligibility\n\nDescription\nPlease add a value...\n\nSearch storage buckets\n\n- Platform resources\nBenefit Claims\n  Eligibility\n  Income\n  Input Documents\n  Residency\nCompliance Inspection\n  Images\n  Workplace Safety and Compliance Regulations...\nmihai.iorg@uipath.com's workspace\n  du_storage_bucket\nShared",
+    "description": "The screenshot shows UiPath Studio Web / Solution Builder with the Debug configuration panel open for a storage bucket resource named Eligibility. In the left solution explorer, Storage buckets is expanded and Eligibility is selected. On the right, the Bucket name selector is open and shows platform storage buckets, with Eligibility under Benefit Claims highlighted.",
+    "step_instructions": "Click on Eligibility under Benefit Claims in the storage buckets dropdown to map the Bucket name field to the Eligibility storage bucket. If needed, use the Search storage buckets field to find Eligibility before selecting it."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 590,
+    "aspect_ratio": 3.21,
+    "image_size": "1903x592",
+    "rationale": "Medium text density (590 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 3086,
+    "completion_tokens": 784,
+    "total_tokens": 3870
+  },
+  "generated_at": "2026-08-18T11:40:37.672590+00:00"
+}

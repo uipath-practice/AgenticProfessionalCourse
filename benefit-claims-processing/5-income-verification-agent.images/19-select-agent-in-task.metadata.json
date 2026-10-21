@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "19-select-agent-in-task.png",
+  "image_path": "docs/benefit-claims-processing/5-income-verification-agent.images/19.png",
+  "lesson": "5-income-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Connect\n\nIncome\nVerification\nAgent\n\nDescription\nThis agent checks an applicant’s reported income against ext\n\nImplementation\n\nAction\nStart and wait for agent\n\nAgent *\nSelect an agent\n\nSearch processes        +  Resource\n\nDefined resources\nIncome Verification Agent\nResidency Verification Agent\n\nOpen Orchestrator",
+    "description": "The screenshot shows the UiPath Studio Web workflow/agent designer with an Agent activity selected on the canvas labeled “Income Verification Agent.” In the properties panel, the Implementation section is open, the Action dropdown is set to “Start and wait for agent,” and the Agent resource selector is expanded showing defined resources.",
+    "step_instructions": "Click on the “Income Verification Agent” option under Defined resources in the Agent dropdown to select it for the Agent field."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 312,
+    "aspect_ratio": 1.6,
+    "image_size": "932x582",
+    "rationale": "Medium text density (312 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2454,
+    "completion_tokens": 384,
+    "total_tokens": 2838
+  },
+  "generated_at": "2026-08-18T11:44:36.547749+00:00"
+}

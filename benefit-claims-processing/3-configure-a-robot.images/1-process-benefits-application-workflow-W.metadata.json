@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "1-process-benefits-application-workflow-W.jpg",
+  "image_path": "docs/benefit-claims-processing/3-configure-a-robot.images/01.jpg",
+  "lesson": "3-configure-a-robot",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Explorer                                      +    🔍\n\nBenefit Claims Processing Template\n  ›  Action App\n  ›  Addition Tool\n  ›  Benefit Claims Processing\n  ›  DownloadFileFromStorageBucket\n  ›  Multiplication Tool\n  ›  Process Benefits Application\n  ›  Retrieve Income Information\n  ›  Subtraction Tool\n  ›  UploadFileToStorageBucket\n\nMain\n\nTRIGGER\nManual Trigger                                      ⋮\n\n+\n\nDownload Storage File                              ⋮\n\nStorage Bucket Name *\n[ Input Documents × ]                              [settings icon]\n\nFile Path*\nIn_ExampleApplication                              [settings icon]\n\nShow additional properties                         ˅",
+    "description": "The screenshot shows UiPath Studio Web with the Explorer panel open on the left and a workflow designer canvas on the right. The project is named \"Benefit Claims Processing Template\" and contains several workflows/tools; \"Process Benefits Application\" is emphasized with a red rectangle. The current canvas displays the Main workflow with a Manual Trigger followed by a configured Download Storage File activity using the \"Input Documents\" storage bucket and file path \"In_ExampleApplication\".",
+    "step_instructions": "Click on the \"Process Benefits Application\" item in the Explorer panel to open that workflow."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 683,
+    "aspect_ratio": 4.06,
+    "image_size": "1942x478",
+    "rationale": "High density (683 chars) + wide (4.06) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2840,
+    "completion_tokens": 611,
+    "total_tokens": 3451
+  },
+  "generated_at": "2026-08-18T11:42:12.855970+00:00"
+}

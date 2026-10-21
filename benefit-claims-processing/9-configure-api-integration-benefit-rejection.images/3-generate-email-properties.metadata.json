@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "3-generate-email-properties.png",
+  "image_path": "docs/benefit-claims-processing/9-configure-api-integration-benefit-rejection.images/03.png",
+  "lesson": "9-configure-api-integration-benefit-rejection",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Properties    XML\n\nSend task                                      ?\n\nPrimary\n\nInclude salutation *\ntrue\n\nSalutation *\nGreetings\n\nInclude sign-off *\ntrue\n\nSign-off *\nRegards\n\nSign-off name *\nBenefit Claims Department\n\nEmail content *\nƒx  \"Generate an email notifyin…\"   X\n\nModel name\ngpt-5.1-2025-11-13 (OpenAI)\n\nSalutation name\nApplicant\n\nStyle\nConcise\n\nOutput format\nHTML\n\n[canvas]\nConnect\n\nGenerate\nRejection Email\n\nGenerate\nApproval Email\n\nSe[...]\n\n+    -",
+    "description": "The screenshot shows UiPath Studio Web with a workflow canvas on the left and the Properties panel open on the right. The selected workflow activity is “Generate Rejection Email,” and its “Send task” properties are being configured. The visible configuration includes salutation, sign-off, email content, OpenAI model, salutation name, style, and output format values.",
+    "step_instructions": "Click on the “Generate Rejection Email” activity on the canvas. In the Properties panel, set “Include salutation” to “true”. In the “Salutation” field, enter or select “Greetings”. Set “Include sign-off” to “true”. In the “Sign-off” field, enter or select “Regards”. In the “Sign-off name” field, enter “Benefit Claims Department”. In the “Email content” field, enter or keep the expression beginning with “Generate an email notifyin…”. In the “Model name” field, select “gpt-5.1-2025-11-13 (OpenAI)”. In the “Salutation name” field, enter “Applicant”. In the “Style” field, select “Concise”. In the “Output format” field, select “HTML”."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 458,
+    "aspect_ratio": 0.67,
+    "image_size": "775x1163",
+    "rationale": "Medium text density (458 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2787,
+    "completion_tokens": 868,
+    "total_tokens": 3655
+  },
+  "generated_at": "2026-08-18T11:47:32.948077+00:00"
+}

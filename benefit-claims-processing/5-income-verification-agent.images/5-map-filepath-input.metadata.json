@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "5-map-filepath-input.png",
+  "image_path": "docs/benefit-claims-processing/5-income-verification-agent.images/05.png",
+  "lesson": "5-income-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Implementation\n\nAction\nStart and wait for RPA workflow\n\nAutomation *\nDownloadFileFromStorageBucket ×\n\nInputs\nFilePath\n@\n\nin_exa\n\nApplication Received\nTt  in_ExamplePaystub (string)\n\n[partial left canvas]\nncome\nification\nAgent",
+    "description": "The screenshot shows UiPath Agent Builder/Studio Web configuring an automation action in the right-side properties panel. The action is set to “Start and wait for RPA workflow,” with the automation “DownloadFileFromStorageBucket” selected and the Inputs section expanded. The FilePath input field is active, and a variable picker/search dropdown is open showing the matching variable “in_ExamplePaystub (string)” under “Application Received.”",
+    "step_instructions": "1. Click on the FilePath input field under Inputs.\n2. In the search box, enter “in_exa” if it is not already entered.\n3. Select “in_ExamplePaystub (string)” from the Application Received section to populate the FilePath input."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 225,
+    "aspect_ratio": 1.51,
+    "image_size": "752x497",
+    "rationale": "Low text density (225 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2230,
+    "completion_tokens": 583,
+    "total_tokens": 2813
+  },
+  "generated_at": "2026-08-18T11:44:07.492396+00:00"
+}

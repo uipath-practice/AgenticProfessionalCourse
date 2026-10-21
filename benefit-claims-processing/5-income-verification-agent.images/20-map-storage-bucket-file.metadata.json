@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "20-map-storage-bucket-file.png",
+  "image_path": "docs/benefit-claims-processing/5-income-verification-agent.images/20.png",
+  "lesson": "5-income-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Connect\n\nIncome\nVerification\nAgent\n\n[...] Income Verification Agent ×\n\nInputs\n\nPaystub\n\nstoragebucketfile\n\nDownloadFileFromStorageBucket\n\nStorageBucketFile (file)\n\n[...] decision",
+    "description": "The screenshot shows UiPath Studio Web/Agent Builder with an \"Income Verification Agent\" activity selected on the canvas. In the right-side configuration panel, the Inputs section is open for the Paystub input, and an expression/value picker dropdown is active. The user has typed \"storagebucketfile\" and the matching file variable \"StorageBucketFile (file)\" under \"DownloadFileFromStorageBucket\" is highlighted as the selectable option.",
+    "step_instructions": "Click on the highlighted \"StorageBucketFile (file)\" option in the dropdown to map it to the Paystub input."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 178,
+    "aspect_ratio": 2.64,
+    "image_size": "886x335",
+    "rationale": "Low text density (178 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2139,
+    "completion_tokens": 535,
+    "total_tokens": 2674
+  },
+  "generated_at": "2026-08-18T11:44:42.901744+00:00"
+}

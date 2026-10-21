@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "5-bpmn-task-properties-W.jpg",
+  "image_path": "docs/benefit-claims-processing/3-configure-a-robot.images/05.jpg",
+  "lesson": "3-configure-a-robot",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Addition Tool\nBenefit Claims Processing\n  Benefit Claims Processing.bpmn    •\nDownloadFileFromStorageBucket\nMultiplication Tool\nProcess Benefits Application\nRetrieve Income Information\nSubtraction Tool\nUploadFileToStorageBucket\n\nConnect\n\nApplication\nReceived\n\nProcess\nBenefits\nApplication\n\nIntelligent\ndocument\nextraction of\napplication\nfields\n\nAll required\nfields\nextracted?\n\nYes\n\nResidency\nVerification\nAgent\n\nDownloadFileFr\nomStorageBuck\net\n\nIncome\nVerification\nAgent\n\nGeneral\nName\nProcess Benefits Application\nDescription\n\nImplementation\nAction\nNone\nNone\nCreate action app task\nStart and wait for RPA workflow\nStart and wait for agent [...]",
+    "description": "The screenshot shows the UiPath Studio Web BPMN process designer for the project “Benefit Claims Processing.” The file “Benefit Claims Processing.bpmn” is selected in the project tree, and the BPMN activity “Process Benefits Application” is selected on the canvas. In the right properties panel, the Implementation section is open and the Action dropdown is expanded, showing options including “Start and wait for RPA workflow.”",
+    "step_instructions": "Click on “Start and wait for RPA workflow” in the Action dropdown for the selected “Process Benefits Application” BPMN activity."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 644,
+    "aspect_ratio": 5.29,
+    "image_size": "2048x387",
+    "rationale": "High density (644 chars) + wide (5.29) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2740,
+    "completion_tokens": 694,
+    "total_tokens": 3434
+  },
+  "generated_at": "2026-08-18T11:42:23.963208+00:00"
+}

@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "4-select-gmail-activity-W.png",
+  "image_path": "docs/benefit-claims-processing/9-configure-api-integration-benefit-rejection.images/4-select-gmail-activity-W.png",
+  "lesson": "9-configure-api-integration-benefit-rejection",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "send email\n\nSend Email\nSend emails with optional attachments using Zoho Mail.\nZoho Mail\n\nSend Email\nSends an email message\nGmail\n\nSend Email Campaign\nSend an email campaign immediately using Zoho Campaigns.\nZoho Campaigns\n\nSend Test Email\nSend a test email for a Mailchimp campaign.\nMailchimp\n\nSend Test Email\nSend a test email to a list of contacts using Mailjet.\nMailjet\n\nSend Test Email\nSend a test email to a list of contacts using Brevo.\nBrevo\n\nSend Test Email\nSend a test email immediately to a list of contacts using Constant Contact [...]\nConstant Contact\n\nSuggest us something new\n\nBackground color\n\nImplementation\nAction\nExecute connector activity\n\nSelect activity *\nSelect activity\n\nError handling\nConditional throw\nThrow errors when certain conditions are met\n\nError retry policy\nConfigure automatic retries when errors occur",
+    "description": "The screenshot shows a UiPath BPMN/designer-style task configuration screen with the properties panel open on the right. The Action field is set to \"Execute connector activity\", and the Select activity picker dialog is open. The search term \"send email\" is entered, and the Gmail \"Send Email\" connector activity result is highlighted.",
+    "step_instructions": "Click on the highlighted \"Send Email\" result for Gmail in the activity picker to select the Gmail Send Email connector activity."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 837,
+    "aspect_ratio": 2.85,
+    "image_size": "1661x582",
+    "rationale": "High density (837 chars) + wide (2.85) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 3261,
+    "completion_tokens": 834,
+    "total_tokens": 4095
+  },
+  "generated_at": "2026-08-20T10:36:43.012032+00:00"
+}

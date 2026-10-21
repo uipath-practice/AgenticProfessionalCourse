@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "3-select-action-type.png",
+  "image_path": "docs/benefit-claims-processing/5-income-verification-agent.images/03.png",
+  "lesson": "5-income-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Residency\nVerification\nAgent\n\nConnect\n\nDownloadFileFr\nomStorageBuck\net\n\nIncome\nVerificati[...]\nAgent\n\nProperties    XML\n\nService task    ?\n\nGeneral\nName\nDownloadFileFromStorageBucket\nDescription\n\nImplementation\nAction\nStart and wait for RPA workflow  ˅\nAutomation *\nSelect an RPA automation\nInputs\nOutputs",
+    "description": "The screenshot shows a UiPath process/BPMN-style designer with a service task selected on the canvas. The selected task is named \"DownloadFileFromStorageBucket\" and appears between a \"Residency Verification Agent\" and an \"Income Verification Agent\" in the workflow. On the right, the Properties panel is open for the Service task, with the Implementation section visible and the Action dropdown set to \"Start and wait for RPA workflow.\"",
+    "step_instructions": "Click on the Action dropdown in the Implementation section and select \"Start and wait for RPA workflow\" if it is not already selected. Then click the Automation field and select the required RPA automation."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 305,
+    "aspect_ratio": 1.78,
+    "image_size": "1177x662",
+    "rationale": "Medium text density (305 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2702,
+    "completion_tokens": 634,
+    "total_tokens": 3336
+  },
+  "generated_at": "2026-08-18T11:44:05.755140+00:00"
+}

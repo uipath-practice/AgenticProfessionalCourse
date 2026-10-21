@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "4-output-panel.jpg",
+  "image_path": "docs/benefit-claims-processing/3-configure-a-robot.images/04.jpg",
+  "lesson": "3-configure-a-robot",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Output\n\nSuccessful                                      Download logs\n\nSearch                                           \n\n4:10:46 PM   Preparing projects for debugging...\n4:10:48 PM   Preparing projects for debugging completed\n4:10:48 PM   Provisioning solution...\n4:10:48 PM   Publishing additional projects in the solution\n4:10:48 PM   Building project\n4:10:49 PM   Project built\n4:11:17 PM   Provisioning resources\n4:11:25 PM   Provisioning solution completed\n4:11:27 PM   Debug session is initializing\n4:11:27 PM   Transferring project\n4:11:27 PM   Download completed\n4:11:27 PM   Restoring NuGet packages\n4:11:28 PM   Packages [...]\n\nAdrian Cole, 123 Main St,\nSpringfield, MO 65803, 900.00\nUSD, 3, 65803, 703-48-9234\n\n4:11:30 PM   Process B[...]d\n4:12:01 PM   Adrian Cole, 123 Main St, Springfield, MO 65803, 900[...]",
+    "description": "The screenshot shows the UiPath Studio Web Output panel after a debug or run session. The run status is marked Successful, and the log stream lists provisioning, building, package restore, and process execution messages. A tooltip is open over one log entry showing extracted benefit claim data for Adrian Cole.",
+    "step_instructions": "Informational screenshot — no user action required. It shows that the automation/debug session completed successfully and produced output data in the logs."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 822,
+    "aspect_ratio": 0.82,
+    "image_size": "600x733",
+    "rationale": "Medium text density (822 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2266,
+    "completion_tokens": 850,
+    "total_tokens": 3116
+  },
+  "generated_at": "2026-08-18T11:42:24.120518+00:00"
+}

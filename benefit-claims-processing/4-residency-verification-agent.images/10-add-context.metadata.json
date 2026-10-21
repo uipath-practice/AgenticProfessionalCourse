@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "10-add-context.png",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/10.png",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "+\n|\nEscalations\n|\n\nResidency Verification A...\nAutonomous Agent\n\nInstructions\nSystem: \"You are an agentic assistant.\"\nUser: \"What is the current date?\"\n\nContext          Tools\n+                +",
+    "description": "The screenshot shows the UiPath Agents/Studio Web agent builder canvas with an autonomous agent node named “Residency Verification A...” selected. The node displays its instruction prompt and has connection points for Escalations, Context, and Tools. A plus button under the Context section is visually highlighted, indicating the next configuration action is to add a context item.",
+    "step_instructions": "Click on the + button under Context to add or configure a context source for the Residency Verification Agent."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 194,
+    "aspect_ratio": 1.11,
+    "image_size": "500x450",
+    "rationale": "Low text density (194 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2060,
+    "completion_tokens": 311,
+    "total_tokens": 2371
+  },
+  "generated_at": "2026-08-18T11:43:14.886394+00:00"
+}

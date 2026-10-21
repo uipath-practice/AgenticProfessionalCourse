@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "9-rejection-email-W.png",
+  "image_path": "docs/benefit-claims-processing/9-configure-api-integration-benefit-rejection.images/09.png",
+  "lesson": "9-configure-api-integration-benefit-rejection",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Benefits Application Rejected\n\nU    uipathlabs@gmail.com\n     To   Mihai Daniel Iorga\n\nRetention Policy   UiPath-Email-Retention-6Y-Delete (6 years)                                      Expires   4/7/2032\nⓘ This sender uipathlabs@gmail.com is from outside your organization.\n\nStart your reply all with:   Can you tell me why?   Thank you for letting me know   What does this mean?   ⓘ Feedback\n\n                                                                                                      Reply     Reply All     Forward     [Teams icon]     ...\n                                                                                                      Thu 4/9/2026 5:25 PM\n\nGreetings Applicant,\n\nWe are writing to inform you that, after careful review, your application for benefits has been denied.\n\nThe reason for this decision is that your income exceeds the allowed income limit for this program.\n\nIf you believe this determination is based on incorrect information, or if your circumstances change, you may contact our office to discuss possible next steps or appeal options.\n\nRegards,\nBenefit Claims Department",
+    "description": "The screenshot shows an Outlook email message titled \"Benefits Application Rejected\" from uipathlabs@gmail.com to Mihai Daniel Iorga. The email body contains a benefits application denial notice stating that the applicant's income exceeds the allowed program limit. Reply, Reply All, Forward, and suggested quick-reply options are visible, along with an external sender warning.",
+    "step_instructions": "Informational screenshot — no user action required. It shows the generated benefit rejection email that was received, confirming the API/email integration produced the expected denial notification."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 1120,
+    "aspect_ratio": 3.52,
+    "image_size": "1600x455",
+    "rationale": "High density (1120 chars) + wide (3.52) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2622,
+    "completion_tokens": 537,
+    "total_tokens": 3159
+  },
+  "generated_at": "2026-08-18T11:47:48.570590+00:00"
+}

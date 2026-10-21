@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "1-download-file-workflow-W.png",
+  "image_path": "docs/benefit-claims-processing/5-income-verification-agent.images/01.png",
+  "lesson": "5-income-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Explorer                         +    🔍\n\nBenefit Claims Processing Template\n  ›  Action App\n  ›  Addition Tool\n  ›  Benefit Claims Processing\n  ˅  DownloadFileFromStorageBucket\n       Main.xaml\n  ›  Multiplication Tool\n  ›  Process Benefits Application\n     Residency Verification Agent\n  ›  Retrieve Income Information\n  ›  Subtraction Tool\n  ›  UploadFileToStorageBucket\n\nMain.xaml\n\nTRIGGER\nManual Trigger                                      ⋮\n\n+\n\nDownload Storage Bucket File                         ⋮\n\nStorage Bucket Name *\n  Input Documents  ×\n\nFile Path *\n  fx  FilePath  ×\n\nShow additional properties                         ˅\n\n+",
+    "description": "The screenshot shows UiPath Studio Web with the Explorer panel open for the “Benefit Claims Processing Template” project. The workflow file “Main.xaml” under “DownloadFileFromStorageBucket” is selected and highlighted. In the workflow designer, a Manual Trigger is followed by a “Download Storage Bucket File” activity configured with Storage Bucket Name set to “Input Documents” and File Path set to the variable “FilePath.”",
+    "step_instructions": "Click on Main.xaml under DownloadFileFromStorageBucket in the Explorer panel to open or confirm the workflow. Verify that the Download Storage Bucket File activity has Storage Bucket Name set to Input Documents and File Path set to FilePath."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 637,
+    "aspect_ratio": 3.1,
+    "image_size": "1691x546",
+    "rationale": "High density (637 chars) + wide (3.10) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2914,
+    "completion_tokens": 748,
+    "total_tokens": 3662
+  },
+  "generated_at": "2026-08-18T11:43:58.500787+00:00"
+}

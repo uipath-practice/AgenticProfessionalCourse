@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "8-debug-arguments-W.png",
+  "image_path": "docs/benefit-claims-processing/8-configure-api-integration-benefit-approval.images/08.png",
+  "lesson": "8-configure-api-integration-benefit-approval",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Debug configuration  Benefit Claims Processing Template  >  Benefit Claims Processing\nEntry point: /content/Benefit Claims Processing.bpmn#Event_RKT5Di\n\nSolution resources     Entrypoint arguments\n\nInput arguments                                                                                                      { }\n\nTt  in_emailAddress\nyour_email_address                                                                                                  ↶\n\nTt  in_ExamplePaystub\nSample pay stub.png                                                                                                 ↶\n\nTt  in_Application\nSample application.pdf                                                                                              ↶\n\nDeploy resources before debugging  ⓘ\nShow before debugging  ⓘ\n\nCancel        Save & Debug\n\n↕   ×",
+    "description": "The screenshot shows the UiPath Studio Web debug configuration dialog for the “Benefit Claims Processing” BPMN entry point. The “Entrypoint arguments” tab is selected, displaying three input arguments: an email address, an example paystub file, and an application PDF. The first input field is focused, and the dialog includes toggles for deploying resources and showing before debugging, plus “Cancel” and “Save & Debug” buttons.",
+    "step_instructions": "1. In the in_emailAddress field, enter your email address in place of your_email_address.\n2. Verify that in_ExamplePaystub is set to Sample pay stub.png.\n3. Verify that in_Application is set to Sample application.pdf.\n4. Click on Save & Debug to start debugging with these entrypoint arguments."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 834,
+    "aspect_ratio": 1.55,
+    "image_size": "1775x1148",
+    "rationale": "High density (834 chars) + wide (1.55) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2862,
+    "completion_tokens": 618,
+    "total_tokens": 3480
+  },
+  "generated_at": "2026-08-18T11:47:17.694483+00:00"
+}

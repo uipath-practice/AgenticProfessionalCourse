@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "7-task-title-and-assignment.png",
+  "image_path": "docs/benefit-claims-processing/7-configure-human-validation.images/07.png",
+  "lesson": "7-configure-human-validation",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Connect\n\nCase Worker\nReview\n\nCase worker\nproductivity\nsuite (Action\nCenter +\nApps)\n\nInputs\n\nSummary *\nTt Justification  ×        @\n\nEligibilityStatus *\nConclusion  ×              @\n\nCalculation\n¹²³ Calculation  ×         @\n\nFraudResidencyRisk\nTt ResidencyValidatio...  × @\n\nFraudResidencyExplanation\nTt rationale  ×            @\n\nFraudIncomeRisk\nTt decision  ×             @\n\nFraudIncomeExplanation\nTt rationale  ×            @\n\nApplicationFilePath\nTt in_Application  ×       @\n\nPaystubFilePath\nTt in_ExamplePaystub  ×    @",
+    "description": "The screenshot shows a UiPath workflow/BPMN-style designer with the “Case Worker Review” human validation step selected on the canvas. On the right, the Inputs panel is open and highlighted, showing input mappings for the selected Action Center/App-based review activity. Several fields are already mapped to variables or outputs such as Justification, Conclusion, Calculation, rationale, decision, in_Application, and in_ExamplePaystub.",
+    "step_instructions": "Click on the “Case Worker Review” step to select it. In the Inputs panel, configure the mappings as shown: set Summary to “Justification”, EligibilityStatus to “Conclusion”, Calculation to “Calculation”, FraudResidencyRisk to “ResidencyValidatio...”, FraudResidencyExplanation to “rationale”, FraudIncomeRisk to “decision”, FraudIncomeExplanation to “rationale”, ApplicationFilePath to “in_Application”, and PaystubFilePath to “in_ExamplePaystub”."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 523,
+    "aspect_ratio": 1.04,
+    "image_size": "881x847",
+    "rationale": "Medium text density (523 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2428,
+    "completion_tokens": 717,
+    "total_tokens": 3145
+  },
+  "generated_at": "2026-08-18T11:46:29.750469+00:00"
+}

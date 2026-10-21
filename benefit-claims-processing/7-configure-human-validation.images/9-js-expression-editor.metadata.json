@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "9-js-expression-editor.png",
+  "image_path": "docs/benefit-claims-processing/7-configure-human-validation.images/09.png",
+  "lesson": "7-configure-human-validation",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "JS Expression editor\n\n↶   ↷    {x} Insert variable  ^\n\n1   var s.ac[...]\n\nVariables                         action\n\n›  {·} Process Benefits Application\n›  {·} Application Received\n›  {·} Residency Verification Agent\n›  {·} Income Verification Agent\n›  {·} Eligibility Determination\n⌄  {·} Case Worker Review\n     Tt  Action (string)\n\nDescribe your expression here. Use Ctrl+Space to insert variables.\n\nActivity test input\n\nNo test input data yet\n\nTest your project to view input data or\n\nMock data\n\nExpression output     Potentially successful\n\nfalse\n\nCancel     Save",
+    "description": "The screenshot shows the UiPath JS Expression editor modal, likely opened from an automation/activity configuration. The Insert variable dropdown is expanded and filtered with the search term “action,” showing workflow variables and an expanded “Case Worker Review” section with the “Action (string)” variable highlighted. The right-side Activity test input panel shows no test input data, while the Expression output panel displays `false` with a “Potentially successful” status.",
+    "step_instructions": "Click on the highlighted “Action (string)” variable under “Case Worker Review” to insert it into the JavaScript expression. After the expression is configured, click on “Save” to apply the expression."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 567,
+    "aspect_ratio": 2.0,
+    "image_size": "1233x616",
+    "rationale": "Medium text density (567 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2644,
+    "completion_tokens": 714,
+    "total_tokens": 3358
+  },
+  "generated_at": "2026-08-18T11:46:34.727476+00:00"
+}

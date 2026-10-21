@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "1-select-tenant.png",
+  "image_path": "docs/benefit-claims-processing/2-setting-up-the-solution.images/01.png",
+  "lesson": "2-setting-up-the-solution",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "⌕    🔔  1    ?    Tenant: AgenticWorkshop  ˅    MI\n\n×\n\nBoost your productivity\neffortlessly\n\nAutomate tasks online, on any operating\nsystem. No installs needed.\n\nStart in Studio Web\n\nLooking for desktop products?\nDownload center\n\nWhat's New",
+    "description": "The screenshot shows the UiPath Automation Cloud home page. The top navigation bar is visible with search, notifications, help, the tenant selector set to “AgenticWorkshop,” and the user initials “MI.” The main content promotes Studio Web with a “Start in Studio Web” button, while the tenant selector is highlighted.",
+    "step_instructions": "Click on the “Tenant: AgenticWorkshop” dropdown in the top navigation bar to confirm or change the active tenant. Select the required tenant from the dropdown if it is not already set to AgenticWorkshop."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 240,
+    "aspect_ratio": 1.81,
+    "image_size": "837x462",
+    "rationale": "Low text density (240 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2204,
+    "completion_tokens": 464,
+    "total_tokens": 2668
+  },
+  "generated_at": "2026-08-18T11:41:10.178485+00:00"
+}

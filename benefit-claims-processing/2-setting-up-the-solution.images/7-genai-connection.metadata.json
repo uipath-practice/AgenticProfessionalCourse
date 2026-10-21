@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "7-genai-connection.jpg",
+  "image_path": "docs/benefit-claims-processing/2-setting-up-the-solution.images/07.jpg",
+  "lesson": "2-setting-up-the-solution",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Name*\n\nGenAI Connection\n\nDescription\n\nUiPath GenAI Activities connection *\n\nGenAI Connection  ×\n\nSearch connections        +  Connection\n\nPlatform resources\n\nBenefit Claims\n\nGenAI Connection\n\nCompliance Inspection\n\nGenAI Connection\n\nOpen connections",
+    "description": "The screenshot shows a UiPath configuration form for setting up a connection, likely in Studio Web or Automation Cloud. The Name field is filled with “GenAI Connection,” the Description field is empty, and the “UiPath GenAI Activities connection” selector is open. The currently selected connection chip and the “GenAI Connection” option under the “Benefit Claims” platform resource are highlighted.",
+    "step_instructions": "Click on the “GenAI Connection” option under “Benefit Claims” in the open “UiPath GenAI Activities connection” dropdown to select it. If the connection is already selected, proceed with the next configuration step."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 249,
+    "aspect_ratio": 1.34,
+    "image_size": "847x630",
+    "rationale": "Low text density (249 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2366,
+    "completion_tokens": 280,
+    "total_tokens": 2646
+  },
+  "generated_at": "2026-08-18T11:40:15.224875+00:00"
+}

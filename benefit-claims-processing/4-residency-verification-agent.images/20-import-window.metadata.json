@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "20-import-window.png",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/18.png",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Import evaluation set                                                    ×\n\n{\n  \"fileName\": \"evaluation-set-1774447972390.json\",\n  \"id\": \"a8246f97-e10e-4e50-9f7e-a7cac5d449c4\",\n  \"name\": \"Sample Eval Set\",\n  \"batchSize\": 10,\n  \"evaluatorRefs\": [\n    \"c4fb87ea-3cec-4435-b69c-64f090e7f1c8\"\n  ],\n  \"evaluations\": [\n    {\n      \"id\": \"668b7745-4205-4d06-9ab6-f5379f40b20b\",\n\nCancel    Import",
+    "description": "A UiPath Agents evaluation import dialog is open titled “Import evaluation set.” The modal contains a large JSON text editor populated with an evaluation set definition, including fileName, id, name, batchSize, evaluatorRefs, and evaluations. The Import button in the bottom-right is visually emphasized, with Cancel next to it and a close icon in the top-right.",
+    "step_instructions": "Click on the Import button to import the pasted evaluation set JSON. If you need to abandon the import, click Cancel or the × close icon."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 388,
+    "aspect_ratio": 2.55,
+    "image_size": "1285x503",
+    "rationale": "Medium text density (388 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2559,
+    "completion_tokens": 587,
+    "total_tokens": 3146
+  },
+  "generated_at": "2026-08-18T11:43:35.567116+00:00"
+}

@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "2-agentic-automation-illustration.png",
+  "image_path": "docs/benefit-claims-processing/1-create-bpmn-process.images/2-agentic-automation-illustration.png",
+  "lesson": "1-create-bpmn-process",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "",
+    "description": "The screenshot is an informational illustration rather than a UiPath product interface. It shows a friendly AI robot presenting a checklist-style speech bubble to a small group of people, representing agentic automation or AI-assisted process guidance.",
+    "step_instructions": "Informational screenshot — no user action required. It visually introduces the concept of an AI agent assisting users with checklist-based or workflow-related tasks."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 0,
+    "aspect_ratio": 0.91,
+    "image_size": "1530x1680",
+    "rationale": "Low text density (0 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2751,
+    "completion_tokens": 131,
+    "total_tokens": 2882
+  },
+  "generated_at": "2026-08-18T11:42:07.292135+00:00"
+}

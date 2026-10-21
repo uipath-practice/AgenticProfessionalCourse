@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "1-benefit-claims-bpmn-diagram-W.jpg",
+  "image_path": "docs/benefit-claims-processing/1-create-bpmn-process.images/1-benefit-claims-bpmn-diagram-W.jpg",
+  "lesson": "1-create-bpmn-process",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Application\nReceived\n\nProcess\nBenefits\nApplication\n\nIntelligent\ndocument\nextraction of\napplication\nfields\n\nGet missing\ninfo from\napplicant\n\nAll required\nfields\nextracted?\n\nYes\n\nFraud research agents\n\nResidency\nVerification\nAgent\n\nDownloadFileFr\nomStorageBuck\net\n\nIncome\nVerification\nAgent\n\nEligibility\nDetermination\n\nAgentic AI\nassisted\neligibility\nresearch &\ndetermination\n\nCase Worker\nReview\n\nCase worker\nproductivity\nsuite (Action\nCenter +\nApps)\n\nGenAI activities to create a\nbenefits application\nrejection email\n\nNo\n\nGenerate\nRejection Email\n\nSend Rejection\nEmail\n\nApplicant\nEligible?\n\nYes\n\nGenerate\nApproval Email\n\nSend Approval\nEmail\n\nUpdate Records\n\nProcess e[...]",
+    "description": "The screenshot shows a completed BPMN diagram on the BPMN designer canvas for the Benefit Claims Processing workflow. The process starts with an application being received, processes and validates extracted fields, routes through fraud research agents and eligibility determination, then branches to rejection or approval email paths before ending.",
+    "step_instructions": "Informational screenshot — no user action required. It shows the expected completed BPMN workflow result for the Benefit Claims Processing exercise."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 671,
+    "aspect_ratio": 3.99,
+    "image_size": "1240x311",
+    "rationale": "High density (671 chars) + wide (3.99) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2634,
+    "completion_tokens": 818,
+    "total_tokens": 3452
+  },
+  "generated_at": "2026-08-18T11:42:13.868950+00:00"
+}

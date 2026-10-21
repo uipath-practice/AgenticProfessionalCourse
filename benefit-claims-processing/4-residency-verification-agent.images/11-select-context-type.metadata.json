@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "11-select-context-type.png",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/11-select-context-type.png",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "New context\n\nContext Grounding Indexes\nFor unstructured documents like PDFs, docs, etc.\n\nData Fabric Entities\nFor structured data like tables, business entities and enterprise systems",
+    "description": "The screenshot shows the UiPath Agent Builder \"New context\" dialog or side panel. Two context source types are listed: Context Grounding Indexes and Data Fabric Entities, with the Context Grounding Indexes option visually highlighted. A vertical toolbar is visible on the right side of the interface.",
+    "step_instructions": "Click on the highlighted Context Grounding Indexes option to add an unstructured document context source."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 183,
+    "aspect_ratio": 2.16,
+    "image_size": "649x301",
+    "rationale": "Low text density (183 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2098,
+    "completion_tokens": 221,
+    "total_tokens": 2319
+  },
+  "generated_at": "2026-08-18T16:00:00.676242+00:00"
+}

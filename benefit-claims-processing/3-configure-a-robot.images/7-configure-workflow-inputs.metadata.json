@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "7-configure-workflow-inputs.jpg",
+  "image_path": "docs/benefit-claims-processing/3-configure-a-robot.images/07.jpg",
+  "lesson": "3-configure-a-robot",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Action\nStart and wait for RPA workflow  ˅\n\nAutomation *\n  Process Benefits Application  ×\n\n⌄  Inputs\n\nIn_Application\n  Tt in_Application  ×        @   [sliders icon]\n\n⌄  Outputs\n\nError\n  {…} Error\n\nMonthlyIncome\n  Tt MonthlyIncome\n\nAddress\n  Tt Address\n\nName\n  Tt Name\n\nHouseholdSize\n  123 HouseholdSize\n\nZipcode\n  Tt Zipcode\n\nSSN [...]",
+    "description": "The screenshot shows a UiPath automation configuration panel for an action set to “Start and wait for RPA workflow.” The selected automation is “Process Benefits Application,” and the input argument “In_Application” is mapped to the variable “in_Application.” The Outputs section is expanded, showing mapped outputs such as Error, MonthlyIncome, Address, Name, HouseholdSize, and Zipcode.",
+    "step_instructions": "Click on the Automation field and select “Process Benefits Application.”\nIn the Inputs section, click the In_Application field and select or enter the variable “in_Application.”\nVerify that the output fields are mapped to the corresponding variables shown, such as Error, MonthlyIncome, Address, Name, HouseholdSize, and Zipcode."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 336,
+    "aspect_ratio": 0.68,
+    "image_size": "606x885",
+    "rationale": "Medium text density (336 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2380,
+    "completion_tokens": 704,
+    "total_tokens": 3084
+  },
+  "generated_at": "2026-08-18T11:42:34.520197+00:00"
+}

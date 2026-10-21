@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "12-execution-trace-W.jpg",
+  "image_path": "docs/benefit-claims-processing/3-configure-a-robot.images/12.jpg",
+  "lesson": "3-configure-a-robot",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Application\nReceived\n\nProcess\nBenefits\nApplication\n\nIntelligent\ndocument\nextraction of\napplication\nfields\n\nGet missing\ninfo from\napplicant\n\nAll required\nfields\nextracted?\n\nYes\n\nFraud research agents\n\nResidency\nVerification\nAgent\n\nDownloadFileFr\nomStorageBuck\net\n\nIncome\nVerification\nAgent\n\nEligibility\nDetermination\n\nAgentic AI\nassisted\neligibility\nresearch &\ndetermination\n\nCase Worker\nReview\n\nCase worker\nproductivity\nsuite (Action\nCenter +\nApps)\n\nApplicant\nEligible?\n\nNo\n\nGenAI activities to create a\nbenefits application\nrejection email\n\nGenerate\nRejection Email\n\nSend Rejection\nEmail\n\nProcess end\n\nYes\n\nGenerate\nApproval Email\n\nSend Approval\nEmail\n\nUpdate Records\n\n+   −   ⛶\n\nExecution trail\n\nStatus & step                         Ended at                  Durati...\nInstance: 67db8f86-6b06-45a5-96bf-6f2...  2026-03-06 18:02:39   47 sec\nApplication Received (Start event)        2026-03-06 18:01:53   < 1 sec\nProcess Benefits Application (Service ...  2026-03-06 18:02:35   41 sec\nRobot Job 350ac8be-02be-43df-a3e3-4...    2026-03-06 18:02:35   34 sec\nAll required fields extracted? (Exclusi...  2026-03-06 18:02:36   < 1 sec\nParallel gateway                           2026-03-06 18:02:36   < 1 sec\nResidency Verification Agent (Service ...   2026-03-06 18:02:36   < 1 sec\nDownloadFileFromStorageBucket (Se...        2026-03-06 18:02:36   < 1 sec\n\nGlobal variables     Incidents\n\nName                  Source        Value\nTt in_Application      Applicatio    Sample application.pdf\nTt in_emailAddress     Applicatio\nTt in_ExamplePaystu    Applicatio\nTt Address             Process Be    123 Main St, Springfield, MO 65803\nTt Error               Process Be    null\n123 HouseholdSize      Process Be    3\nTt MonthlyIncome       Process Be    900.00 USD\nTt Name                Process Be    Adrian Cole",
+    "description": "The screenshot shows a UiPath process execution view for a Benefit Claims Processing workflow, with a BPMN-style process diagram on top and execution details below. The completed process includes document extraction, fraud research agents, eligibility determination, case worker review, and approval/rejection email paths. The bottom pane has the Global variables tab selected and highlighted, showing extracted and computed values such as the application PDF, address, household size, monthly income, and applicant name.",
+    "step_instructions": "Informational screenshot — no user action required. It shows the completed execution trail and the Global variables table, where the user can verify that values such as Address, HouseholdSize, MonthlyIncome, and Name were populated correctly."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 1805,
+    "aspect_ratio": 1.73,
+    "image_size": "1778x1029",
+    "rationale": "High density (1805 chars) + wide (1.73) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2951,
+    "completion_tokens": 1512,
+    "total_tokens": 4463
+  },
+  "generated_at": "2026-08-18T11:42:59.525709+00:00"
+}

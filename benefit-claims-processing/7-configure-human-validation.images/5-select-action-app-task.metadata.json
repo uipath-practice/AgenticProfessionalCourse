@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "5-select-action-app-task.png",
+  "image_path": "docs/benefit-claims-processing/7-configure-human-validation.images/05.png",
+  "lesson": "7-configure-human-validation",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Case Worker\nReview\n\nCase worker\nproductivity\nsuite (Action\nCenter +\nApps)\n\nAction\nCreate action app task  ˅\n\nAction *\nSelect an Action\n\nSearch apps     + Resource\n\nDefined resources\nAction App\n\nOpen Orchestrator",
+    "description": "The screenshot shows the UiPath workflow/agent designer with a human validation step selected on the canvas, labeled \"Case Worker Review.\" In the configuration panel, the Action type is set to \"Create action app task,\" and the required Action field dropdown is open, showing available app resources. The dropdown lists a defined resource named \"Action App\" and includes options to search apps, add a resource, or open Orchestrator.",
+    "step_instructions": "Click on the \"Action App\" option under Defined resources to select it for the required Action field."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 211,
+    "aspect_ratio": 1.62,
+    "image_size": "768x475",
+    "rationale": "Low text density (211 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2140,
+    "completion_tokens": 347,
+    "total_tokens": 2487
+  },
+  "generated_at": "2026-08-18T11:46:19.077172+00:00"
+}

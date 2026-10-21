@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "11-execution-paused-W.png",
+  "image_path": "docs/benefit-claims-processing/7-configure-human-validation.images/11.png",
+  "lesson": "7-configure-human-validation",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Get missing\ninfo from\napplicant\n\nApplication\nReceived\n\nProcess\nBenefits\nApplication\n\nIntelligent\ndocument\nextraction of\napplication\nfields\n\nAll required\nfields\nextracted?\n\nYes\n\nFraud research agents\n\nResidency\nVerification\nAgent\n\nDownloadFileFr\nomStorageBuck\net\n\nIncome\nVerification\nAgent\n\nEligibility\nDetermination\n\nAgentic AI\nassisted\neligibility\nresearch &\ndetermination\n\nGenAI activities to create a\nbenefits application\nrejection email\n\nCase Worker\nReview\n\nCase worker\nproductivity\nsuite (Action\nCenter +\nApps)\n\nApplicant\nEligible?\n\nNo\n\nGenerate\nRejection Email\n\nSend Rejection\nEmail\n\nProcess end\n\nYes\n\nGenerate\nApproval Email\n\nSend Approval\nEmail\n\nUpdate Records\n\n+   −   ⟳\n\nExecution trail\n\nStatus & step                         Ended at                  Durat...\n\nMultiplication Tool                   2026-04-07 14:01:45       3 sec\n  Robot Job bff4e94f-0da5-...         2026-04-07 14:01:44       < 1 sec\nTool call - Subtraction_Tool          2026-04-07 14:01:49       4 sec\n  Subtraction Tool                    2026-04-07 14:01:49       4 sec\nLLM call                              2026-04-07 14:01:54       5 sec\n  Model run                           2026-04-07 14:01:54       5 sec\n  Agent output                        2026-04-07 14:01:55       < 1 sec\nCase Worker Review (User task)        -                         -\n\nDetails    Variables\n\nExecution duration                    In progress...\n\nElement name                          Case Worker Review\n\nElement ID                            Activity_PeUITb\n\nUser Task - Action Center             Open app task",
+    "description": "The screenshot shows a UiPath process execution view with a BPMN-style workflow for Benefit Claims Processing. The “Case Worker Review” human validation/user task is selected in the process diagram and in the execution trail, and the Details panel is open. The details indicate the task is still in progress and provide an “Open app task” button for the Action Center user task.",
+    "step_instructions": "Click on the selected “Case Worker Review (User task)” step if it is not already selected. Click on the “Details” tab. Click on “Open app task” under “User Task - Action Center” to open the human validation task."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 1573,
+    "aspect_ratio": 1.44,
+    "image_size": "1612x1120",
+    "rationale": "High density (1573 chars) + wide (1.44) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2716,
+    "completion_tokens": 1115,
+    "total_tokens": 3831
+  },
+  "generated_at": "2026-08-18T11:46:46.952276+00:00"
+}

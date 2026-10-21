@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "9-approval-email-W.png",
+  "image_path": "docs/benefit-claims-processing/8-configure-api-integration-benefit-approval.images/09.png",
+  "lesson": "8-configure-api-integration-benefit-approval",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Benefits Application Approved\n\nU    uipathlabs@gmail.com\n     To  Mihai Daniel Iorga\n\nRetention Policy   UiPath-Email-Retention-6Y-Delete (6 years)                                      Expires   4/7/2032\nⓘ This sender uipathlabs@gmail.com is from outside your organization.\n\n                                                                                              Reply     Reply All     Forward        [Teams icon]     ...\n                                                                                              Thu 4/9/2026 3:44 PM\n\nGreetings Applicant,\n\nWe are pleased to inform you that your application for benefits has been approved. You are eligible to receive a monthly amount of $679.70.\n\nYour payments will begin with the next scheduled cycle. If you have any questions or need additional information, please contact our office.\n\nRegards,\nBenefits Claims Department",
+    "description": "The screenshot shows an email message opened in Microsoft Outlook. The email subject is “Benefits Application Approved” and it was sent from uipathlabs@gmail.com to Mihai Daniel Iorga, confirming that a benefits application has been approved and specifying a monthly amount of $679.70. Reply, Reply All, Forward, Teams, and more options buttons are visible at the top right.",
+    "step_instructions": "Informational screenshot — no user action required. It shows the completed approval notification email generated as part of the Benefit Claims Processing workflow."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 885,
+    "aspect_ratio": 4.16,
+    "image_size": "1802x433",
+    "rationale": "High density (885 chars) + wide (4.16) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2679,
+    "completion_tokens": 449,
+    "total_tokens": 3128
+  },
+  "generated_at": "2026-08-18T11:47:20.641016+00:00"
+}

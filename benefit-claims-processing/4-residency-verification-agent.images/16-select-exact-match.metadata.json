@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "16-select-exact-match.png",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/15.png",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Add evaluator\nSelect a type that corresponds to your needs.\n\n○  LLM-as-a-judge: Semantic Similarity\n   Create your own LLM-based evaluator.\n\n○  Trajectory\n   Create your own trajectory evaluator.\n\n◉  Exact match\n   Checks if the output precisely matches the expected output without any variations in wording,\n   formatting.\n\nJSON similarity\n○  Checking if two JSON structures or values are 'close enough' or share a similar\n   structure/contents\n\n○  CSV Column Exact Match  Preview\n   Evaluates CSV output by matching exact values in specified columns against expected values\n\n○  Context precision\n   An evaluator that scores the relevancy of Context Grounding results to the user's query.\n\n○  Faithfulness\n   An evaluator that scores whether claims in the agent output are grounded in the provided\n   context.\n\nCancel    Continue\n\n×",
+    "description": "The screenshot shows a UiPath Agents evaluation modal titled \"Add evaluator.\" A list of evaluator types is displayed, and the \"Exact match\" evaluator is selected and visually emphasized with a red rectangle. The modal includes Cancel and Continue buttons at the bottom right.",
+    "step_instructions": "Click on the \"Exact match\" evaluator option if it is not already selected. Click on the \"Continue\" button to proceed with adding this evaluator."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 833,
+    "aspect_ratio": 1.35,
+    "image_size": "967x717",
+    "rationale": "Medium text density (833 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2627,
+    "completion_tokens": 359,
+    "total_tokens": 2986
+  },
+  "generated_at": "2026-08-18T11:43:27.174819+00:00"
+}

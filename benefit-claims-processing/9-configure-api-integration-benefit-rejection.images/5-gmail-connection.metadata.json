@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "5-gmail-connection.png",
+  "image_path": "docs/benefit-claims-processing/9-configure-api-integration-benefit-rejection.images/05.png",
+  "lesson": "9-configure-api-integration-benefit-rejection",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Connect\n\nGenerate\nRejection Email\n\nSend Rejection\nEmail\n\nPrimary\n\nTo *\nTt in_emailAddress  ×\n@\n\nSave as draft\n\nSubject\nBenefits Application Rejected\n@",
+    "description": "The screenshot shows UiPath Studio Web/BPMN-style workflow designer with an email activity selected. The selected step is \"Send Rejection Email,\" connected after \"Generate Rejection Email.\" On the right, the activity configuration panel is open under \"Primary,\" with the recipient field set to the variable `in_emailAddress` and the subject set to \"Benefits Application Rejected.\"",
+    "step_instructions": "Click on the \"Send Rejection Email\" activity. In the \"To\" field, enter or select `in_emailAddress`. In the \"Subject\" field, enter `Benefits Application Rejected`."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 150,
+    "aspect_ratio": 3.13,
+    "image_size": "957x306",
+    "rationale": "Low text density (150 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2082,
+    "completion_tokens": 410,
+    "total_tokens": 2492
+  },
+  "generated_at": "2026-08-18T11:47:40.322951+00:00"
+}

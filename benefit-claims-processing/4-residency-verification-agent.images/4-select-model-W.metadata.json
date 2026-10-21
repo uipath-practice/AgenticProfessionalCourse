@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "4-select-model-W.png",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/04.png",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Canvas        Form\n\nResidency Verification A...\nAutonomous Agent    ♥ 53\n\nInstructions\nSystem: \"You are a residency verification assistant desi...\nUser: \"Please evaluate the residency verification for th...\n\nContext        Tools\n\nResidency Verification Agent (Autonomous Agent)\n\nModel *\ngpt-5.4\n\nSystem prompt *  ⓘ\nYou are a residency verification assistant\ndesigned to verify that an applicant's provided\naddress matches the address in our known\nrecords. Your primary goal is to determine if the\napplication can proceed or if additional proof of",
+    "description": "The screenshot shows UiPath Agent Builder/Studio Web with a canvas on the left and the agent configuration panel on the right. The \"Residency Verification Agent\" autonomous agent node is selected on the canvas, and its properties are open. The Model dropdown is highlighted and currently set to \"gpt-5.4\", with the system prompt field visible below.",
+    "step_instructions": "Click on the selected Residency Verification Agent node if it is not already selected. In the right-side configuration panel, click the Model dropdown. Select gpt-5.4 as the model for the agent."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 546,
+    "aspect_ratio": 2.81,
+    "image_size": "1002x357",
+    "rationale": "Medium text density (546 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2232,
+    "completion_tokens": 646,
+    "total_tokens": 2878
+  },
+  "generated_at": "2026-08-18T11:43:02.757725+00:00"
+}

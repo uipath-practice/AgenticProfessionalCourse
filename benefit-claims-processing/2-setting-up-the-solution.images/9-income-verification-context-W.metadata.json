@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "9-income-verification-context-W.png",
+  "image_path": "docs/benefit-claims-processing/2-setting-up-the-solution.images/9-income-verification-context-W.png",
+  "lesson": "2-setting-up-the-solution",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Explorer\n\nBenefit Claims Processing - Mihai Iorga 18...\n  Action App\n  Addition Tool\n  Benefit Claims Processing\n  DownloadFileFromStorageBucket\n  Multiplication Tool\n\nApps\nAssets\nConnections\nIndexes\n  Eligibility\n  Income Verification\n  Residency Verification\nIXP Models\n\nBenefit Claims Processing.bpmn\nuipathlabs@gmail.com\nGenAI Connection\nEligibility\nIncome Verification\n\nDebug configuration\nWill be deployed in Debug folder\n\nIncome Verification\nNo fields to display for filter valu[...]\n\nSearch context grounding indexes\n\nPlatform resources\nBenefit Claims\n  Eligibility\n  Income Verification\n  Residency Verification\nCompliance Inspection\n  Index Workplace Safety and Compliance Regulati...\nShared\n  IT_FAQ_Documents",
+    "description": "The screenshot shows UiPath Studio Web in the Benefit Claims Processing project, with the Explorer panel open on the left. The Income Verification context grounding index is selected under Indexes, and the context grounding index picker is open on the right. In the picker, Platform resources are expanded and the Benefit Claims folder shows Eligibility, Income Verification, and Residency Verification options.",
+    "step_instructions": "Click on Income Verification under Indexes in the Explorer. In the context grounding index picker, select Income Verification under Platform resources > Benefit Claims. Confirm the configuration uses the Debug folder deployment shown as “Will be deployed in Debug folder.”"
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 720,
+    "aspect_ratio": 3.36,
+    "image_size": "1796x535",
+    "rationale": "High density (720 chars) + wide (3.36) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 3132,
+    "completion_tokens": 765,
+    "total_tokens": 3897
+  },
+  "generated_at": "2026-08-18T15:19:22.479705+00:00"
+}

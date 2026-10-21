@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "2-workflow-inputs-outputs.png",
+  "image_path": "docs/benefit-claims-processing/5-income-verification-agent.images/02.png",
+  "lesson": "5-income-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Download File From\nStorage Bucket\n\nInputs:\n\nFilePath (filepath from the storage\nbucket)\n\nOutputs:\nStorageBucketFile",
+    "description": "The screenshot shows a workflow/tool diagram for a UiPath automation step named “Download File From Storage Bucket.” The diagram indicates a left-to-right flow, with an Inputs box specifying the FilePath parameter and an Outputs box specifying StorageBucketFile.",
+    "step_instructions": "Informational screenshot — no user action required. It shows the expected input and output mapping for the “Download File From Storage Bucket” step."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 115,
+    "aspect_ratio": 2.69,
+    "image_size": "945x351",
+    "rationale": "Low text density (115 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2166,
+    "completion_tokens": 206,
+    "total_tokens": 2372
+  },
+  "generated_at": "2026-08-18T11:43:54.008747+00:00"
+}

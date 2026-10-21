@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "2-workflow-inputs-outputs.jpg",
+  "image_path": "docs/benefit-claims-processing/3-configure-a-robot.images/02.jpg",
+  "lesson": "3-configure-a-robot",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Process Benefits\nApplication\n\nInputs:\n\nin_Application (filepath from the\nStorage Bucket)\n\nOutputs:\nAddress\nHouseholdSize\nMonthlyIncome\nName\nSSN\nZipcode",
+    "description": "The screenshot shows an informational workflow diagram for the Benefit Claims Processing exercise. It illustrates a \"Process Benefits Application\" step with an input file path from a Storage Bucket and several extracted output fields, including Address, HouseholdSize, MonthlyIncome, Name, SSN, and Zipcode.",
+    "step_instructions": "Informational screenshot — no user action required. It shows the expected input argument in_Application and the output data fields produced by the Process Benefits Application workflow."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 151,
+    "aspect_ratio": 2.67,
+    "image_size": "1362x511",
+    "rationale": "Low text density (151 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2567,
+    "completion_tokens": 203,
+    "total_tokens": 2770
+  },
+  "generated_at": "2026-08-18T11:42:11.250817+00:00"
+}

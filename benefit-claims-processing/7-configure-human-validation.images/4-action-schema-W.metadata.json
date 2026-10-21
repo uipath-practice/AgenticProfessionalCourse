@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "4-action-schema-W.png",
+  "image_path": "docs/benefit-claims-processing/7-configure-human-validation.images/04.png",
+  "lesson": "7-configure-human-validation",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Explorer\n\n{ } ApplicationDoc\ncontainerVisible\n{ } EligibilityDoc\n{ } LicenseDoc\n{ } PaystubDoc\nresLicense\n{ } supportingDoc\n{ } utility\n\n⌄  Action\n    ActionSchema\n\nAddition Tool\nBenefit Claims Processing\nDownloadFileFromStorageBucket\nEligibility Determination Agent\nIncome Verification Agent\nMultiplication Tool\nProcess Benefits Application\nResidency Verification Agent\n\nApps\nAssets\nConnections\nContext\nProcesses\nQueues\nStorage buckets\n\nBenefit C...bpmn     MainPage     ActionSchema\n\nOutcomes\nDecisions available to users for managing escalations or tasks in a workflow or rule. e.g. Approve, Reject\nApprove  X     Reject  X     +\n\nInput Properties\nDefine data fields to display when an escalation or task is created via workflow or agent run, and map these to display/input controls in your app. e.g. label or text area.\n\nTt   Summary*             System.String   >     Enter description\n     EligibilityStatus*   System.Boolean  >     Enter description\nTt   Calculation          System.String   >     Enter description\nTt   FraudResidenc...     System.String   >     Enter description\nTt   FraudResidenc...     System.String   >     Enter description\nTt   FraudIncomeRi...     System.String   >     Enter description\nTt   FraudIncomeEx...     System.String   >     Enter description\nTt   ApplicationFile...   System.String   >     Enter description\nTt   PaystubFilePath      System.String   >     Enter description\n\n+  Add property\n\nInput/Output Properties\nSome properties can be both inputs and outputs. Map these properties to the input controls in your app as needed.\n\n+  Add property\n\nOutput Properties\nDefine the data provided by the end user upon task completion, and map these properties to a submit action rule. e.g. User comments, decisions\n\nTt   DenialReason         System.String   >     Enter description\n\n+  Add property",
+    "description": "The screenshot shows UiPath Studio Web with the ActionSchema tab open for a Benefit Claims Processing project. In the Explorer panel, the Action folder is expanded and ActionSchema is selected. The main editor is configuring a human validation action schema with outcomes Approve and Reject, several input properties such as Summary, EligibilityStatus, Calculation, and fraud-related fields, plus an output property named DenialReason.",
+    "step_instructions": "Click on Action > ActionSchema in the Explorer if it is not already selected. In the Outcomes section, ensure the available decisions are Approve and Reject. In the Input Properties section, verify or add the required fields including Summary, EligibilityStatus, Calculation, fraud-related fields, ApplicationFile..., and PaystubFilePath with the shown data types. In the Output Properties section, add or verify the DenialReason field as System.String."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 1837,
+    "aspect_ratio": 1.63,
+    "image_size": "1748x1072",
+    "rationale": "High density (1837 chars) + wide (1.63) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2860,
+    "completion_tokens": 1140,
+    "total_tokens": 4000
+  },
+  "generated_at": "2026-08-18T11:46:14.066680+00:00"
+}

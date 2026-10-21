@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "14-add-tool.png",
+  "image_path": "docs/benefit-claims-processing/5-income-verification-agent.images/14.png",
+  "lesson": "5-income-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "+\n|\nEscalations\n\nIncome Verification Age...\nAutonomous Agent\n\nInstructions\nSystem: \"You are an agentic assistant.\"\nUser: \"What is the current date?\"\n\nContext        Tools\n+              +",
+    "description": "The screenshot shows the UiPath Agent Builder canvas with an autonomous agent node selected. The node is titled \"Income Verification Age...\" and displays its configured instructions, including the system and user prompts. Connection points for Escalations, Context, and Tools are visible, with the Tools add button highlighted.",
+    "step_instructions": "Click on the + button under Tools to add or configure a tool for the Income Verification Agent."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 187,
+    "aspect_ratio": 0.98,
+    "image_size": "510x520",
+    "rationale": "Low text density (187 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2096,
+    "completion_tokens": 305,
+    "total_tokens": 2401
+  },
+  "generated_at": "2026-08-18T11:44:25.824339+00:00"
+}

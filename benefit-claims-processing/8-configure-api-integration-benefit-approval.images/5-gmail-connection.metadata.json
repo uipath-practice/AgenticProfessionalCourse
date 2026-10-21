@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "5-gmail-connection.png",
+  "image_path": "docs/benefit-claims-processing/8-configure-api-integration-benefit-approval.images/05.png",
+  "lesson": "8-configure-api-integration-benefit-approval",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Send Approval\nEmail\n\nUpdate Records\n\nPrimary\n\nTo *\n  Tt in_emailAddress  ×        @\n\nSave as draft\n\nSubject\n  Benefits Application Approved        @",
+    "description": "The screenshot shows UiPath Studio Web workflow designer with a Gmail email activity selected on the canvas. The selected step is labeled “Send Approval Email” and flows into an “Update Records” activity. On the right, the activity properties panel is open to the Primary section, showing the recipient set to the variable `in_emailAddress`, Save as draft turned off, and the subject configured as “Benefits Application Approved.”",
+    "step_instructions": "Click on the Send Approval Email activity. In the To field, enter or select the variable in_emailAddress. Leave Save as draft turned off. In the Subject field, enter Benefits Application Approved."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 148,
+    "aspect_ratio": 2.94,
+    "image_size": "940x320",
+    "rationale": "Low text density (148 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2082,
+    "completion_tokens": 437,
+    "total_tokens": 2519
+  },
+  "generated_at": "2026-08-18T11:47:08.164483+00:00"
+}

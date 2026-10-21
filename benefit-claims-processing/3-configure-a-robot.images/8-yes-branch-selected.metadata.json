@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "8-yes-branch-selected.jpg",
+  "image_path": "docs/benefit-claims-processing/3-configure-a-robot.images/08.jpg",
+  "lesson": "3-configure-a-robot",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Make default path\nIf no other path conditions are true, the default path will be used\nautomatically.\n\nCondition\n\nUse\nƒx  JS expression editor\n{}  C# expression editor\n\nYes\n\nAll required\nfields\nextracted?",
+    "description": "The screenshot shows a UiPath workflow/BPMN-style designer with a conditional connector path labeled “Yes” selected on the canvas. The right-side properties panel is open to configure the path condition, with the Condition input field visible and the expression editor menu expanded. The “JS expression editor” option is highlighted in the dropdown.",
+    "step_instructions": "Click on the expression editor/options icon next to the Condition field. Select JS expression editor from the Use menu to define the condition for the selected “Yes” path."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 203,
+    "aspect_ratio": 2.64,
+    "image_size": "836x317",
+    "rationale": "Low text density (203 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2066,
+    "completion_tokens": 349,
+    "total_tokens": 2415
+  },
+  "generated_at": "2026-08-18T11:42:31.259832+00:00"
+}

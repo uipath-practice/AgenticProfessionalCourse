@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "10-yes-path-condition.png",
+  "image_path": "docs/benefit-claims-processing/7-configure-human-validation.images/10.png",
+  "lesson": "7-configure-human-validation",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "⌄ Yes\n\nLabel\n\nYes\n\n○  Make default path\n\nIf no other path conditions are true, the default path will be used\nautomatically.\n\nCondition\n\nƒx  vars.action == \"Approve\"  ×",
+    "description": "The screenshot shows a UiPath workflow/path configuration panel, likely in a designer for configuring a conditional branch. The branch is labeled “Yes,” the default path toggle is off, and the Condition expression field is highlighted with the expression `vars.action == \"Approve\"`.",
+    "step_instructions": "In the Condition expression field, enter `vars.action == \"Approve\"`. Leave the Make default path toggle off unless this branch should be used when no other conditions are true."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 167,
+    "aspect_ratio": 1.76,
+    "image_size": "547x310",
+    "rationale": "Low text density (167 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 1924,
+    "completion_tokens": 281,
+    "total_tokens": 2205
+  },
+  "generated_at": "2026-08-18T11:46:35.933681+00:00"
+}

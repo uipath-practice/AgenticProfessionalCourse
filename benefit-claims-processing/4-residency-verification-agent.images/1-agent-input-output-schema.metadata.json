@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "1-agent-input-output-schema.jpg",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/01.jpg",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Residency\nVerification Agent\n\nInputs:\n\ndeclared_applicant_address\nSSN\n\nOutputs:\nResidencyValidationDecision\nrationale",
+    "description": "The screenshot shows a conceptual flow diagram for a Residency Verification Agent in the Benefit Claims Processing exercise. It illustrates the agent receiving inputs on the left, processing them in the central agent block, and producing outputs on the right. The inputs are declared_applicant_address and SSN, and the outputs are ResidencyValidationDecision and rationale.",
+    "step_instructions": "Informational screenshot — no user action required. It shows the expected input and output schema for the Residency Verification Agent."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 117,
+    "aspect_ratio": 2.51,
+    "image_size": "1362x543",
+    "rationale": "Low text density (117 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2649,
+    "completion_tokens": 218,
+    "total_tokens": 2867
+  },
+  "generated_at": "2026-08-18T11:42:46.162060+00:00"
+}

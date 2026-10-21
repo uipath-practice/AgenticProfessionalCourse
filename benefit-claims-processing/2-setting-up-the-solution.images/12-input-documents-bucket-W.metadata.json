@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "12-input-documents-bucket-W.jpg",
+  "image_path": "docs/benefit-claims-processing/2-setting-up-the-solution.images/12.jpg",
+  "lesson": "2-setting-up-the-solution",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Benefit Claims Processing Template\n\n›  Action App\n›  Addition Tool\n›  Benefit Claims Processing\n›  DownloadFileFromStorageBucket\n\nApps\nAssets\nConnections\nContext\nProcesses\nQueues\nStorage buckets\n  Eligibility\n  Input Documents\n\n▶  Debug configuration   i\n\nInput Documents  ×\n\nInput Documents\n\nBucket name *\nInput Documents\n\nDescription\nPlease add a value...\n\nSearch storage buckets\n\nPlatform resources\n\nBenefit Claims\n  Eligibility\n  Income\n  Input Documents\n  Residency\n\nCompliance Inspection\n  Images\n  Workplace Safety and Compliance Regulations...\n\nmihai.iorg@uipath.com's workspace\n  du_storage_bucket\n\nShared",
+    "description": "The screenshot shows the UiPath Studio Web solution designer/debug configuration for the “Benefit Claims Processing Template.” The Storage buckets section is expanded, with “Input Documents” selected, and the Debug configuration panel is configuring the “Input Documents” resource. A storage bucket picker dropdown is open, showing platform resources and the “Input Documents” bucket under the “Benefit Claims” folder.",
+    "step_instructions": "Click on the “Input Documents” option in the storage bucket dropdown under Platform resources > Benefit Claims. Confirm that the “Bucket name” field is populated with “Input Documents.”"
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 614,
+    "aspect_ratio": 3.21,
+    "image_size": "1900x591",
+    "rationale": "High density (614 chars) + wide (3.21) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 3086,
+    "completion_tokens": 704,
+    "total_tokens": 3790
+  },
+  "generated_at": "2026-08-18T11:40:37.119893+00:00"
+}

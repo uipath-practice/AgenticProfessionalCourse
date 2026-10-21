@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "25-map-agent-inputs.png",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/23.png",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Connect\n\nFraud research agents\n\nResidency\nVerification\nAgent\n\nAgent *\nResidency Verification Agent ×\n\nInputs\ndeclared_applicant_address *\nTt Address ×        @\nSSN\nTt SSN ×            @\n\nOutputs",
+    "description": "The screenshot shows the UiPath Studio Web workflow/agent designer with a selected agent node on the canvas. The right-side configuration panel is open for the Agent activity, with the agent set to “Residency Verification Agent.” In the Inputs section, the required declared_applicant_address input is mapped to “Address,” and the SSN input is mapped to “SSN.”",
+    "step_instructions": "Click on the “Residency Verification Agent” node on the canvas. In the Agent field, select “Residency Verification Agent.” Under Inputs, set declared_applicant_address to “Address.” Set SSN to “SSN.”"
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 194,
+    "aspect_ratio": 2.84,
+    "image_size": "980x345",
+    "rationale": "Low text density (194 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2181,
+    "completion_tokens": 501,
+    "total_tokens": 2682
+  },
+  "generated_at": "2026-08-18T11:43:49.870203+00:00"
+}

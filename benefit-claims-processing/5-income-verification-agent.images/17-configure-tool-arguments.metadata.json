@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "17-configure-tool-arguments.png",
+  "image_path": "docs/benefit-claims-processing/5-income-verification-agent.images/17.png",
+  "lesson": "5-income-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Retrieve Income Information\n\nName *\nRetrieve Income Information\n\nTool\nRetrieve Income Information\n\nDescription\nClick here to add description\n\nSSN (string)\nThe applicant social security number  ×",
+    "description": "The screenshot shows a UiPath Studio Web/Agent Builder configuration panel for a tool named \"Retrieve Income Information.\" The tool name and description fields are visible, and the lower section highlights the required input argument \"SSN (string).\" The SSN argument is populated with a token labeled \"The applicant social security number.\"",
+    "step_instructions": "In the SSN (string) field, enter or select \"The applicant social security number\" as the input value for the Retrieve Income Information tool."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 194,
+    "aspect_ratio": 1.05,
+    "image_size": "556x532",
+    "rationale": "Low text density (194 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2137,
+    "completion_tokens": 444,
+    "total_tokens": 2581
+  },
+  "generated_at": "2026-08-18T11:44:33.779199+00:00"
+}

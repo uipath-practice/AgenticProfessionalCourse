@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "8-eligibility-context-W.png",
+  "image_path": "docs/benefit-claims-processing/2-setting-up-the-solution.images/8-eligibility-context-W.png",
+  "lesson": "2-setting-up-the-solution",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Explorer\n\nBenefit Claims Processing - Mihai Iorga 18...\n  Action App\n  Addition Tool\n  Benefit Claims Processing\n  DownloadFileFromStorageBucket\n  Multiplication Tool\n\nApps\nAssets\nConnections\nIndexes\n  Eligibility\n  Income Verification\n  Residency Verification\nIXP Models\n\nBenefit Claims Processing.bpmn\nuipathlabs@gmail.com\nGenAI Connection\nEligibility\n\nDebug configuration  i\nWill be deployed in Debug folder\n\nEligibility\nNo fields to display for filter valu[...]\n\nSearch context grounding indexes\n\nPlatform resources\nBenefit Claims\n  Eligibility\n  Income Verification\n  Residency Verification\nCompliance Inspection\n  Index Workplace Safety and Compliance Regulati...\nShared\n  IT_FAQ_Documents",
+    "description": "The screenshot shows UiPath Studio Web with the Explorer panel open and the Eligibility context grounding index selected under Indexes. In the main editor, the Eligibility tab is active and the Debug configuration panel is open. A context grounding index picker dropdown is expanded, showing Platform resources with the Benefit Claims folder and the Eligibility index highlighted/selected.",
+    "step_instructions": "Click on Eligibility under Indexes in the Explorer panel. In the Debug configuration panel, open the context grounding index selector/search field. Select Eligibility from the Benefit Claims section in the Platform resources list. Confirm the configuration shows Will be deployed in Debug folder."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 695,
+    "aspect_ratio": 3.3,
+    "image_size": "1771x537",
+    "rationale": "High density (695 chars) + wide (3.30) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 3047,
+    "completion_tokens": 739,
+    "total_tokens": 3786
+  },
+  "generated_at": "2026-08-18T15:17:38.433524+00:00"
+}

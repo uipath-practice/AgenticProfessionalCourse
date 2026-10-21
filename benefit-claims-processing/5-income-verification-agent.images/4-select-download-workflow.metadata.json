@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "4-select-download-workflow.png",
+  "image_path": "docs/benefit-claims-processing/5-income-verification-agent.images/04.png",
+  "lesson": "5-income-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Automation *\n\nSelect an RPA automation\n\nSearch processes        + Resource\n\nDefined resources\n\n  Addition Tool\n\n  DownloadFileFromStorageBucket\n\n  Multiplication Tool\n\n  Process Benefits Application",
+    "description": "The screenshot shows a UiPath Studio Web/Agent Builder configuration field for selecting an RPA automation. The Automation dropdown is open, with a search box at the top and a list of defined resources below. The resource named \"DownloadFileFromStorageBucket\" is visually highlighted with a red rectangle.",
+    "step_instructions": "Click on the highlighted \"DownloadFileFromStorageBucket\" option in the Automation dropdown to select it as the RPA automation."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 198,
+    "aspect_ratio": 1.8,
+    "image_size": "632x352",
+    "rationale": "Low text density (198 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2034,
+    "completion_tokens": 260,
+    "total_tokens": 2294
+  },
+  "generated_at": "2026-08-18T11:44:02.834472+00:00"
+}

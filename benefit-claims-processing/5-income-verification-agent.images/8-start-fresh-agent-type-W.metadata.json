@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "8-start-fresh-agent-type-W.png",
+  "image_path": "docs/benefit-claims-processing/5-income-verification-agent.images/08.png",
+  "lesson": "5-income-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Select agent type\n\nAutonomous\nCreate an agent that acts\nindependently to complete\na given task.\n\nConversational\n(Preview)\nCreate an assistant that\ninteracts with users\nthrough real-time dialogue.\n\nCoded\nImport a coded agent\nproject built in your IDE into\nStudio.\n\nGet started with Autopilot\n\nWhat should your agent do?\n\nDescribe the agent you want to create...\n\nStart fresh\nGenerate Agent",
+    "description": "The screenshot shows a UiPath Studio Web/Agents modal for creating a new agent and selecting the agent type. The Autonomous agent type tile is selected, while Conversational (Preview) and Coded are available options. Below, the Autopilot prompt area is focused with an empty text box asking what the agent should do, and the Generate Agent button is disabled until input is provided.",
+    "step_instructions": "Click on the Autonomous tile if it is not already selected. In the \"Describe the agent you want to create...\" field, enter a description of the agent you want to build. Click \"Generate Agent\" once the button becomes enabled, or click \"Start fresh\" to create the agent manually without Autopilot."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 388,
+    "aspect_ratio": 1.31,
+    "image_size": "2048x1558",
+    "rationale": "Medium text density (388 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2691,
+    "completion_tokens": 342,
+    "total_tokens": 3033
+  },
+  "generated_at": "2026-08-18T11:44:13.654182+00:00"
+}

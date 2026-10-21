@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "13-select-semantic-strategy.png",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/12.png",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Strategy\nSemantic  ^\nSemantic\nStructured (Preview)\nDeepRAG\nBatch Transform (Preview)\nFile extension\nAll  ˅\nQuery *",
+    "description": "The screenshot shows a UiPath Agents/Studio Web configuration form with the Strategy dropdown expanded. The current strategy is set to Semantic, and the dropdown lists available options: Semantic, Structured (Preview), DeepRAG, and Batch Transform (Preview). Below it, the File extension dropdown is visible and set to All, with a required Query field label underneath.",
+    "step_instructions": "Click on the highlighted Semantic option in the Strategy dropdown to select it. Then continue configuring the remaining fields, such as File extension and Query, as required."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 114,
+    "aspect_ratio": 1.21,
+    "image_size": "403x332",
+    "rationale": "Low text density (114 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 1943,
+    "completion_tokens": 301,
+    "total_tokens": 2244
+  },
+  "generated_at": "2026-08-18T11:43:20.581846+00:00"
+}

@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "1-integration-service-connections-W.png",
+  "image_path": "docs/benefit-claims-processing/8-configure-api-integration-benefit-approval.images/01.png",
+  "lesson": "8-configure-api-integration-benefit-approval",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "UiPath Orchestrator\n\nTenant\n\nMy Folders\nSearch\n\nMy Workspace\nAutopilot\nBenefit Claims\nCompliance Inspection\nShared\n\nHome    Automations    Monitoring    Queues    Assets    Connections    Business Rules  Preview    Storage Buckets    I\n\nYou can now manage connections in Orchestrator for a unified experience.\n\nSearch by connector or conne      Connector: All    Status: All\n\nConnection name        Connector                 Connection account          Status\nData Fabric Connection Data Fabric               mihai.iorga@uipath.com      Connected\nuipathlabs@gmail.com   Gmail                     uipathlabs@gmail.com        Connected\nGenAI Connection       UiPath GenAI Activities   mihai.iorga@uipath.com      Connected\n\n1 - 3 / 3                                      Page 1 / 1",
+    "description": "The screenshot shows UiPath Orchestrator with the Benefit Claims folder selected. The Connections tab is open, displaying configured Integration Service connections for Data Fabric, Gmail, and UiPath GenAI Activities. All three connections are listed with a green checkmark status of Connected.",
+    "step_instructions": "Click on the Benefit Claims folder in the left navigation if it is not already selected. Click on the Connections tab in the top navigation. Verify that Data Fabric Connection, uipathlabs@gmail.com, and GenAI Connection are present and that each status shows Connected."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 779,
+    "aspect_ratio": 3.67,
+    "image_size": "1733x472",
+    "rationale": "High density (779 chars) + wide (3.67) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2712,
+    "completion_tokens": 828,
+    "total_tokens": 3540
+  },
+  "generated_at": "2026-08-18T11:47:00.298920+00:00"
+}

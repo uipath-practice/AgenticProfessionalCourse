@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "7-select-body-variable.png",
+  "image_path": "docs/benefit-claims-processing/9-configure-api-integration-benefit-rejection.images/07.png",
+  "lesson": "9-configure-api-integration-benefit-rejection",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Use variable                         Search variable\n\nTt  Thread ID (string)\n⌄  Generate Rejection Email\n   Tt  emailContent (string)\n      ⌄  response (object)\n         Include salutation (boolean)\n         Include sign off (boolean)\n      123  Total words (integer)\n      Tt  Email output (string)\n⌄  Generate Approval Email",
+    "description": "The screenshot shows a UiPath variable selection panel, likely in Studio Web or an Integration Service activity configuration. The panel lists available workflow variables and outputs, with a search box at the top and a scrollable variable tree. The variables under “Generate Rejection Email” are expanded, and the “emailContent (string)” variable is visually highlighted.",
+    "step_instructions": "Click on the “emailContent (string)” variable under “Generate Rejection Email” to use it as the selected variable."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 326,
+    "aspect_ratio": 1.44,
+    "image_size": "627x435",
+    "rationale": "Medium text density (326 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2058,
+    "completion_tokens": 308,
+    "total_tokens": 2366
+  },
+  "generated_at": "2026-08-18T11:47:40.081701+00:00"
+}

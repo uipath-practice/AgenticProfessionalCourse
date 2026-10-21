@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "26-execution-result-W.png",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/24.png",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "←  Back to design mode\n\nApplication\nReceived\n\nProcess\nBenefits\nApplication\n\nIntelligent\ndocument\nextraction of\napplication\nfields\n\nGet missing\ninfo from\napplicant\n\nAll required\nfields\nextracted?\n\nYes\n\nFraud research agents\n\nResidency\nVerification\nAgent\n\nDownloadFileFr\nomStorageBuck\net\n\nIncome\nVerification\nAgent\n\nEligibility\nDetermination\n\nAgentic AI\nassisted\neligibility\nresearch &\ndetermination\n\nCase Worker\nReview\n\nApplicant\nEligible?\n\nNo\n\nGenAI activities to cr...\nbenefits application\nrejection email\n\nRej...\n\nExecution trail\n\nStatus & step                         Ended at                  Dura...\nInstance: db83a0c3-5146-4ae6...       2026-03-25 17:59:58       1 min, ...\nApplication Received (Start ...       2026-03-25 17:58:26       < 1 sec\nProcess Benefits Applicatio...        2026-03-25 17:59:34       1 min, 7...\n  Robot Job ed8558e9-ff51-494...      2026-03-25 17:59:33       1 min, 4...\nAll required fields extracted...       2026-03-25 17:59:34       < 1 sec\nParallel gateway                       2026-03-25 17:59:35       < 1 sec\nDownloadFileFromStorageB...           2026-03-25 17:59:36       < 1 sec\n\nDetails    Variables\n\nName                 Directi...    Value\n{} JobArguments       In           {\"declared_applicant_address\":\"123 Main ...\nTt rationale          Out          A residency record was found for SSN 703-48-9\nTt ResidencyValida    Out          Valid\n\n+    −",
+    "description": "The screenshot shows a UiPath process execution view for the Benefit Claims Processing workflow, with the BPMN-style flow diagram on the canvas and the execution trail/variables panels open at the bottom. The Residency Verification Agent activity inside the “Fraud research agents” group is selected and highlighted with a red box. In the Variables tab, the selected agent’s output variables show a rationale indicating a residency record was found and a ResidencyValida value of “Valid.”",
+    "step_instructions": "Informational screenshot — no user action required. It shows the completed execution state for the selected Residency Verification Agent and displays its output variables in the Variables panel."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 1394,
+    "aspect_ratio": 1.36,
+    "image_size": "1525x1121",
+    "rationale": "High density (1394 chars) + wide (1.36) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2722,
+    "completion_tokens": 1104,
+    "total_tokens": 3826
+  },
+  "generated_at": "2026-08-18T11:43:58.051121+00:00"
+}

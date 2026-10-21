@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "9-js-expression-editor.jpg",
+  "image_path": "docs/benefit-claims-processing/3-configure-a-robot.images/09.jpg",
+  "lesson": "3-configure-a-robot",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "JS Expression editor\n\n↶    ↷    {x} Insert variable ˅\n\n1    vars.address!==\"\" && vars.name!==\"\" && vars.monthlyIncome!==\"\" && vars.\n     householdSize!==\"\" && vars.zipcode!==\"\"\n\nDescribe your expression here. Use Ctrl+Space to insert variables.\n\nActivity test input\n\nNo test input data yet\n\nTest your project to view input data or\n\nMock data\n\nExpression output    Potentially successful\n\ntrue\n\nCancel    Save",
+    "description": "The screenshot shows a UiPath JS Expression editor dialog, likely in Studio Web or a related UiPath design interface. A JavaScript validation expression is entered to check that several variables, such as address, name, monthlyIncome, householdSize, and zipcode, are not empty. The right-side test panel shows no test input data, while the expression output displays `true` with a “Potentially successful” status.",
+    "step_instructions": "Click on the Save button to save the JavaScript expression. If changes are needed first, edit the expression in the code editor, then click Save."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 408,
+    "aspect_ratio": 2.01,
+    "image_size": "1240x617",
+    "rationale": "Medium text density (408 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2678,
+    "completion_tokens": 549,
+    "total_tokens": 3227
+  },
+  "generated_at": "2026-08-18T11:42:41.507224+00:00"
+}

@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "5-connections-panel.jpg",
+  "image_path": "docs/benefit-claims-processing/2-setting-up-the-solution.images/05.jpg",
+  "lesson": "2-setting-up-the-solution",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "›  Subtraction Tool\n›  UploadFileToStorageBucket\n\n›  Apps\n   Assets\n⌄  Connections\n   uipathlabs@gmail.com\n   GenAI Connection\n›  Context\n›  Processes",
+    "description": "The screenshot shows a UiPath Automation Cloud/Studio Web-style project navigation panel with resource categories. The Connections section is expanded and highlighted with a red rectangle, showing two configured connections: a Gmail account and a GenAI Connection.",
+    "step_instructions": "Click on the Connections section in the left navigation panel. Confirm that the required connections, uipathlabs@gmail.com and GenAI Connection, are listed under it."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 150,
+    "aspect_ratio": 1.24,
+    "image_size": "533x430",
+    "rationale": "Low text density (150 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2003,
+    "completion_tokens": 327,
+    "total_tokens": 2330
+  },
+  "generated_at": "2026-08-18T11:40:09.016903+00:00"
+}

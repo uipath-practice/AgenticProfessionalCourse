@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "19-paste-json-array.png",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/19-paste-json-array.png",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Import datasets                                                   ×\n\nChoose how you want to add datasets\n\n┌──────────────────────────────────────────────┐   ┌──────────────────────────────────────────────┐\n│                                              │   │                    ‹ ›                       │\n│                    [upload icon]             │   │                                              │\n│                 Upload file                  │   │              Paste JSON array                │\n│                                              │   │ Paste a JSON array directly without creating a file. │\n│ Upload a JSON or CSV file containing your datasets. │   │                                              │\n└──────────────────────────────────────────────┘   └──────────────────────────────────────────────┘",
+    "description": "The screenshot shows a UiPath Agents evaluation import modal titled \"Import datasets.\" The dialog asks how to add datasets and presents two selectable cards: \"Upload file\" and \"Paste JSON array.\" The \"Paste JSON array\" option is highlighted with a red border, indicating it is the intended selection.",
+    "step_instructions": "Click on the Paste JSON array option to import the evaluation set by pasting JSON directly."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 820,
+    "aspect_ratio": 3.08,
+    "image_size": "1024x332",
+    "rationale": "High density (820 chars) + wide (3.08) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 4115,
+    "completion_tokens": 452,
+    "total_tokens": 4567
+  },
+  "generated_at": "2026-08-19T10:09:45.047249+00:00"
+}

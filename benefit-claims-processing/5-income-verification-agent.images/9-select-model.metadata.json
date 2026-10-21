@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "9-select-model.png",
+  "image_path": "docs/benefit-claims-processing/5-income-verification-agent.images/09.png",
+  "lesson": "5-income-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Canvas        Form\n\nVerification of Income A...\nAutonomous Agent\n\nInstructions\nSystem: \"You are an AI assistant designed to validate r...\nUser: \"Please validate the income for an applicant with ...\n\nContext          Tools\n\nVerification of Income Agent (Autonomous Agent)\n\nModel *\ngpt-5-2025-08-07    Preview\n\nSystem prompt *\nYou are an AI assistant designed to validate\nreported monthly income against external wage\ndata for benefits eligibility. Your task is to\ncompare information from the context and the\ninputs. Follow these steps:\n\n1. Capture the applicant's monthly income, name",
+    "description": "The screenshot shows UiPath Studio Web Agent Builder for an autonomous agent named “Verification of Income Agent.” The Canvas tab is open with the agent node selected on the left, while the configuration/properties panel on the right displays the selected model and system prompt. The Model field is highlighted and currently set to “gpt-5-2025-08-07” with a Preview badge.",
+    "step_instructions": "Click on the selected “Verification of Income Agent” card if it is not already selected. In the Model dropdown, select or confirm “gpt-5-2025-08-07.” Review or edit the System prompt field as needed for the income verification instructions."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 584,
+    "aspect_ratio": 2.52,
+    "image_size": "1011x401",
+    "rationale": "Medium text density (584 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2269,
+    "completion_tokens": 606,
+    "total_tokens": 2875
+  },
+  "generated_at": "2026-08-18T11:44:16.049260+00:00"
+}

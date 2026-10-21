@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "12-select-residency-index.png",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/11.png",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Canvas        Form\n\nResidency Verification A...\nAutonomous Agent\n\nInstructions\nSystem: \"You are an agentic assistant.\"\nUser: \"What is the current date?\"\n\nContext        Tools\n\nNew context\n\nChoose context\n\nIndexes                                      Create new\n\nSearch contexts\n\nIn current solution (3)\nEligibility\nIncome Verification\nResidency Verification\n\nAvailable resources\nBenefit Claims\nEligibility\nIncome Verification",
+    "description": "The screenshot shows the UiPath Studio Web Agent Builder canvas with an autonomous agent named “Residency Verification A...” and a newly added context node. On the right, the context selection/indexes panel is open, showing contexts available in the current solution and available resources. The “Residency Verification” context under “In current solution (3)” is visually highlighted with a red outline.",
+    "step_instructions": "Click on “Residency Verification” under “In current solution (3)” to select it as the context for the new context node."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 425,
+    "aspect_ratio": 1.87,
+    "image_size": "877x468",
+    "rationale": "Medium text density (425 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2276,
+    "completion_tokens": 545,
+    "total_tokens": 2821
+  },
+  "generated_at": "2026-08-18T11:43:23.254063+00:00"
+}

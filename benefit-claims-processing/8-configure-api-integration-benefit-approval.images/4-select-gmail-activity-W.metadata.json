@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "4-select-gmail-activity-W.png",
+  "image_path": "docs/benefit-claims-processing/8-configure-api-integration-benefit-approval.images/4-select-gmail-activity-W.png",
+  "lesson": "8-configure-api-integration-benefit-approval",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "send email\n\nSend Email                                      Zoho Mail\nSend emails with optional attachments using Zoho Mail.\n\nSend Email                                      Gmail\nSends an email message\n\nSend Email Campaign                            Zoho Campaigns\nSend an email campaign immediately using Zoho Campaigns.\n\nSend Test Email                                Mailchimp\nSend a test email for a Mailchimp campaign.\n\nSend Test Email                                Mailjet\nSend a test email to a list of contacts using Mailjet.\n\nBrevo\nSend Test Email                                Brevo\nSend a test email to a list of contacts using Brevo.\n\nSend Test Email                                Constant Contact\nSend a test email immediately to a list of contacts using Constant Contact [...]\n\nSuggest us something new\n\nBackground color\n\nImplementation\nAction\nExecute connector activity\n\nSelect activity *\nSelect activity\n\nError handling\nConditional throw\nThrow errors when certain conditions are met\n\nError retry policy\nConfigure automatic retries when errors occur",
+    "description": "The screenshot shows UiPath Studio Web with an activity picker dialog open over the workflow designer. The picker is searching for \"send email\" and the Gmail \"Send Email\" connector activity is highlighted. In the right properties panel, the task action is set to \"Execute connector activity\" and the required \"Select activity\" field is active.",
+    "step_instructions": "Click on the highlighted \"Send Email\" result for Gmail in the activity picker. This selects the Gmail Send Email connector activity for the \"Select activity\" field while the Action remains set to \"Execute connector activity\"."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 1068,
+    "aspect_ratio": 2.85,
+    "image_size": "1661x582",
+    "rationale": "High density (1068 chars) + wide (2.85) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 3259,
+    "completion_tokens": 828,
+    "total_tokens": 4087
+  },
+  "generated_at": "2026-08-20T10:35:17.787978+00:00"
+}

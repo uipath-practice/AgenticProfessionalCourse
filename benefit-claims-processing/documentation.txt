@@ -1,0 +1,12 @@
+# Reference documentation for the Benefit Claims Processing exercise.
+# One URL per line. Read by scripts/extract_metadata.py to ground screenshot analysis.
+# Harvested from the source Google Site.
+
+https://docs.uipath.com/ixp/automation-cloud/latest/user-guide/introduction
+https://docs.uipath.com/integration-service/automation-cloud/latest/user-guide/introduction
+https://docs.uipath.com/agents/automation-cloud/latest/user-guide/agent-tools
+https://docs.uipath.com/agents/automation-cloud/latest/user-guide/agent-evaluations
+https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-storage-buckets
+https://docs.uipath.com/automation-cloud/automation-cloud/latest/admin-guide/about-context-grounding
+https://docs.uipath.com/activities/other/latest/integration-service/uipath-uipath-airdk-about
+https://docs.uipath.com/activities/other/latest/integration-service/uipath-airdk-airdk-generate-email

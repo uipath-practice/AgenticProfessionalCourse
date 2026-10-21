@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "3-debug-configuration-arguments-W.jpg",
+  "image_path": "docs/benefit-claims-processing/3-configure-a-robot.images/03.jpg",
+  "lesson": "3-configure-a-robot",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "[...] Debug in cloud\n\nExplorer\n\nBenefit Claims Processing Template\n  Action App\n  Addition Tool\n  Benefit Claims Processing\n    Benefit Claims Processing.b...\n  DownloadFileFromStorageBu...\n  Multiplication Tool\n  Process Benefits Applicatio...\n    Main.xaml\n  Retrieve Income Information\n  Subtraction Tool\n  UploadFileToStorageBucket\n\nApps\nAssets\nConnections\nContext\nProcesses\nQueues\nStorage buckets\n\nDebug configuration        Benefit Claims Processing Template  >  Process Benefits Application\n\nSolution resources     Project arguments\n\nInput arguments\n\nTt  In_Application\nSample application.pdf                                                   ↶\n\n{ }\n\nDeploy resources before debugging  ⓘ\nShow before debugging  ⓘ\n\nCancel        Save & Debug",
+    "description": "The screenshot shows UiPath Studio Web in the Debug configuration view for the Benefit Claims Processing Template, specifically the Process Benefits Application project. The Project arguments tab is selected, and the input argument In_Application is populated with the file name \"Sample application.pdf\". The left Explorer panel shows the project structure with Process Benefits Application expanded and Main.xaml visible.",
+    "step_instructions": "Click on Process Benefits Application in the Explorer if it is not already selected. In the In_Application field under Project arguments, enter Sample application.pdf. Click on Save & Debug to start debugging with the configured argument."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 747,
+    "aspect_ratio": 1.91,
+    "image_size": "2048x1070",
+    "rationale": "High density (747 chars) + wide (1.91) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 3066,
+    "completion_tokens": 822,
+    "total_tokens": 3888
+  },
+  "generated_at": "2026-08-18T11:42:24.147333+00:00"
+}

@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "6-configure-email-properties.png",
+  "image_path": "docs/benefit-claims-processing/8-configure-api-integration-benefit-approval.images/06.png",
+  "lesson": "8-configure-api-integration-benefit-approval",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Tt emailContent  ×\n\n@\n\nAttachment\nThe attachment to be sent w...\n\n›  Additional Options\n\n⌄  Output\nEmail\n{} response\n\n+ Add new\n\nUse\nTt  Rich text editor HTML\n{}  Variables\nƒx  JS expression editor\n{}  C# expression editor\n{;}  JSON editor\n▣  Date and time\n▣  Date\n◇  Data Fabric",
+    "description": "The screenshot shows UiPath Studio Web with an activity configuration panel open, likely configuring an email-related field. The expression/input type menu is expanded from the field editor, showing available input modes such as Rich text editor HTML, Variables, JS expression editor, C# expression editor, JSON editor, Date and time, and Date. The Variables option is highlighted, indicating it is the intended selection.",
+    "step_instructions": "Click on the input type/options icon next to the emailContent field if the menu is not already open. Select Variables from the Use dropdown menu."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 279,
+    "aspect_ratio": 1.53,
+    "image_size": "600x391",
+    "rationale": "Low text density (279 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2018,
+    "completion_tokens": 411,
+    "total_tokens": 2429
+  },
+  "generated_at": "2026-08-18T11:47:12.945906+00:00"
+}

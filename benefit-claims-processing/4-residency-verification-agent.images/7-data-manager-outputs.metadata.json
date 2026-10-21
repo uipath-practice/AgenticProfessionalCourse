@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "7-data-manager-outputs.jpg",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/07.jpg",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Data manager\n\nInputs\nOutputs\n\n2\n\nTt  ResidencyValidationDec... *\n\nType *\nString\n\nDescription\nFinal decision on the residency\nverification\n\nRequired\n\nTt  rationale*\n\nType *\nString\n\nDescription\nExplanation of why the decision\nwas made, including any\nmismatches between addresses\n\nRequired",
+    "description": "The screenshot shows the UiPath Studio Web/Agent Builder Data manager panel. The Outputs section is expanded, displaying configured output fields for a residency verification agent, including a truncated ResidencyValidationDec... field and a rationale field. Both outputs are set to Type String and marked as Required, with descriptions explaining the expected final decision and reasoning.",
+    "step_instructions": "Click on the Data manager icon in the left toolbar if it is not already open. Click on Outputs to expand the output arguments section. Configure the required output fields as String values, including the residency validation decision and rationale, and ensure the Required checkbox is selected for each."
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 286,
+    "aspect_ratio": 0.68,
+    "image_size": "488x722",
+    "rationale": "Low text density (286 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2213,
+    "completion_tokens": 746,
+    "total_tokens": 2959
+  },
+  "generated_at": "2026-08-18T11:43:14.668473+00:00"
+}

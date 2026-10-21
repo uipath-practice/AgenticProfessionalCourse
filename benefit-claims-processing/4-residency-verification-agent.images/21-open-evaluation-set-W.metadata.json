@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "21-open-evaluation-set-W.png",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/19.png",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Explorer                                  +   🔍\n\nBenefit Claims Processing Templ...\n  Action App\n  Addition Tool\n  Benefit Claims Processing\n  DownloadFileFromStorageB...\n  Eligibility Determination Agent\n  Income Verification Agent\n  Multiplication Tool\n  Process Benefits Application\n  Residency Verification Agent\n    Definition\n    Evaluation Sets\n    Evaluators\n  Retrieve Income Information\n  Subtraction Tool\n  UploadFileToStorageBucket\n\nBenefit C...bpmn        Definition        Evaluation Sets\n\nEvaluation Sets\n\nEvaluation sets\nCreate and manage your evaluation sets.\n\nCreate  ˅\n\nSample Eval Set (copy)\n10 evaluations · Last ran: a month ago with 10 evaluations\n\nResidency Validation Evaluator     Deterministic\n100.00%\n\nView details        View all results\n\nOptimize        Run        ⋮\n\nDefault Evaluation Set\n0 evaluations · Last ran: N/A\n\nView details        View all results\n\nOptimize        Run        ⋮",
+    "description": "The screenshot shows UiPath Studio Web/Agent Builder with the Explorer panel open for the Benefit Claims Processing template. The Residency Verification Agent is selected, and its Evaluation Sets page is active. The main panel lists evaluation sets, including “Sample Eval Set (copy)” with 10 evaluations and a 100.00% result for the Residency Validation Evaluator, plus a Default Evaluation Set with no evaluations.",
+    "step_instructions": "Click on Residency Verification Agent in the Explorer if it is not already selected. Click on Evaluation Sets under the agent. Click on Sample Eval Set (copy), or use View details, to open and inspect the sample evaluation set results."
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 918,
+    "aspect_ratio": 2.71,
+    "image_size": "2048x757",
+    "rationale": "High density (918 chars) + wide (2.71) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 3615,
+    "completion_tokens": 833,
+    "total_tokens": 4448
+  },
+  "generated_at": "2026-08-18T11:43:39.801342+00:00"
+}

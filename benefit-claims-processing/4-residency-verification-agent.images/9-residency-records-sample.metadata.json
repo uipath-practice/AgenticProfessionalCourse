@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "9-residency-records-sample.png",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/09.png",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "[\n{\n  \"Applicant_Name\": \"Ethan Parker\",\n  \"Applicant_SSN\": \"877-30-7924\",\n  \"Address\": \"1507 Cedar St\",\n  \"City\": \"Pittsburgh\",\n  \"State\": \"DE\",\n  \"ZIP\": \"44702\",\n  \"StartDate\": \"1/7/2025\",\n  \"EndDate\": \"\",\n  \"LicenseID\": \"DL9029943\"\n},\n{\n  \"Applicant_Name\": \"Olivia Reynolds\",\n  \"Applicant_SSN\": \"877-30-7924\",\n  \"Address\": \"478 Cedar St\",\n  \"City\": \"Erie\",\n  \"State\": \"DE\",\n  \"ZIP\": \"29215\",\n  \"StartDate\": \"8/18/2024\",\n  \"EndDate\": \"12/17/2024\",\n  \"LicenseID\": \"DL1453697\"\n},\n{\n  \"Applicant_Name\": \"Mason Carter\",\n  \"Applicant_SSN\": \"877-30-7924\",\n  \"Address\": \"1591 Oak St\",\n  \"City\": \"Erie\",\n  \"State\": \"DE\",\n  \"ZIP\": \"31894\",\n  \"StartDate\": \"9/23/2023\",\n  \"EndDate\": \"8/4/2024\",\n  \"LicenseID\": \"DL6967591\"\n},\n{\n  \"Applicant_Name\": \"Sophia Hayes\",\n  \"Applicant_SSN\": \"529-38-8359\",\n  \"Address\": \"8973 Walnut St\",\n  \"City\": \"Allentown\",\n  \"State\": \"OH\",\n  \"ZIP\": \"90377\",\n  \"StartDate\": \"9/16/2024\",\n  \"EndDate\": \"\",\n  \"LicenseID\": \"DL4274007\"",
+    "description": "The screenshot shows a plain text/code editor view containing JSON-like applicant residency/license records for a benefit claims processing exercise. Several applicant objects are visible with fields such as name, SSN, address, city, state, ZIP, start/end dates, and license ID. No UiPath panels or controls are visible in this cropped view; it appears to be source/test data used by the agent or workflow.",
+    "step_instructions": "Informational screenshot — no user action required. It shows applicant data records that may be used as test input or reference data for residency verification."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 947,
+    "aspect_ratio": 0.49,
+    "image_size": "280x574",
+    "rationale": "Medium text density (947 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 1966,
+    "completion_tokens": 1068,
+    "total_tokens": 3034
+  },
+  "generated_at": "2026-08-18T11:43:15.248335+00:00"
+}

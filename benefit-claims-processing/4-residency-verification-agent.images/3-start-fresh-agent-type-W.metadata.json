@@ -1,0 +1,34 @@
+{
+  "version": "1.0",
+  "image_file": "3-start-fresh-agent-type-W.png",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/03.png",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Select agent type                                                   ×\n\n┌───────────────────────────────┐    ┌───────────────────────────────┐    ┌───────────────────────────────┐\n│                               │    │                               │    │                               │\n│  [robot icon]                  │    │  [robot icon]                  │    │  [coded icon]                  │\n│                               │    │                               │    │                               │\n│  Autonomous                    │    │  Conversational                │    │  Coded                         │\n│                               │    │  (Preview)                     │    │                               │\n│  Create an agent that acts     │    │  Create an assistant that      │    │  Import a coded agent          │\n│  independently to complete     │    │  interacts with users          │    │  project built in your IDE into │\n│  a given task.                 │    │  through real-time dialogue.   │    │  Studio.                       │\n│                               │    │                               │    │                               │\n└───────────────────────────────┘    └───────────────────────────────┘    └───────────────────────────────┘\n\nGet started with Autopilot\n\n✦  What should your agent do?\n\nDescribe the agent you want to create...\n\n                                                    Start fresh     Generate Agent",
+    "description": "The screenshot shows a UiPath Studio Web/Agents modal for selecting an agent type. The Autonomous agent type card is selected, and the Autopilot prompt area is focused for describing what the agent should do. The Generate Agent button is disabled until a description is entered, while Start fresh is available.",
+    "step_instructions": [
+      "Click on the Autonomous agent type card if it is not already selected.",
+      "In the description field under \"What should your agent do?\", enter a description of the agent you want to create.",
+      "Click on Generate Agent once the button becomes enabled, or click Start fresh to create the agent manually."
+    ]
+  },
+  "layout": {
+    "mode": "full_width",
+    "ocr_length": 1460,
+    "aspect_ratio": 1.31,
+    "image_size": "2048x1558",
+    "rationale": "High density (1460 chars) + wide (1.31) or very high text"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2693,
+    "completion_tokens": 491,
+    "total_tokens": 3184
+  },
+  "generated_at": "2026-08-18T11:42:52.901710+00:00"
+}

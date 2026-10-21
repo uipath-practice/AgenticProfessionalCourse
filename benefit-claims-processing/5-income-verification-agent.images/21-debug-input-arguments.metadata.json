@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "21-debug-input-arguments.png",
+  "image_path": "docs/benefit-claims-processing/5-income-verification-agent.images/21.png",
+  "lesson": "5-income-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Debug configuration  Benefit Claims Processing Template  ›  Benefit Claims Processi\nEntry point: /content/Benefit Claims Processing.bpmn#Event_RKT5Di\n\nSolution resources    Entrypoint arguments\n\nInput arguments\n\nTt  in_emailAddress\n\n\nTt  in_ExamplePaystub\nSample pay stub.png\n\nTt  in_Application\nSample application.pdf",
+    "description": "The screenshot shows the UiPath Debug configuration screen for a Benefit Claims Processing template, with the Entrypoint arguments tab selected. The Input arguments section is visible, showing fields for in_emailAddress, in_ExamplePaystub, and in_Application. The paystub and application fields are populated with sample files, while the email address field is empty.",
+    "step_instructions": "Click on the in_emailAddress field and enter the required email address. Verify that the in_ExamplePaystub field contains Sample pay stub.png. Verify that the in_Application field contains Sample application.pdf."
+  },
+  "layout": {
+    "mode": "split_50",
+    "ocr_length": 318,
+    "aspect_ratio": 1.46,
+    "image_size": "840x576",
+    "rationale": "Medium text density (318 chars)"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2353,
+    "completion_tokens": 486,
+    "total_tokens": 2839
+  },
+  "generated_at": "2026-08-18T11:44:41.831854+00:00"
+}

@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "image_file": "24-select-agent-in-task.png",
+  "image_path": "docs/benefit-claims-processing/4-residency-verification-agent.images/22.png",
+  "lesson": "4-residency-verification-agent",
+  "exercise": "benefit-claims-processing",
+  "extraction": {
+    "ocr_text": "Residency\nVerification\nAgent\n\nDownloadFileFr\nomStorageBuck\net\n\nAction\nStart and wait for agent\n\nAgent *\nSelect an agent\n\nSearch processes        + Resource\n\nDefined resources\nResidency Verification Agent\n\nOpen Orchestrator",
+    "description": "The screenshot shows UiPath Studio Web / workflow designer with a workflow activity named “Residency Verification Agent” selected on the canvas. In the properties/configuration panel, the Action dropdown is set to “Start and wait for agent,” and the Agent picker dropdown is open. The available defined resource “Residency Verification Agent” is visible and highlighted as the agent to select.",
+    "step_instructions": "Click on “Residency Verification Agent” under Defined resources in the Agent dropdown. If needed, ensure the Action dropdown remains set to “Start and wait for agent.”"
+  },
+  "layout": {
+    "mode": "split_30",
+    "ocr_length": 222,
+    "aspect_ratio": 1.86,
+    "image_size": "853x458",
+    "rationale": "Low text density (222 chars) or narrow layout"
+  },
+  "model": {
+    "name": "gpt-5.4",
+    "deployment": "gpt-5.5",
+    "api_version": "2025-04-01-preview"
+  },
+  "usage": {
+    "prompt_tokens": 2258,
+    "completion_tokens": 376,
+    "total_tokens": 2634
+  },
+  "generated_at": "2026-08-18T11:43:46.761017+00:00"
+}
