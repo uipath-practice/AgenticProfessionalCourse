@@ -195,7 +195,7 @@ It's the coded counterpart of the dependencies Studio Web manages for you.
     mkdir eligibility-determination-coded-agent
     cd eligibility-determination-coded-agent
     uv venv --python 3.13 --managed-python
-    .venv\Scripts\Activate.ps1
+    .venv\Scripts\activate
     ```
 
 === "Mac"
@@ -220,7 +220,7 @@ installed. Coded agents need Python 3.11 to 3.13.
 
         ```powershell
         cd (Join-Path ([Environment]::GetFolderPath("Desktop")) "eligibility-determination-coded-agent")
-        .venv\Scripts\Activate.ps1
+        .venv\Scripts\activate
         ```
 
     === "Mac"

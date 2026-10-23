@@ -24,7 +24,7 @@ Create the **Benefit Claims Processing** solution from a prepared template, then
 Let's start by creating a new Agentic Process from a previously created template.
 
 In the [Studio Web](https://cloud.uipath.com/tpenlabs/studio_/projects) home page go to
-**Templates** and select the **Benefit Claims Processing Template**. This will create a new
+**Templates** and select the **Benefit Claims Processing Template_Professional**. This will create a new
 solution, based on a project that was previously submitted as a template.
 
 ![Studio Web Templates tab, filtered for "Benefit Claim", showing the Benefit Claims Processing Template card by TPEN Labs](2-setting-up-the-solution.images/2-templates-benefit-claims-W.jpg){ .screenshot width="900" }
