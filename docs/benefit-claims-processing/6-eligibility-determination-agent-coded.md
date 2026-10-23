@@ -80,6 +80,9 @@ same building blocks, written in Python instead:
 
     ```bash
     node --version
+    ```
+
+    ```bash
     npm --version
     ```
 
@@ -156,8 +159,17 @@ same building blocks, written in Python instead:
 
     ```bash
     node --version
+    ```
+
+    ```bash
     npm --version
+    ```
+
+    ```bash
     uip --version
+    ```
+
+    ```bash
     uv --version
     ```
 
@@ -192,9 +204,21 @@ It's the coded counterpart of the dependencies Studio Web manages for you.
 
     ```powershell
     cd ([Environment]::GetFolderPath("Desktop"))
+    ```
+
+    ```powershell
     mkdir eligibility-determination-coded-agent
+    ```
+
+    ```powershell
     cd eligibility-determination-coded-agent
+    ```
+
+    ```powershell
     uv venv --python 3.13 --managed-python
+    ```
+
+    ```powershell
     .venv\Scripts\activate
     ```
 
@@ -202,9 +226,21 @@ It's the coded counterpart of the dependencies Studio Web manages for you.
 
     ```bash
     cd ~/Desktop
+    ```
+
+    ```bash
     mkdir eligibility-determination-coded-agent
+    ```
+
+    ```bash
     cd eligibility-determination-coded-agent
+    ```
+
+    ```bash
     uv venv --python 3.13 --managed-python
+    ```
+
+    ```bash
     source .venv/bin/activate
     ```
 
@@ -220,6 +256,9 @@ installed. Coded agents need Python 3.11 to 3.13.
 
         ```powershell
         cd (Join-Path ([Environment]::GetFolderPath("Desktop")) "eligibility-determination-coded-agent")
+        ```
+
+        ```powershell
         .venv\Scripts\activate
         ```
 
@@ -227,6 +266,9 @@ installed. Coded agents need Python 3.11 to 3.13.
 
         ```bash
         cd ~/Desktop/eligibility-determination-coded-agent
+        ```
+
+        ```bash
         source .venv/bin/activate
         ```
 
@@ -245,8 +287,17 @@ project files:
 
 ```bash
 uv pip install uipath-langchain
+```
+
+```bash
 uip codedagent setup --force
+```
+
+```bash
 uip codedagent new eligibility-determination-coded-agent
+```
+
+```bash
 uv sync
 ```
 
