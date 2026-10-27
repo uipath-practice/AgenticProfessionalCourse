@@ -2,6 +2,8 @@
 
 How the site works, how to edit it, and what to ask Claude Code to do.
 
+**Live site:** <https://uipath-practice.github.io/AgenticProfessionalCourse/>
+
 ---
 
 ## How It Works
